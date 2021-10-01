@@ -106,7 +106,7 @@ const Landing = () => {
               For more recharge options |{" "}
               <span>
                 {" "}
-                <a href="#"> Sign up </a>
+                <a href="/"> Sign up </a>
               </span>{" "}
             </p>
           </div>
