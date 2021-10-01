@@ -28,7 +28,7 @@ const Landing = () => {
           <div className="RechargeOptions">
             <div className="RechargeBox">
               <div className="RechargeBoxContainer">
-                <img src={Recharge} />
+                <img src={Recharge} alt="Recharge" />
               </div>
             </div>
             <p className="RechargePara1">Instant Recharge</p>
@@ -44,7 +44,7 @@ const Landing = () => {
             <div className="RechargeBox">
               <div className="RechargeBoxContainer">
                 {" "}
-                <img src={Schedule} />
+                <img src={Schedule} alt="Schedule" />
               </div>
             </div>
             <p className="RechargePara1">Scheduled Recharge</p>
@@ -60,7 +60,7 @@ const Landing = () => {
             <div className="RechargeBox">
               <div className="RechargeBoxContainer">
                 {" "}
-                <img src={Auto} />
+                <img src={Auto} alt="Auto" />
               </div>
             </div>
             <p className="RechargePara1">Auto Recharge</p>
@@ -111,14 +111,14 @@ const Landing = () => {
             </p>
           </div>
           <div className="QuickRechargePicture">
-            <img src={PhoneMan} />
+            <img src={PhoneMan} alt="Phoneman" />
           </div>
         </div>
       </div>
       <div className="Why">
         <div className="WhyUs">
           <div className="WhyPicture">
-            <img src={BlackMan} />
+            <img src={BlackMan} alt="BlackMan" />
           </div>
           <div className="WhyBody">
             <h2>Why One1Card?</h2>
@@ -143,8 +143,12 @@ const Landing = () => {
         <div className="ColorRectangle6"></div>
         <div className="DashboardPicture">
           <div className="DashboardPictures">
-            <img className="FirstPicture" src={Rectangle4} />
-            <img className="SecondPicture" src={Rectangle3} />
+            <img className="FirstPicture" src={Rectangle4} alt="FirstPicture" />
+            <img
+              className="SecondPicture"
+              src={Rectangle3}
+              alt="SecondPicture"
+            />
           </div>
         </div>
         <div className="DashCon">
