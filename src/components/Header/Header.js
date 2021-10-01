@@ -9,24 +9,24 @@ const Header = () => {
       <div className="HeaderHead">
         <div className="HeaderLogo">
           {/* <Group/>  */}
-          <img src={Group} />
+          <img src={Group} alt="Logo" />
         </div>
         <div className="NavHeader">
           <div className="NavLinks">
             <p>
-              <a href="" className="Active">
+              <a href="/" className="Active">
                 {" "}
                 Home
               </a>
             </p>
             <p>
-              <a href=""> Services</a>
+              <a href="/"> Services</a>
             </p>
             <p>
-              <a href=""> Cards</a>
+              <a href="/"> Cards</a>
             </p>
             <p>
-              <a href=""> Contact</a>
+              <a href="/"> Contact</a>
             </p>
           </div>
           <div className="LoginButton">
@@ -56,7 +56,7 @@ const Header = () => {
           <button>Quick Recharge</button>
         </div>
         <div>
-          <img src={Man} className="ManImage" />
+          <img src={Man} className="ManImage" alt="man" />
         </div>
       </div>
     </div>
