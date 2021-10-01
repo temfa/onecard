@@ -9,67 +9,62 @@ import Recharge from "../../assets/Recharge.svg";
 import Schedule from "../../assets/Schedule.svg";
 import Rectangle3 from "../../assets/Rectangle3.jpg";
 import Rectangle4 from "../../assets/Rectangle4.jpg";
+import Man from "../../assets/Man.png";
 
 const Landing = () => {
   return (
     <div>
-      <Header />
+      <div className="Welcome">
+        <Header />
+        <div className="WelcomeText">
+          <h2>
+            Life just got easier <span> with One1Card</span>
+          </h2>
+          <p>
+            Schedule (or automatically repeat) airtime recharges, data
+            recharges, tv subscriptions or electricity payments
+          </p>
+          <button>Quick Recharge</button>
+        </div>
+        <div>
+          <img src={Man} className="ManImage" alt="man" />
+        </div>
+      </div>
       <div className="Recharge">
         <div className="RechargeText">
           <h2>
-            Recharge options{" "}
-            <span className="Cards">
-              {" "}
-              <br /> with <span className="Card"> One1Card </span>{" "}
-            </span>
+            Recharge options with <span className="Card"> One1Card</span>
           </h2>
         </div>
         <div className="RechargeOption">
           <div className="RechargeOptions">
             <div className="RechargeBox">
-              <div className="RechargeBoxContainer">
-                <img src={Recharge} alt="Recharge" />
-              </div>
+              <img src={Recharge} alt="Recharge" />
             </div>
             <p className="RechargePara1">Instant Recharge</p>
             <p className="RechargePara2">
-              This allows you to recharge{" "}
-              <span>
-                {" "}
-                <br /> instantly
-              </span>
+              This allows you to recharge instantly
             </p>
           </div>
           <div className="RechargeOptions">
             <div className="RechargeBox">
-              <div className="RechargeBoxContainer">
-                {" "}
-                <img src={Schedule} alt="Schedule" />
-              </div>
+              <img src={Schedule} alt="Schedule" />
             </div>
             <p className="RechargePara1">Scheduled Recharge</p>
             <p className="RechargePara2">
-              You can set a future date and{" "}
-              <span>
-                {" "}
-                <br /> time for a recharge
-              </span>
+              You can set a future date and time for a recharge
             </p>
           </div>
           <div className="RechargeOptions">
             <div className="RechargeBox">
-              <div className="RechargeBoxContainer">
-                {" "}
-                <img src={Auto} alt="Auto" />
-              </div>
+              {/* <div className="RechargeBoxContainer"> */}
+              <img src={Auto} alt="Auto" />
+              {/* </div> */}
             </div>
             <p className="RechargePara1">Auto Recharge</p>
             <p className="RechargePara2">
-              Recharges can be set to automically{" "}
-              <span>
-                {" "}
-                <br /> repeat daily, weekly or monthly
-              </span>
+              Recharges can be set to automically repeat daily, weekly or
+              monthly
             </p>
           </div>
         </div>
@@ -106,7 +101,7 @@ const Landing = () => {
               For more recharge options |{" "}
               <span>
                 {" "}
-                <a href="#"> Sign up </a>
+                <a href="/"> Sign up </a>
               </span>{" "}
             </p>
           </div>
@@ -126,11 +121,10 @@ const Landing = () => {
               We have built a robust technology that enables every individual to
               enjoy easy, convenient and extensive recharge or payment solutions
               for various services.
-              <span>
-                {" "}
-                <br /> <br /> Verified individuals and businesses have access to
-                even more powerful capabilities
-              </span>
+            </p>
+            <p>
+              Verified individuals and businesses have access to even more
+              powerful capabilities
             </p>
             <button>Learn More</button>
           </div>
