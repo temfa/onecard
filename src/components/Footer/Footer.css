@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.Footer {
+  width: 100%;
+  max-width: 1442px;
+  background-color: #eb6a2b;
+  height: 450px;
+}
+
+.FooterHeader {
+  margin: 0px 140px;
+  border-bottom: 3px solid white;
+  height: 350px;
+  padding-top: 100px;
+}
+
+.FooterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.FooterText h2 {
+  font-weight: 400;
+  font-family: Roboto;
+  font-size: 20px;
+  color: white;
+  line-height: 100%;
+}
+
+.FooterText > span {
+  padding-top: 50px;
+}
+
+.FooterNewsletter {
+  width: 40%;
+}
+
+.FooterNewsletter h2 {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  font-family: Roboto;
+  padding: 50px 0px;
+}
+
+.NewsletterBody {
+  width: 100%;
+  display: flex;
+}
+
+.NewsletterBody input {
+  width: 70%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.28);
+  padding-left: 40px;
+  color: white;
+  border: 0;
+}
+
+.NewsletterBody button {
+  width: 30%;
+  height: 50px;
+  background-color: #124a80;
+  border: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Roboto;
+  line-height: 100%;
+}
+
+.FooterBody {
+  margin: 0px 140px;
+  padding-top: 35px;
+}
+
+.FooterBody p {
+  color: white;
+  font-size: 12px;
+  line-height: 100%;
+  font-family: Poppins;
+}
