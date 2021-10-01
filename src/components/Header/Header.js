@@ -14,19 +14,19 @@ const Header = () => {
         <div className="NavHeader">
           <div className="NavLinks">
             <p>
-              <a href="#" className="Active">
+              <a href="/" className="Active">
                 {" "}
                 Home
               </a>
             </p>
             <p>
-              <a href="#"> Services</a>
+              <a href="/"> Services</a>
             </p>
             <p>
-              <a href="#"> Cards</a>
+              <a href="/"> Cards</a>
             </p>
             <p>
-              <a href="#"> Contact</a>
+              <a href="/"> Contact</a>
             </p>
           </div>
           <div className="LoginButton">
