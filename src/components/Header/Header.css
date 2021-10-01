@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.Header {
+  width: 100%;
+  max-width: 1442px;
+  height: 700px;
+}
+
+.HeaderHead {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 0px 0px 80px;
+  position: relative;
+  height: 50px;
+}
+
+.HeaderLogo {
+  padding-top: 40px;
+}
+
+.NavHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+}
+
+.NavLinks {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  padding-top: 30px;
+}
+.NavLinks a {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  color: #124a80;
+}
+
+.NavLinks .Active {
+  color: #eb6a2b;
+}
+
+.LoginButton {
+  background-image: url(../../assets/Rectangle\ 2.jpg);
+  height: 700px;
+  width: 350px;
+}
+
+.Buttons {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  height: 100px;
+}
+
+.Buttons .SignIn {
+  width: 100px;
+  background-color: #eb6a2b;
+  border: 0;
+  margin-top: 20px;
+  height: 35px;
+  color: white;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-family: Roboto;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.Buttons .SignUp {
+  width: 100px;
+  background-color: #124a80;
+  border: 0;
+  margin-top: 20px;
+  height: 35px;
+  color: white;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-family: Roboto;
+  border-radius: 0px 20px 20px 0px;
+  border: 2px solid #eb6a2b;
+}
+
+.Welcome {
+  position: absolute;
+  left: 150px;
+  /* top: 100px; */
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Welcome .ManImage {
+  height: 600px;
+}
+
+.WelcomeText h2 {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 100%;
+  font-family: Roboto;
+  color: #124a80;
+}
+
+.WelcomeText h2 span {
+  padding-top: 12px;
+  font-weight: 700;
+}
+
+.WelcomeText p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 100%;
+  font-family: Roboto;
+  color: #eb6a2b;
+  padding: 25px 0;
+}
+
+.WelcomeText button {
+  width: 170px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  line-height: 100%;
+  font-weight: 400;
+  background-color: #eb6a2b;
+  border: 0;
+  border-radius: 20px;
+}

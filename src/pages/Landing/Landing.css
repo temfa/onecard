@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.Recharge {
+  width: 100%;
+  max-width: 1442px;
+  background-color: #eb6a2b;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 150px;
+}
+
+.RechargeText h2 {
+  color: white;
+  font-size: 30px;
+  line-height: 100%;
+  font-weight: 500;
+  font-family: Roboto;
+}
+
+.RechargeText .Cards {
+  margin-top: 500px;
+}
+
+.RechargeText .Card {
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.RechargeOption {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.RechargeOptions {
+  width: 33%;
+}
+
+.RechargeBox {
+  background-color: rgba(255, 255, 255, 0.35);
+  width: 140px;
+  height: 150px;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.RechargeBoxContainer {
+  width: 50%;
+  margin: auto;
+  padding-top: 35px;
+  height: 100%;
+}
+
+.RechargeBox img {
+  margin: auto;
+  width: 100%;
+}
+
+.RechargeOptions .RechargePara1 {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: Roboto;
+  color: white;
+}
+
+.RechargeOptions .RechargePara2 {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 10px;
+  font-weight: 400;
+  font-family: Roboto;
+  color: white;
+}
+
+.QuickRecharge {
+  width: 100%;
+  max-width: 1442px;
+}
+
+.ColorRectangle {
+  background-color: rgba(235, 106, 43, 0.58);
+  width: 100%;
+  height: 40px;
+}
+
+.ColorRectangle2 {
+  background-color: #eb6a2b;
+  height: 100%;
+  width: 50%;
+  margin-left: 60px;
+}
+.ColorRectangle3 {
+  background-color: rgba(235, 106, 43, 0.58);
+  height: 40px;
+  width: 54.4%;
+}
+
+.QuickRechargeBody {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px 0px 150px;
+  align-items: center;
+  width: 100%;
+}
+
+.QuickRechargeText {
+  width: 50%;
+}
+
+.QuickRechargeText h2 {
+  color: #124a80;
+  font-weight: bold;
+  font-family: Roboto;
+  font-size: 35px;
+  /* padding: 20px 0px; */
+  margin: 0;
+}
+
+.RechargeButtons {
+  width: 68%;
+  margin-bottom: 40px;
+}
+
+.RechargeButtons .Data {
+  width: 160px;
+  height: 35px;
+  color: white;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 0;
+  background-color: #eb6a2b;
+}
+
+.RechargeButtons .Airtime {
+  width: 160px;
+  height: 35px;
+  color: #124a80;
+  border: 2px solid #124a80;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.SelectPlan {
+  width: 90%;
+}
+
+.NetworkSelect {
+  width: 100%;
+  margin: 10px auto;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #124a80;
+  border-radius: 20px;
+  color: #124a80;
+  font-size: 15px;
+  font-family: Roboto;
+  padding-left: 20px;
+}
+
+.QuickRechargeText button {
+  width: 200px;
+  height: 45px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  line-height: 100%;
+  border: 0;
+  margin: 40px auto 15px;
+  cursor: pointer;
+  background-color: #eb6a2b;
+}
+
+.QuickRechargeText p {
+  font-weight: 400;
+  font-size: 12px;
+  font-family: Roboto;
+  color: #124a80;
+}
+
+.QuickRechargeText p span a {
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.QuickRechargePicture {
+  height: 550px;
+}
+
+.QuickRechargePicture img {
+  height: 100%;
+}
+
+.Why {
+  background-color: rgba(235, 106, 43, 0.1);
+  height: 600px;
+}
+
+.WhyUs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  padding: 100px 0;
+}
+
+.WhyPicture {
+  width: 30%;
+}
+
+.WhyPicture img {
+  width: 100%;
+  height: 400px;
+}
+
+.WhyBody {
+  width: 50%;
+  height: 300px;
+}
+
+.WhyBody h2 {
+  color: #124a80;
+  font-size: 40px;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 100%;
+  margin: 25px 0px;
+}
+
+.WhyBody p {
+  color: #124a80;
+  font-family: Roboto;
+  font-weight: normal;
+  line-height: 100%;
+  font-size: 13px;
+}
+
+.WhyBody button {
+  width: 200px;
+  height: 45px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  line-height: 100%;
+  border: 0;
+  margin: 40px auto 15px;
+  cursor: pointer;
+  background-color: #eb6a2b;
+}
+
+.DashboardContainer {
+  width: 100%;
+  height: 600px;
+  max-width: 1442px;
+}
+
+.ColorRectangle4 {
+  background-color: rgba(235, 106, 43, 0.58);
+  width: 100%;
+  height: 40px;
+}
+
+.ColorRectangle5 {
+  background-color: #eb6a2b94;
+  height: 100%;
+  width: 50%;
+  margin-left: 60px;
+}
+.ColorRectangle6 {
+  background-color: rgba(235, 106, 43, 0.58);
+  height: 40px;
+  width: 54.4%;
+}
+.DashboardPicture {
+  width: 100%;
+}
+
+.DashboardPictures {
+  display: flex;
+  width: 40%;
+  margin: auto;
+}
+
+.DashboardPictures img {
+  width: 80%;
+}
+
+/* .firstPicture {
+  position: relative;
+}
+
+.SecondPicture {
+  position: absolute;
+} */
+
+.DashCon {
+  width: 65%;
+  margin: auto;
+}
+
+.DashConButton {
+  width: 20%;
+  margin: auto;
+}
+
+.DashboardContainer h2 {
+  color: #124a80;
+  text-align: center;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 100%;
+  font-family: Roboto;
+}
+
+.DashboardContainer button {
+  width: 200px;
+  height: 45px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  line-height: 100%;
+  border: 0;
+  margin: 40px auto 15px;
+  cursor: pointer;
+  background-color: #eb6a2b;
+}
