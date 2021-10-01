@@ -9,7 +9,7 @@ const Header = () => {
       <div className="HeaderHead">
         <div className="HeaderLogo">
           {/* <Group/>  */}
-          <img src={Group} />
+          <img src={Group} alt="Logo" />
         </div>
         <div className="NavHeader">
           <div className="NavLinks">
@@ -56,7 +56,7 @@ const Header = () => {
           <button>Quick Recharge</button>
         </div>
         <div>
-          <img src={Man} className="ManImage" />
+          <img src={Man} className="ManImage" alt="man" />
         </div>
       </div>
     </div>
