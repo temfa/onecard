@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +15,7 @@
 .Welcome .ManImage {
   position: absolute;
   bottom: 0;
-  top: 0;
+  top: 100px;
   right: 0;
   left: 434px;
 }
@@ -264,9 +265,10 @@
   color: #124a80;
 }
 
-.QuickRechargeText p span a {
+.QuickRechargeText p span {
   font-weight: 900;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .QuickRechargePicture {
@@ -362,56 +364,30 @@
   width: 54.44%;
 }
 .DashboardPicture {
-  width: 100%;
+  margin: 100px auto;
 }
 
-.DashboardPictures {
-  display: flex;
-  width: 40%;
+.DashboardPicture img {
   margin: auto;
+  display: block;
 }
-
-.DashboardPictures img {
-  width: 80%;
-}
-
-/* .firstPicture {
-  position: relative;
-}
-
-.SecondPicture {
-  position: absolute;
-} */
 
 .DashCon {
   width: 100%;
-}
-
-.DashConButton {
-  width: 20%;
-  margin: auto;
 }
 
 .DashboardContainer h2 {
   color: #124a80;
   text-align: center;
   font-weight: 400;
-  font-size: 64px;
+  font-size: 60px;
   line-height: 100%;
   font-family: Roboto;
+  width: 1000px;
+  margin: auto;
 }
 
 .DashboardContainer button {
-  width: 269px;
-  height: 56px;
-  border-radius: 20px;
-  color: white;
-  text-align: center;
-  font-size: 18px;
-  line-height: 100%;
-  border: 0;
-  font-weight: 400;
-  margin-top: 50px;
-  cursor: pointer;
-  background-color: #eb6a2b;
+  margin: auto;
+  display: block;
 }

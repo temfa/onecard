@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import Group from "../../assets/Group.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,21 +12,13 @@ const Header = () => {
       </div>
       <div className="NavHeader">
         <div className="NavLinks">
-          <p>
-            <a href="/" className="Active">
-              {" "}
-              Home
-            </a>
-          </p>
-          <p>
-            <a href="/"> Services</a>
-          </p>
-          <p>
-            <a href="/"> Cards</a>
-          </p>
-          <p>
-            <a href="/"> Contact</a>
-          </p>
+          <Link to="/">Home</Link>
+
+          <Link to="/services">Services</Link>
+
+          <Link to="/cards">Cards</Link>
+
+          <Link to="/contact">Contact</Link>
         </div>
         <div className="Buttons">
           <button className="SignIn">Sign In</button>

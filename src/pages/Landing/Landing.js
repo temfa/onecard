@@ -2,14 +2,14 @@ import React from "react";
 import "./Landing.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import Button from "../../components/Button/Button";
 import PhoneMan from "../../assets/PhoneMan.jpg";
 import BlackMan from "../../assets/BlackMan.jpg";
 import Auto from "../../assets/Auto.svg";
 import Recharge from "../../assets/Recharge.svg";
 import Schedule from "../../assets/Schedule.svg";
-import Rectangle3 from "../../assets/Rectangle3.jpg";
-import Rectangle4 from "../../assets/Rectangle4.jpg";
-import Man from "../../assets/Man.png";
+import AppScreen from "../../assets/app-screens.png";
+import Man from "../../assets/man.png";
 
 const Landing = () => {
   return (
@@ -98,11 +98,7 @@ const Landing = () => {
             </div>
             <button>Quick Recharge</button>
             <p>
-              For more recharge options |{" "}
-              <span>
-                {" "}
-                <a href="/"> Sign up </a>
-              </span>{" "}
+              For more recharge options | <span> Sign up</span>{" "}
             </p>
           </div>
           <div className="QuickRechargePicture">
@@ -136,26 +132,16 @@ const Landing = () => {
         </div>
         <div className="ColorRectangle6"></div>
         <div className="DashboardPicture">
-          <div className="DashboardPictures">
-            <img className="FirstPicture" src={Rectangle4} alt="FirstPicture" />
-            <img
-              className="SecondPicture"
-              src={Rectangle3}
-              alt="SecondPicture"
-            />
-          </div>
+          <img className="Pictures" src={AppScreen} alt="FirstPicture" />
         </div>
         <div className="DashCon">
-          <h2>
-            Sign up and enjoy swift{" "}
-            <span>
-              {" "}
-              <br /> recharge service to any network
-            </span>
-          </h2>
-          <div className="DashConButton">
-            <button>Sign Up for Free</button>
-          </div>
+          <h2>Sign up and enjoy swift recharge service to any network</h2>
+          <Button
+            buttonText="Sign Up for Free"
+            marginTop="50px"
+            backgroundColor="#EB6A2B"
+            Color="White"
+          />
         </div>
       </div>
       <Footer />
