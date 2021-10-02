@@ -7,14 +7,13 @@
   width: 100%;
   max-width: 1442px;
   background-color: #eb6a2b;
-  height: 450px;
+  height: 426px;
 }
 
 .FooterHeader {
-  margin: 0px 140px;
   border-bottom: 3px solid white;
+  padding: 172px 130px 43px 132px;
   height: 350px;
-  padding-top: 100px;
 }
 
 .FooterContainer {
@@ -26,36 +25,34 @@
 .FooterText h2 {
   font-weight: 400;
   font-family: Roboto;
-  font-size: 20px;
+  font-size: 24px;
   color: white;
   line-height: 100%;
+  margin-bottom: 79px;
 }
 
 .FooterText > span {
   padding-top: 50px;
 }
 
-.FooterNewsletter {
-  width: 40%;
-}
-
 .FooterNewsletter h2 {
   color: white;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
+  margin-bottom: 22px;
   line-height: 100%;
   font-family: Roboto;
-  padding: 50px 0px;
+  /* padding: 50px 0px; */
 }
 
 .NewsletterBody {
-  width: 100%;
   display: flex;
+  margin-bottom: 71px;
 }
 
 .NewsletterBody input {
-  width: 70%;
-  height: 50px;
+  width: 361px;
+  height: 56px;
   background-color: rgba(0, 0, 0, 0.28);
   padding-left: 40px;
   color: white;
@@ -63,8 +60,8 @@
 }
 
 .NewsletterBody button {
-  width: 30%;
-  height: 50px;
+  width: 130px;
+  height: 56px;
   background-color: #124a80;
   border: 0;
   color: white;
