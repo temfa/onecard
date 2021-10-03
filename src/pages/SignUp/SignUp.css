@@ -4,28 +4,29 @@
   margin: 0;
 }
 
-.SignInContainer {
+.SignUpContainer {
   padding-top: 102px;
   padding-bottom: 157px;
   display: flex;
 }
 
-.SignInForm {
-  margin-left: 150px;
+.SignUpForm {
+  margin-left: 100px;
   margin-right: 234px;
+  width: 501px;
 }
 
-.SignInForm h2 {
+.SignUpForm h2 {
   color: #eb6a2b;
   margin-bottom: 50px;
   font-size: 48px;
   font-weight: 700;
   font-family: Roboto;
   line-height: 100%;
-  width: 230px;
+  width: 300px;
 }
 
-.SignInForm input {
+.SignUpForm input {
   width: 501px;
   height: 50px;
   border: 1px solid #124a80;
@@ -34,11 +35,11 @@
   padding-left: 40px;
 }
 
-.SignInForm input:first-child {
+.SignUpForm input:first-child {
   margin-top: 0;
 }
 
-.SignInForm p {
+.SignUpForm p {
   color: #124a80;
   margin-top: 45px;
   font-size: 18px;
@@ -46,11 +47,17 @@
   line-height: 100%;
 }
 
-.SignInForm p a {
+.SignUpForm p a {
   font-weight: 700;
   text-decoration: none;
 }
 
-.SignInContainer img {
-  margin-right: 152px;
+.SignUpContainer > img:first-child {
+  position: relative;
+}
+
+.RectangleBox {
+  position: absolute;
+  top: 800px;
+  left: 807px;
 }

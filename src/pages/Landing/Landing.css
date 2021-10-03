@@ -70,13 +70,7 @@
   background-color: #eb6a2b;
   height: 650px;
   display: flex;
-  align-items: center;
-  /* justify-content: space-between; */
-  padding: 182px 141px 197px 150px;
-}
-
-.RechargeText {
-  margin-right: 50px;
+  padding: 182px 100px 197px 100px;
 }
 
 .RechargeText h2 {
@@ -85,7 +79,7 @@
   line-height: 100%;
   font-weight: 500;
   font-family: Roboto;
-  /* width: 292px; */
+  margin-bottom: 51px;
 }
 
 .RechargeText .Card {
@@ -96,12 +90,18 @@
 .RechargeOption {
   display: flex;
   justify-content: space-between;
-  /* width: 60%; */
-  /* background-color: red; */
+  position: relative;
+  width: 800px;
+}
+
+.Rectangle {
+  position: absolute;
+  bottom: -60px;
+  left: 60px;
 }
 
 .RechargeOptions {
-  width: 33%;
+  width: 40%;
 }
 
 .RechargeBox {
@@ -113,19 +113,20 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  text-align: center;
 }
 
 .RechargeBox img {
   height: 70px;
-}
-
-.RechargeBox img {
   margin: auto;
   width: 100%;
 }
 
 .RechargeOptions .RechargePara1 {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 20px;
   margin-top: 18px;
   font-size: 18px;
   font-weight: 500;
@@ -140,6 +141,7 @@
   font-weight: 400;
   font-family: Roboto;
   color: white;
+  width: 192px;
 }
 
 .QuickRecharge {
@@ -170,7 +172,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 21px 150px 62px;
+  padding: 21px 80px 62px;
   align-items: center;
   width: 100%;
 }
@@ -184,7 +186,6 @@
   font-weight: 700px;
   font-family: Roboto;
   font-size: 48px;
-  /* padding: 20px 0px; */
   margin: 0;
 }
 
@@ -219,7 +220,6 @@
   font-size: 24px;
   text-align: center;
   border-radius: 20px;
-  /* margin-left: 20px; */
   cursor: pointer;
   background-color: #fff;
 }
@@ -276,10 +276,25 @@
   width: 601px;
 }
 
-.QuickRechargePicture img {
-  /* height: 100%; */
+.QuickRechargePicture .PhoneMan {
   width: 100%;
+  position: relative;
   margin: auto;
+}
+
+.ellipse {
+  position: absolute;
+  z-index: 1;
+  bottom: -1600px;
+  left: 650px;
+  width: 418px;
+  height: 418px;
+}
+
+.ellipse1 {
+  position: absolute;
+  right: 180px;
+  bottom: -1600px;
 }
 
 .Why {
@@ -299,9 +314,16 @@
   margin-right: 70px;
 }
 
-.WhyPicture img {
+.WhyPicture .BlackMan {
   width: 316px;
   height: 394px;
+  position: relative;
+}
+
+.WhyPicture .RectangleWhy {
+  position: absolute;
+  top: 3015px;
+  left: 290px;
 }
 
 .WhyBody h2 {

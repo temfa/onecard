@@ -40,8 +40,16 @@
   padding: 214px 0;
   margin: 0 324px;
 }
-.SignUp img {
+
+.SignUp img:first-child {
   margin-right: 70px;
+  position: relative;
+}
+
+.SignUp .ServiceRectangle {
+  position: absolute;
+  top: 5288px;
+  left: 299px;
 }
 
 .SignUp h2 {

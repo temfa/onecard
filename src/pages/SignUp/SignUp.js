@@ -1,17 +1,17 @@
 import React from "react";
 import "./SignUp.css";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
 import Rectangle from "../../assets/Rectangle 6.png";
+import RectangleBox from "../../assets/Rectangle 25.png";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
     <div>
       <Header />
-      <div className="SignInContainer">
-        <div className="SignInForm">
+      <div className="SignUpContainer">
+        <div className="SignUpForm">
           <h2>Create an account</h2>
           <input type="text" placeholder="Full Name" />
           <input type="email" placeholder="Email" />
@@ -29,6 +29,11 @@ const SignUp = () => {
           </p>
         </div>
         <img src={Rectangle} alt="Sign In Picture" />
+        <img
+          src={RectangleBox}
+          alt="Sign In Picture"
+          className="RectangleBox"
+        />
       </div>
     </div>
   );

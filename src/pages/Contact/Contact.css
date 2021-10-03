@@ -9,10 +9,23 @@
   width: 100%;
   max-width: 1442px;
   height: 900px;
+  position: relative;
 }
 
 .Message {
   margin: 307px 146px 113px 150px; /*Reduced the Margin Top so that it can be visible at first glance*/
+}
+
+.Message > img:first-child {
+  position: absolute;
+  top: 150px;
+  left: 832px;
+}
+
+.Message .ContactEllipse2 {
+  position: absolute;
+  top: 332px;
+  left: 1075px;
 }
 
 .Message h2 {

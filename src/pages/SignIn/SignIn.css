@@ -11,8 +11,9 @@
 }
 
 .SignInForm {
-  margin-left: 150px;
+  margin-left: 100px;
   margin-right: 234px;
+  width: 501px;
 }
 
 .SignInForm h2 {
@@ -56,6 +57,13 @@
   text-decoration: none;
 }
 
-.SignInContainer img {
+.SignInContainer > img:first-child {
   margin-right: 152px;
+  position: relative;
+}
+
+.RectangleBox2 {
+  position: absolute;
+  top: 760px;
+  left: 807px;
 }

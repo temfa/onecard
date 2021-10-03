@@ -1,9 +1,9 @@
 import React from "react";
 import "./SignIn.css";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
 import Rectangle from "../../assets/Rectangle 6(1).png";
+import RectangleBox from "../../assets/Rectangle 25.png";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
@@ -31,6 +31,11 @@ const SignUp = () => {
           </p>
         </div>
         <img src={Rectangle} alt="Sign In Picture" />
+        <img
+          src={RectangleBox}
+          alt="Sign In Picture"
+          className="RectangleBox2"
+        />
       </div>
     </div>
   );

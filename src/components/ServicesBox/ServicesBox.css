@@ -5,9 +5,10 @@
   padding: 105px 0;
 }
 
-.ServiceBox img {
+.ServiceBox .ServiceMan {
   display: block;
   margin: 0 auto;
+  position: relative;
 }
 
 .ServiceDetails {

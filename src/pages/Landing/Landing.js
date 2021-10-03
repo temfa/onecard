@@ -10,6 +10,11 @@ import Recharge from "../../assets/Recharge.svg";
 import Schedule from "../../assets/Schedule.svg";
 import AppScreen from "../../assets/app-screens.png";
 import Man from "../../assets/man.png";
+import HomePage from "../../assets/HomePage.png";
+import HomePage2 from "../../assets/HomePage2.png";
+import Eclipse from "../../assets/Ellipse 16.png";
+import Eclipse1 from "../../assets/Ellipse 17.png";
+import Rectangle from "../../assets/Rectangle 25.png";
 
 const Landing = () => {
   return (
@@ -35,8 +40,10 @@ const Landing = () => {
           <h2>
             Recharge options with <span className="Card"> One1Card</span>
           </h2>
+          <img src={HomePage2} className="Rectangle2" alt="HomePage" />
         </div>
         <div className="RechargeOption">
+          <img src={HomePage} className="Rectangle" alt="HomePage" />
           <div className="RechargeOptions">
             <div className="RechargeBox">
               <img src={Recharge} alt="Recharge" />
@@ -100,14 +107,17 @@ const Landing = () => {
             </p>
           </div>
           <div className="QuickRechargePicture">
-            <img src={PhoneMan} alt="Phoneman" />
+            <img src={Eclipse} alt="ellipse" className="ellipse" />
+            <img src={PhoneMan} alt="Phoneman" className="PhoneMan" />
+            <img src={Eclipse1} alt="ellipse1" className="ellipse1" />
           </div>
         </div>
       </div>
       <div className="Why">
         <div className="WhyUs">
           <div className="WhyPicture">
-            <img src={BlackMan} alt="BlackMan" />
+            <img src={BlackMan} alt="BlackMan" className="BlackMan" />
+            <img src={Rectangle} alt="BlackMan" className="RectangleWhy" />
           </div>
           <div className="WhyBody">
             <h2>Why One1Card?</h2>

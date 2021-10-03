@@ -4,6 +4,8 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
 import Vector from "../../assets/Vector.png";
+import Ellipse from "../../assets/Ellipse 22.png";
+import Ellipse2 from "../../assets/Ellipse 23.png";
 
 const Contact = () => {
   return (
@@ -11,6 +13,8 @@ const Contact = () => {
       <div className="ContactHeader">
         <Header />
         <div className="Message">
+          <img src={Ellipse} alt="Ellipse" />
+          <img src={Ellipse2} alt="Ellipse2" className="ContactEllipse2" />
           <h2>
             Get in touch with One1Card,<span> Leave a message</span>
           </h2>

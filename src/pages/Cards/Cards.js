@@ -6,6 +6,14 @@ import Button from "../../components/Button/Button";
 import Phone from "../../assets/Phone.png";
 import Left from "../../assets/Left.png";
 import Right from "../../assets/Right.png";
+import Top from "../../assets/Top.png";
+import Bottom from "../../assets/Bottom.png";
+import Ellipse from "../../assets/Ellipse 17.png";
+import Ellipse2 from "../../assets/Ellipse 19.png";
+import Ellipse3 from "../../assets/Ellipse 18.png";
+import Group from "../../assets/Group.png";
+import Group2 from "../../assets/Group 189.png";
+import Layer from "../../assets/Layer 3.png";
 
 const Cards = () => {
   return (
@@ -13,6 +21,7 @@ const Cards = () => {
       <div className="CardWelcome">
         <Header />
         <div className="CardWelcomeBody">
+          <img src={Top} alt="Top" />
           <h2>
             Enjoy customized<span> One1Card</span> with your friends, families &
             more
@@ -27,7 +36,8 @@ const Cards = () => {
       </div>
       <div className="WhatWeOffer">
         <div>
-          <img src={Phone} alt="Phone" />
+          <img src={Phone} alt="Phone" className="Phone" />
+          <img src={Ellipse} alt="Ellipse" className="CardEllipse" />
           <h2>
             Get to know<span> what we offer</span>
           </h2>
@@ -62,15 +72,21 @@ const Cards = () => {
         <h2>Who can you gift your One1Card to?</h2>
         <div className="ContainerCard">
           <div className="Container">
-            <div></div>
+            <div>
+              <img src={Layer} alt="Layer" />
+            </div>
             <p>Employees</p>
           </div>
           <div className="Container">
-            <div></div>
+            <div>
+              <img src={Group2} alt="Group2" />
+            </div>
             <p>Family and Friends</p>
           </div>
           <div className="Container">
-            <div></div>
+            <div>
+              <img src={Group} alt="Group" />
+            </div>
             <p>Occassion Guests</p>
           </div>
           <div className="Container">
@@ -79,8 +95,10 @@ const Cards = () => {
           </div>
         </div>
         <div className="Images">
+          <img src={Ellipse2} alt="Ellipse2" className="CardEllipse2" />
           <img src={Left} alt="picture" className="FirstPicture" />
           <img src={Right} alt="picture" className="SecondPicture" />
+          <img src={Ellipse3} alt="Ellipse3" className="CardEllipse3" />
         </div>
       </div>
       <div className="CustomizedCards">
@@ -105,7 +123,7 @@ const Cards = () => {
           />
         </div>
         <div className="CardPicture">
-          <img src={Right} alt="picture" />
+          <img src={Bottom} alt="picture" />
         </div>
       </div>
       <Footer />
