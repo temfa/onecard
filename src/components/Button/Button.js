@@ -11,6 +11,8 @@ const Button = (props) => {
     border: "none",
     color: props.Color,
     marginTop: props.marginTop,
+    width: props.width,
+    height: props.height,
   };
   return <button style={ButtonStyle}>{props.buttonText}</button>;
 };

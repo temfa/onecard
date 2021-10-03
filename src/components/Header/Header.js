@@ -3,7 +3,7 @@ import "./Header.css";
 import Group from "../../assets/Group.svg";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className="Header">
       <div className="HeaderLogo">
@@ -13,16 +13,17 @@ const Header = () => {
       <div className="NavHeader">
         <div className="NavLinks">
           <Link to="/">Home</Link>
-
           <Link to="/services">Services</Link>
-
           <Link to="/cards">Cards</Link>
-
           <Link to="/contact">Contact</Link>
         </div>
         <div className="Buttons">
-          <button className="SignIn">Sign In</button>
-          <button className="SignUp">Sign Up</button>
+          <button className="SignIn">
+            <Link to="/signin">Sign In</Link>
+          </button>
+          <button className="SignUp">
+            <Link to="/signup"> Sign Up</Link>
+          </button>
         </div>
       </div>
     </div>

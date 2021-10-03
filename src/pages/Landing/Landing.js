@@ -57,9 +57,7 @@ const Landing = () => {
           </div>
           <div className="RechargeOptions">
             <div className="RechargeBox">
-              {/* <div className="RechargeBoxContainer"> */}
               <img src={Auto} alt="Auto" />
-              {/* </div> */}
             </div>
             <p className="RechargePara1">Auto Recharge</p>
             <p className="RechargePara2">

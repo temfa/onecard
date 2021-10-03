@@ -68,6 +68,8 @@ const Services = () => {
             Color="White"
             backgroundColor="#EB6A2B"
             marginTop="50px"
+            width="231px"
+            height="56px"
           />
         </div>
       </div>

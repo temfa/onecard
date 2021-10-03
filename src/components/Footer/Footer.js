@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import LogoWhite from "../../assets/LogoWhite.png";
 
 const Footer = () => {
   return (
@@ -7,15 +8,7 @@ const Footer = () => {
       <div className="FooterHeader">
         <div className="FooterContainer">
           <div className="FooterText">
-            <h2>
-              {" "}
-              OneCard{" "}
-              <span>
-                {" "}
-                <br />
-                Nigeria{" "}
-              </span>
-            </h2>
+            <img src={LogoWhite} alt="logo" />
           </div>
           <div className="FooterNewsletter">
             <h2>Signup For Our Newsletter</h2>
