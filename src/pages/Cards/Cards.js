@@ -13,6 +13,7 @@ import Ellipse2 from "../../assets/Ellipse 19.png";
 import Ellipse3 from "../../assets/Ellipse 18.png";
 import Group from "../../assets/Group.png";
 import Group2 from "../../assets/Group 189.png";
+import Group3 from "../../assets/Group 190.png";
 import Layer from "../../assets/Layer 3.png";
 
 const Cards = () => {
@@ -90,7 +91,9 @@ const Cards = () => {
             <p>Occassion Guests</p>
           </div>
           <div className="Container">
-            <div></div>
+            <div>
+              <img src={Group3} alt="Group3" />
+            </div>
             <p>Competition Winners</p>
           </div>
         </div>

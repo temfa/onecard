@@ -15,6 +15,18 @@
   margin: 307px 146px 113px 150px; /*Reduced the Margin Top so that it can be visible at first glance*/
 }
 
+.Explore > img:first-child {
+  position: absolute;
+  top: 150px;
+  left: 832px;
+}
+
+.Explore .ContactEllipse2 {
+  position: absolute;
+  top: 332px;
+  left: 1075px;
+}
+
 .Explore h2 {
   font-size: 36px;
   font-family: "Roboto";
@@ -59,4 +71,67 @@
   font-family: "Roboto";
   font-weight: normal;
   line-height: 100%;
+}
+
+/*Responsiveness*/
+@media screen and (max-width: 480px) {
+  .WelcomeService {
+    height: fit-content;
+  }
+
+  .Explore {
+    margin: 170px 0 0 0;
+  }
+
+  .Explore > img:first-child {
+    display: none;
+  }
+
+  .Explore .ContactEllipse2 {
+    display: none;
+  }
+
+  .Explore h2 {
+    font-size: 30px;
+    width: 400px;
+    margin-left: 30px;
+  }
+
+  .Explore button {
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+
+  .SignUp {
+    height: fit-content;
+  }
+
+  .SignUp > div:first-child {
+    flex-direction: column;
+    margin: 0;
+    padding: 120px 0;
+  }
+
+  .SignUpImg {
+    width: 100%;
+  }
+
+  .SignUp img:first-child {
+    margin: auto;
+    display: block;
+  }
+
+  .SignUp .ServiceRectangle {
+    top: 4838px;
+    left: 59px;
+  }
+
+  .SignUp h2 {
+    width: 100%;
+    margin-left: 30px;
+  }
+
+  .SignUp button {
+    margin-left: 30px;
+  }
 }

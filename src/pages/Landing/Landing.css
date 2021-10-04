@@ -147,7 +147,6 @@
 .QuickRecharge {
   width: 100%;
   max-width: 1442px;
-  height: 1034px;
 }
 
 .ColorRectangle {
@@ -173,7 +172,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 21px 80px 62px;
-  align-items: center;
   width: 100%;
 }
 
@@ -240,6 +238,30 @@
   font-family: Roboto;
   font-weight: 400;
   padding-left: 20px;
+  appearance: none;
+  background-image: url(../../assets/Vector\ 1.png);
+  background-repeat: no-repeat;
+  background-position: 453px 15px;
+  cursor: pointer;
+}
+
+.SelectPlan input {
+  width: 501px;
+  margin: 10px auto;
+  height: 50px;
+  background-color: white;
+  border: 1px solid #124a80;
+  border-radius: 20px;
+  color: #124a80;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 400;
+  padding-left: 20px;
+  appearance: none;
+  background-image: url(../../assets/Ellipse\ 7.png);
+  background-repeat: no-repeat;
+  background-position: 453px 15px;
+  cursor: pointer;
 }
 
 .QuickRechargeText > button {
@@ -277,24 +299,23 @@
 }
 
 .QuickRechargePicture .PhoneMan {
-  width: 100%;
+  display: block;
   position: relative;
   margin: auto;
+  z-index: 1;
 }
 
 .ellipse {
   position: absolute;
   z-index: 1;
   bottom: -1600px;
-  left: 650px;
-  width: 418px;
-  height: 418px;
+  left: 700px;
 }
 
 .ellipse1 {
   position: absolute;
   right: 180px;
-  bottom: -1600px;
+  bottom: -1700px;
 }
 
 .Why {
@@ -304,7 +325,6 @@
 
 .WhyUs {
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   width: 100%;
   padding: 128px 259px 128px 324px;
@@ -412,4 +432,148 @@
 .DashboardContainer button {
   margin: auto;
   display: block;
+}
+
+/*Responsiveness*/
+
+@media screen and (max-width: 480px) {
+  .Welcome {
+    width: 480px;
+    max-width: 480px;
+    background: none;
+    height: 500px;
+  }
+
+  .WelcomeText {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    margin: auto;
+  }
+
+  .WelcomeText h2 {
+    font-size: 35px;
+    width: 300px;
+  }
+
+  .WelcomeText p {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .Welcome .ManImage {
+    display: none;
+  }
+
+  .Recharge {
+    flex-direction: column;
+    padding: 40px 50px 90px 50px;
+    height: fit-content;
+  }
+
+  .Rectangle {
+    display: none;
+  }
+
+  .RechargeOption {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .RechargeOptions {
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  .RechargeOptions .RechargePara1 {
+    font-size: 25px;
+  }
+
+  .RechargeOptions .RechargePara2 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .QuickRechargeBody {
+    flex-direction: column;
+  }
+
+  .QuickRechargePicture {
+    display: none;
+  }
+
+  .QuickRechargeText {
+    width: 100%;
+    /* margin: auto; */
+  }
+
+  .QuickRechargeText h2 {
+    font-size: 40px;
+  }
+
+  .NetworkSelect {
+    width: 100%;
+    background-position: 350px 15px;
+  }
+
+  .SelectPlan input {
+    width: 100%;
+    background-position: 350px 15px;
+  }
+
+  .Why {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .WhyUs {
+    flex-direction: column;
+    padding: 50px 0px 0px 0px;
+  }
+
+  .WhyPicture {
+    margin-right: 0px;
+  }
+
+  .WhyPicture .RectangleWhy {
+    top: 3215px;
+    left: 70px;
+  }
+
+  .WhyBody h2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .WhyBody p {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .WhyBody button {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .DashboardContainer {
+    height: fit-content;
+  }
+
+  .DashboardPicture {
+    width: 100%;
+  }
+
+  .DashboardPicture img {
+    width: 100%;
+  }
+
+  .DashboardContainer h2 {
+    width: 90%;
+    font-size: 40px;
+  }
+
+  .DashboardContainer button {
+    margin-bottom: 20px;
+  }
 }

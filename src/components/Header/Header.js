@@ -18,12 +18,12 @@ const Header = (props) => {
           <Link to="/contact">Contact</Link>
         </div>
         <div className="Buttons">
-          <button className="SignIn">
-            <Link to="/signin">Sign In</Link>
-          </button>
-          <button className="SignUp">
-            <Link to="/signup"> Sign Up</Link>
-          </button>
+          <Link to="/signin">
+            <button className="SignIn">Sign In</button>
+          </Link>
+          <Link to="/signup">
+            <button className="SignUp">Sign Up</button>
+          </Link>
         </div>
       </div>
     </div>

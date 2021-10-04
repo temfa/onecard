@@ -26,7 +26,7 @@
   align-items: center;
 }
 
-h2 {
+.ServiceDetails h2 {
   margin-top: 58px;
   font-weight: 700;
   font-size: 36px;
@@ -36,7 +36,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-p {
+.ServiceDetails p {
   font-weight: 400;
   font-family: "Roboto";
   color: white;
@@ -52,4 +52,26 @@ p {
   display: block;
   position: absolute;
   bottom: -28px;
+}
+
+/*Responsiveness*/
+
+.ServiceBox .ServiceMan {
+  width: 70%;
+  height: 100%;
+}
+
+.ServiceDetails {
+  width: 80%;
+  align-items: flex-start;
+  height: 150px;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+p {
+  height: fit-content;
 }

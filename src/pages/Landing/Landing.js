@@ -3,8 +3,8 @@ import "./Landing.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
-import PhoneMan from "../../assets/PhoneMan.jpg";
-import BlackMan from "../../assets/BlackMan.jpg";
+import PhoneMan from "../../assets/PhoneMan.png";
+import BlackMan from "../../assets/BlackMan.png";
 import Auto from "../../assets/Auto.svg";
 import Recharge from "../../assets/Recharge.svg";
 import Schedule from "../../assets/Schedule.svg";
@@ -95,11 +95,7 @@ const Landing = () => {
               <select className="NetworkSelect">
                 <option>Select Data Plan </option>
               </select>
-              <input
-                type="text"
-                className="NetworkSelect"
-                placeholder="Phone Number"
-              />
+              <input type="text" placeholder="Phone Number" />
             </div>
             <button>Quick Recharge</button>
             <p>

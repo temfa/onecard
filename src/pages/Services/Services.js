@@ -11,6 +11,8 @@ import GroupPeople from "../../assets/GroupPeople.png";
 import Laptop from "../../assets/Laptop.png";
 import BlackMan2 from "../../assets/BlackMan2.png";
 import Ellipse from "../../assets/Ellipse 21.png";
+import Ellipse1 from "../../assets/Ellipse 22.png";
+import Ellipse2 from "../../assets/Ellipse 23.png";
 import Rectangle from "../../assets/Rectangle 33.png";
 
 const Services = () => {
@@ -76,6 +78,8 @@ const Services = () => {
       <div className="WelcomeService">
         <Header />
         <div className="Explore">
+          <img src={Ellipse1} alt="Ellipse1" />
+          <img src={Ellipse2} alt="Ellipse2" className="ContactEllipse2" />
           <h2>
             Enjoy various
             <span> recharge and payment options with One1Card</span>
@@ -105,7 +109,7 @@ const Services = () => {
       ))}
       <div className="SignUp">
         <div>
-          <div>
+          <div className="SignUpImg">
             <img src={BlackMan2} alt="BlackMan2" />
             <img src={Rectangle} alt="Rectangle" className="ServiceRectangle" />
           </div>
