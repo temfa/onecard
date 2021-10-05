@@ -67,3 +67,65 @@
   top: 760px;
   left: 807px;
 }
+
+@media screen and (max-width: 480px) {
+  .SignInContainer {
+    padding: 0;
+    padding-top: 40px;
+    height: fit-content;
+  }
+
+  .SignInForm {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .SignInForm input {
+    width: 100%;
+  }
+
+  .SignInForm button {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .RectangleBox2 {
+    display: none;
+  }
+
+  .SignInContainer .SignInpicture {
+    display: none;
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .SignInContainer {
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  .SignInForm {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .SignInForm input {
+    width: 100%;
+  }
+
+  .SignInForm button {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .RectangleBox2 {
+    display: none;
+  }
+
+  .SignInContainer .SignInpicture {
+    display: none;
+  }
+}

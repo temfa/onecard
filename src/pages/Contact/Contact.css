@@ -13,7 +13,7 @@
 }
 
 .Message {
-  margin: 307px 146px 113px 150px; /*Reduced the Margin Top so that it can be visible at first glance*/
+  margin: 207px 146px 113px 150px; /*Reduced the Margin Top so that it can be visible at first glance*/
 }
 
 .Message > img:first-child {
@@ -111,4 +111,145 @@ textarea {
 .ContactAddress {
   margin-top: 44px;
   width: 372px;
+}
+
+@media screen and (max-width: 480px) {
+  .ContactHeader {
+    height: fit-content;
+  }
+
+  .Message {
+    margin: 0px 0 0 30px;
+  }
+
+  .Message > img:first-child {
+    display: none;
+  }
+
+  .Message .ContactEllipse2 {
+    display: none;
+  }
+
+  .Message h2 {
+    font-size: 35px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .Message button {
+    margin-bottom: 20px;
+  }
+
+  .ContactForm {
+    flex-direction: column;
+    height: fit-content;
+    align-items: flex-start;
+  }
+
+  .FormContainer {
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .FormContainer input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .FormContainer button {
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .ContactAddress {
+    width: 50%;
+    display: none;
+    margin-left: 0;
+  }
+
+  .ContactAddress img {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .ContactDetails {
+    margin: 0;
+  }
+
+  .ContactDetails > div:first-child {
+    display: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ContactHeader {
+    height: fit-content;
+  }
+
+  .Message {
+    margin: 170px 0 0 35px;
+  }
+
+  .Message > img:first-child {
+    display: none;
+  }
+
+  .Message .ContactEllipse2 {
+    display: none;
+  }
+
+  .Message button {
+    margin-bottom: 20px;
+  }
+
+  .ContactForm {
+    flex-direction: column;
+    height: fit-content;
+    align-items: flex-start;
+  }
+
+  .FormContainer {
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .FormContainer input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .FormContainer button {
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .ContactAddress {
+    width: 100%;
+    margin-left: 40px;
+    margin-bottom: 30px;
+  }
+
+  .ContactAddress img {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .ContactDetails {
+    margin: 0;
+  }
+
+  .ContactDetails > div:first-child {
+    display: none;
+  }
 }

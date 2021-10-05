@@ -1,6 +1,9 @@
 import React from "react";
 import "./Footer.css";
 import LogoWhite from "../../assets/LogoWhite.png";
+import instagram from "../../assets/instagram.png";
+import Twitter from "../../assets/Twitter.png";
+import Facebook from "../../assets/Facebook.png";
 
 const Footer = () => {
   return (
@@ -23,7 +26,11 @@ const Footer = () => {
         <div className="Copyright">
           <p>Copyright © 2021. All rights reserved.</p>
         </div>
-        <div className="Socials"></div>
+        <div className="Socials">
+          <img src={instagram} />
+          <img src={Facebook} />
+          <img src={Twitter} />
+        </div>
       </div>
     </div>
   );

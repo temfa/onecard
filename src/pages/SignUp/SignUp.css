@@ -61,3 +61,65 @@
   top: 800px;
   left: 807px;
 }
+
+@media screen and (max-width: 480px) {
+  .SignUpContainer {
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  .SignUpForm {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .SignUpForm input {
+    width: 100%;
+  }
+
+  .SignUpForm button {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .RectangleBox {
+    display: none;
+  }
+
+  .SignUpContainer .SignUppicture {
+    display: none;
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .SignUpContainer {
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  .SignUpForm {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .SignUpForm input {
+    width: 100%;
+  }
+
+  .SignUpForm button {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .RectangleBox {
+    display: none;
+  }
+
+  .SignUpContainer .SignUppicture {
+    display: none;
+    background-color: red;
+  }
+}

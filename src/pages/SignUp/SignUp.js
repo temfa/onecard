@@ -21,14 +21,13 @@ const SignUp = () => {
             marginTop="50px"
             Color="white"
             backgroundColor="#EB6A2B"
-            width="501px"
             height="66px"
           />
           <p>
             Already have an account?<Link to="/signin"> Sign in</Link>
           </p>
         </div>
-        <img src={Rectangle} alt="Sign In Picture" />
+        <img src={Rectangle} alt="Sign In Picture" className="SignUppicture" />
         <img
           src={RectangleBox}
           alt="Sign In Picture"

@@ -12,7 +12,7 @@
 }
 
 .Explore {
-  margin: 307px 146px 113px 150px; /*Reduced the Margin Top so that it can be visible at first glance*/
+  margin: 207px 146px 113px 150px; /*Reduced the Margin Top so that it can be visible at first glance*/
 }
 
 .Explore > img:first-child {
@@ -133,5 +133,152 @@
 
   .SignUp button {
     margin-left: 30px;
+  }
+}
+
+/*Responsiveness*/
+@media screen and (max-width: 480px) {
+  .WelcomeService {
+    height: fit-content;
+  }
+
+  .Explore {
+    margin: 170px 0 0 30px;
+  }
+
+  .Explore > img:first-child {
+    display: none;
+  }
+
+  .Explore .ContactEllipse2 {
+    display: none;
+  }
+
+  .Explore h2 {
+    font-size: 30px;
+    width: 80%;
+  }
+
+  .Explore button {
+    margin-bottom: 20px;
+  }
+
+  .SignUp {
+    height: fit-content;
+  }
+
+  .SignUp > div:first-child {
+    flex-direction: column;
+    margin: 0;
+    padding: 120px 0;
+  }
+
+  .SignUpImg {
+    width: 80%;
+    margin: auto;
+  }
+
+  .SignUp img:first-child {
+    margin: auto;
+    display: block;
+    width: 100%;
+  }
+
+  .SignUp .ServiceRectangle {
+    display: none;
+  }
+
+  .SignUp h2 {
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .SignUp button {
+    display: block;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .SignUp {
+    height: fit-content;
+  }
+
+  .SignUp > div:first-child {
+    flex-direction: column;
+    margin: 0;
+    padding: 120px 0;
+  }
+
+  .SignUpImg {
+    width: 80%;
+    margin: auto;
+  }
+
+  .SignUp img:first-child {
+    margin: auto;
+    display: block;
+    width: 100%;
+  }
+
+  .SignUp .ServiceRectangle {
+    display: none;
+  }
+
+  .SignUp h2 {
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .SignUp button {
+    display: block;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .WelcomeService {
+    height: fit-content;
+  }
+
+  .Explore {
+    margin: 50px 0 0 30px;
+  }
+
+  .Explore > img:first-child {
+    display: none;
+  }
+
+  .Explore .ContactEllipse2 {
+    display: none;
+  }
+
+  .Explore h2 {
+    width: 80%;
+  }
+
+  .Explore button {
+    margin-bottom: 20px;
+  }
+
+  .SignUp {
+    height: fit-content;
+  }
+
+  .SignUp > div:first-child {
+    margin: 0;
+    padding: 60px 0;
+    margin-left: 20px;
+  }
+
+  .SignUp .ServiceRectangle {
+    display: none;
+  }
+
+  .SignUp h2 {
+    width: 90%;
+    margin-top: 50px;
   }
 }

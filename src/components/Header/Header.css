@@ -9,17 +9,17 @@
   max-width: 1442px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 40px 80px;
 }
 
-/* .HeaderLogo img {
-  margin: -60px;
-} */
+.HeaderLogo img {
+  margin-bottom: -60px;
+}
 
 .NavHeader {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .NavLinks {
@@ -30,6 +30,32 @@
 
 .NavLinks a :first-child {
   margin-left: 0px;
+}
+
+.Burger {
+  width: 40px;
+  height: 50px;
+  display: none;
+}
+
+.line1 {
+  background-color: chocolate;
+  width: 100%;
+  height: 7%;
+}
+
+.line2 {
+  background-color: chocolate;
+  width: 100%;
+  height: 7%;
+  margin-top: 7px;
+}
+
+.line3 {
+  background-color: chocolate;
+  width: 100%;
+  height: 7%;
+  margin-top: 7px;
 }
 
 .NavLinks a {
@@ -47,13 +73,7 @@
   color: #eb6a2b;
 }
 
-.Buttons {
-  display: flex;
-  width: 50%;
-  margin: 0 auto;
-}
-
-.Buttons .SignIn {
+.SignInButton {
   width: 139px;
   background-color: #eb6a2b;
   border: 0;
@@ -68,7 +88,7 @@
   font-size: 18px;
 }
 
-.Buttons .SignUp {
+.SignUpButton {
   width: 139px;
   background-color: #124a80;
   border: 0;
@@ -87,4 +107,98 @@
 .Buttons a {
   text-decoration: none;
   color: inherit;
+}
+@media screen and (max-width: 500px) {
+  .Header {
+    flex-direction: column;
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .Burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .HeaderLogo {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+  }
+
+  .HeaderLogo img {
+    margin-bottom: 0;
+    margin: 20px;
+  }
+
+  .NavLinks a {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .NavHeader {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .NavLinks {
+    flex-direction: column;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .SignInButton {
+    display: block;
+    width: 50%;
+    border-radius: 20px;
+    margin: 20px auto;
+  }
+
+  .SignUpButton {
+    display: block;
+    width: 50%;
+    border: 0;
+    border-radius: 20px;
+    margin: 20px auto;
+  }
+
+  .NavHeader a {
+    text-decoration: none;
+    width: 80%;
+  }
+
+  .show {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Header {
+    padding: 40px 20px;
+    width: 100%;
+  }
+
+  .NavLinks {
+    margin-right: 50px;
+  }
+
+  .NavLinks a :first-child {
+    margin-left: 0px;
+  }
+
+  .NavLinks a {
+    margin-left: 40px;
+  }
+
+  .SignInButton {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .SignUpButton {
+    width: 100%;
+    margin-right: 0;
+  }
 }
