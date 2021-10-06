@@ -27,9 +27,9 @@ const Footer = () => {
           <p>Copyright © 2021. All rights reserved.</p>
         </div>
         <div className="Socials">
-          <img src={instagram} />
-          <img src={Facebook} />
-          <img src={Twitter} />
+          <img src={instagram} alt="" />
+          <img src={Facebook} alt="" />
+          <img src={Twitter} alt="" />
         </div>
       </div>
     </div>

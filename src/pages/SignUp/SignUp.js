@@ -27,12 +27,8 @@ const SignUp = () => {
             Already have an account?<Link to="/signin"> Sign in</Link>
           </p>
         </div>
-        <img src={Rectangle} alt="Sign In Picture" className="SignUppicture" />
-        <img
-          src={RectangleBox}
-          alt="Sign In Picture"
-          className="RectangleBox"
-        />
+        <img src={Rectangle} alt="Sign Up " className="SignUppicture" />
+        <img src={RectangleBox} alt="Sign Up " className="RectangleBox" />
       </div>
     </div>
   );

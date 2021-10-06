@@ -29,12 +29,8 @@ const SignUp = () => {
             Don’t have an account? <Link to="/signin"> Sign up</Link>
           </p>
         </div>
-        <img src={Rectangle} alt="Sign In Picture" className="SignInpicture" />
-        <img
-          src={RectangleBox}
-          alt="Sign In Picture"
-          className="RectangleBox2"
-        />
+        <img src={Rectangle} alt="Sign In " className="SignInpicture" />
+        <img src={RectangleBox} alt="Sign In " className="RectangleBox2" />
       </div>
     </div>
   );

@@ -99,8 +99,8 @@ const Cards = () => {
         </div>
         <div className="Images">
           <img src={Ellipse2} alt="Ellipse2" className="CardEllipse2" />
-          <img src={Left} alt="picture" className="FirstPicture" />
-          <img src={Right} alt="picture" className="SecondPicture" />
+          <img src={Left} alt="" className="FirstPicture" />
+          <img src={Right} alt="" className="SecondPicture" />
           <img src={Ellipse3} alt="Ellipse3" className="CardEllipse3" />
         </div>
       </div>
@@ -126,7 +126,7 @@ const Cards = () => {
           />
         </div>
         <div className="CardPicture">
-          <img src={Bottom} alt="picture" />
+          <img src={Bottom} alt="" />
         </div>
       </div>
       <Footer />
