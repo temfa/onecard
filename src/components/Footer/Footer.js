@@ -6,6 +6,7 @@ import Twitter from "../../assets/Twitter.png";
 import Facebook from "../../assets/Facebook.png";
 
 const Footer = () => {
+  const date = new Date().getFullYear();
   return (
     <div className="Footer">
       <div className="FooterHeader">
@@ -24,7 +25,7 @@ const Footer = () => {
       </div>
       <div className="FooterBody">
         <div className="Copyright">
-          <p>Copyright © 2021. All rights reserved.</p>
+          <p>Copyright © {date}. All rights reserved.</p>
         </div>
         <div className="Socials">
           <img src={instagram} alt="" />

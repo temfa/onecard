@@ -9,21 +9,24 @@
   width: 100%;
   max-width: 1442px;
   height: 900px;
+  position: relative;
 }
 
 .Explore {
-  margin: 207px 146px 113px 150px; /*Reduced the Margin Top so that it can be visible at first glance*/
+  position: absolute;
+  bottom: 30%;
+  padding: 0 100px;
 }
 
 .Explore > img:first-child {
   position: absolute;
-  top: 150px;
-  left: 832px;
+  left: 850px;
+  bottom: 150px;
 }
 
 .Explore .ContactEllipse2 {
   position: absolute;
-  top: 332px;
+  top: -100px;
   left: 1075px;
 }
 
@@ -33,7 +36,7 @@
   font-weight: 400;
   line-height: 100%;
   color: #124a80;
-  width: 452px;
+  width: 100%;
 }
 
 .Explore h2 span {
@@ -49,6 +52,7 @@
 .SignUp > div:first-child {
   display: flex;
   margin: auto;
+  align-items: center;
   padding: 214px 0;
   margin: 0 324px;
 }
@@ -143,7 +147,8 @@
   }
 
   .Explore {
-    margin: 170px 0 0 30px;
+    position: unset;
+    padding: 0 0;
   }
 
   .Explore > img:first-child {
@@ -244,7 +249,8 @@
   }
 
   .Explore {
-    margin: 50px 0 0 30px;
+    position: unset;
+    padding: 10px 20px;
   }
 
   .Explore > img:first-child {

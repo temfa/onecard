@@ -69,10 +69,6 @@
   cursor: pointer;
 }
 
-.NavLinks .Active {
-  color: #eb6a2b;
-}
-
 .SignInButton {
   width: 139px;
   background-color: #eb6a2b;
