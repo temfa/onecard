@@ -24,8 +24,11 @@ const Cards = () => {
         <div className="CardWelcomeBody">
           <img src={Top} alt="Top" />
           <h2>
-            Enjoy customized<span> One1Card</span> with your friends, families &
-            more
+            Enjoy customized
+            <span>
+              <br /> One1Card
+            </span>{" "}
+            with your friends, families & more
           </h2>
           <Button
             buttonText="Explore"

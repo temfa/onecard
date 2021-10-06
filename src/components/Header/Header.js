@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import Group from "../../assets/Group.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function hamburger() {
   const NavHeader = document.getElementById("NavHeader");
@@ -23,17 +23,38 @@ const Header = (props) => {
       </div>
       <div className="NavHeader" id="NavHeader">
         <div className="NavLinks">
-          <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/cards">Cards</Link>
-          <Link to="/contact">Contact</Link>
+          <NavLink
+            to="/"
+            exact
+            activeStyle={{ color: "#eb6a2b", fontWeight: "bold" }}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/services"
+            activeStyle={{ color: "#eb6a2b", fontWeight: "bold" }}
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="/cards"
+            activeStyle={{ color: "#eb6a2b", fontWeight: "bold" }}
+          >
+            Cards
+          </NavLink>
+          <NavLink
+            to="/contact"
+            activeStyle={{ color: "#eb6a2b", fontWeight: "bold" }}
+          >
+            Contact
+          </NavLink>
         </div>
-        <Link to="/signin">
+        <NavLink to="/signin">
           <button className="SignInButton">Sign In</button>
-        </Link>
-        <Link to="/signup">
+        </NavLink>
+        <NavLink to="/signup">
           <button className="SignUpButton">Sign Up</button>
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

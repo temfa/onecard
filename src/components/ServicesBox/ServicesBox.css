@@ -58,15 +58,15 @@
 
 @media screen and (max-width: 480px) {
   .ServiceBox .ServiceMan {
-    width: 70%;
+    width: 90%;
     height: 100%;
   }
 
   .ServiceDetails {
-    width: 80%;
+    width: 90%;
     align-items: flex-start;
     height: 200px;
-    margin-top: -10px;
+    margin-top: -15px;
   }
 
   .ServiceDetails h2 {
@@ -87,7 +87,7 @@
 
 @media screen and (max-width: 1024px) {
   .ServiceBox .ServiceMan {
-    width: 70%;
+    width: 80%;
     height: 100%;
   }
 
@@ -95,7 +95,7 @@
     width: 80%;
     align-items: flex-start;
     height: 200px;
-    margin-top: -10px;
+    margin-top: -20px;
   }
 
   .imgStyle {
