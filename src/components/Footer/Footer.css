@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,14 +8,15 @@
   width: 100%;
   max-width: 1442px;
   background-color: #eb6a2b;
-  height: 450px;
+  height: 426px;
 }
 
 .FooterHeader {
-  margin: 0px 140px;
   border-bottom: 3px solid white;
+  padding-top: 140px;
+  margin: auto;
+  width: 80%;
   height: 350px;
-  padding-top: 100px;
 }
 
 .FooterContainer {
@@ -26,36 +28,34 @@
 .FooterText h2 {
   font-weight: 400;
   font-family: Roboto;
-  font-size: 20px;
+  font-size: 24px;
   color: white;
   line-height: 100%;
+  margin-bottom: 79px;
 }
 
 .FooterText > span {
   padding-top: 50px;
 }
 
-.FooterNewsletter {
-  width: 40%;
-}
-
 .FooterNewsletter h2 {
   color: white;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
+  margin-bottom: 22px;
   line-height: 100%;
   font-family: Roboto;
-  padding: 50px 0px;
+  /* padding: 50px 0px; */
 }
 
 .NewsletterBody {
-  width: 100%;
   display: flex;
+  margin-bottom: 71px;
 }
 
 .NewsletterBody input {
-  width: 70%;
-  height: 50px;
+  width: 361px;
+  height: 56px;
   background-color: rgba(0, 0, 0, 0.28);
   padding-left: 40px;
   color: white;
@@ -63,8 +63,8 @@
 }
 
 .NewsletterBody button {
-  width: 30%;
-  height: 50px;
+  width: 130px;
+  height: 56px;
   background-color: #124a80;
   border: 0;
   color: white;
@@ -76,7 +76,14 @@
 
 .FooterBody {
   margin: 0px 140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.FooterBody img {
   padding-top: 35px;
+  margin-left: 25px;
+  cursor: pointer;
 }
 
 .FooterBody p {
@@ -84,4 +91,116 @@
   font-size: 12px;
   line-height: 100%;
   font-family: Poppins;
+  padding-top: 35px;
+}
+
+@media screen and (max-width: 480px) {
+  .Footer {
+    height: fit-content;
+  }
+
+  .FooterHeader {
+    padding: 0;
+    height: fit-content;
+  }
+
+  .FooterContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .FooterText {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .FooterText img {
+    margin: 20px auto;
+    display: block;
+  }
+
+  .FooterNewsletter {
+    margin: 30px auto;
+    display: block;
+  }
+
+  .NewsletterBody {
+    margin-bottom: 10px;
+  }
+
+  .NewsletterBody input {
+    width: 60%;
+    padding-left: 5px;
+  }
+
+  .NewsletterBody button {
+    width: 30%;
+  }
+
+  .Socials {
+    width: 50%;
+    margin: 20px auto;
+  }
+
+  .Socials img {
+    padding-top: 0;
+  }
+
+  .FooterBody {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .FooterBody p {
+    width: 100%;
+    padding-left: 15%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Footer {
+    height: fit-content;
+    width: 100%;
+  }
+
+  .FooterHeader {
+    padding: 0;
+    height: fit-content;
+    width: 80%;
+  }
+
+  .FooterContainer {
+    width: 100%;
+  }
+
+  .FooterText {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .FooterText img {
+    margin-left: 50px;
+  }
+
+  .FooterNewsletter {
+    margin: 30px auto;
+    display: block;
+  }
+
+  .NewsletterBody {
+    margin-bottom: 10px;
+  }
+
+  .NewsletterBody input {
+    width: 60%;
+    padding-left: 5px;
+  }
+
+  .NewsletterBody button {
+    width: 40%;
+  }
 }

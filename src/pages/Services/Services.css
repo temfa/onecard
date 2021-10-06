@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.WelcomeService {
+  background-image: url(../../assets/banner.png);
+  width: 100%;
+  max-width: 1442px;
+  height: 900px;
+}
+
+.Explore {
+  margin: 207px 146px 113px 150px; /*Reduced the Margin Top so that it can be visible at first glance*/
+}
+
+.Explore > img:first-child {
+  position: absolute;
+  top: 150px;
+  left: 832px;
+}
+
+.Explore .ContactEllipse2 {
+  position: absolute;
+  top: 332px;
+  left: 1075px;
+}
+
+.Explore h2 {
+  font-size: 36px;
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 100%;
+  color: #124a80;
+  width: 452px;
+}
+
+.Explore h2 span {
+  font-weight: 700;
+}
+
+.SignUp {
+  width: 100%;
+  max-width: 1442px;
+  height: 819px;
+}
+
+.SignUp > div:first-child {
+  display: flex;
+  margin: auto;
+  padding: 214px 0;
+  margin: 0 324px;
+}
+
+.SignUp img:first-child {
+  margin-right: 70px;
+  position: relative;
+}
+
+.SignUp .ServiceRectangle {
+  position: absolute;
+  top: 5288px;
+  left: 299px;
+}
+
+.SignUp h2 {
+  color: #124a80;
+  width: 505px;
+  font-size: 40px;
+  font-family: "Roboto";
+  font-weight: normal;
+  line-height: 100%;
+}
+
+/*Responsiveness*/
+@media screen and (max-width: 480px) {
+  .WelcomeService {
+    height: fit-content;
+  }
+
+  .Explore {
+    margin: 170px 0 0 0;
+  }
+
+  .Explore > img:first-child {
+    display: none;
+  }
+
+  .Explore .ContactEllipse2 {
+    display: none;
+  }
+
+  .Explore h2 {
+    font-size: 30px;
+    width: 400px;
+    margin-left: 30px;
+  }
+
+  .Explore button {
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+
+  .SignUp {
+    height: fit-content;
+  }
+
+  .SignUp > div:first-child {
+    flex-direction: column;
+    margin: 0;
+    padding: 120px 0;
+  }
+
+  .SignUpImg {
+    width: 100%;
+  }
+
+  .SignUp img:first-child {
+    margin: auto;
+    display: block;
+  }
+
+  .SignUp .ServiceRectangle {
+    top: 4838px;
+    left: 59px;
+  }
+
+  .SignUp h2 {
+    width: 100%;
+    margin-left: 30px;
+  }
+
+  .SignUp button {
+    margin-left: 30px;
+  }
+}
+
+/*Responsiveness*/
+@media screen and (max-width: 480px) {
+  .WelcomeService {
+    height: fit-content;
+  }
+
+  .Explore {
+    margin: 170px 0 0 30px;
+  }
+
+  .Explore > img:first-child {
+    display: none;
+  }
+
+  .Explore .ContactEllipse2 {
+    display: none;
+  }
+
+  .Explore h2 {
+    font-size: 30px;
+    width: 80%;
+  }
+
+  .Explore button {
+    margin-bottom: 20px;
+  }
+
+  .SignUp {
+    height: fit-content;
+  }
+
+  .SignUp > div:first-child {
+    flex-direction: column;
+    margin: 0;
+    padding: 120px 0;
+  }
+
+  .SignUpImg {
+    width: 80%;
+    margin: auto;
+  }
+
+  .SignUp img:first-child {
+    margin: auto;
+    display: block;
+    width: 100%;
+  }
+
+  .SignUp .ServiceRectangle {
+    display: none;
+  }
+
+  .SignUp h2 {
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .SignUp button {
+    display: block;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .SignUp {
+    height: fit-content;
+  }
+
+  .SignUp > div:first-child {
+    flex-direction: column;
+    margin: 0;
+    padding: 120px 0;
+  }
+
+  .SignUpImg {
+    width: 80%;
+    margin: auto;
+  }
+
+  .SignUp img:first-child {
+    margin: auto;
+    display: block;
+    width: 100%;
+  }
+
+  .SignUp .ServiceRectangle {
+    display: none;
+  }
+
+  .SignUp h2 {
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .SignUp button {
+    display: block;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .WelcomeService {
+    height: fit-content;
+  }
+
+  .Explore {
+    margin: 50px 0 0 30px;
+  }
+
+  .Explore > img:first-child {
+    display: none;
+  }
+
+  .Explore .ContactEllipse2 {
+    display: none;
+  }
+
+  .Explore h2 {
+    width: 80%;
+  }
+
+  .Explore button {
+    margin-bottom: 20px;
+  }
+
+  .SignUp {
+    height: fit-content;
+  }
+
+  .SignUp > div:first-child {
+    margin: 0;
+    padding: 60px 0;
+    margin-left: 20px;
+  }
+
+  .SignUp .ServiceRectangle {
+    display: none;
+  }
+
+  .SignUp h2 {
+    width: 90%;
+    margin-top: 50px;
+  }
+}

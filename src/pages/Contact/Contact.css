@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.ContactHeader {
+  background-image: url(../../assets/Contact.png);
+  width: 100%;
+  max-width: 1442px;
+  height: 900px;
+  position: relative;
+}
+
+.Message {
+  margin: 207px 146px 113px 150px; /*Reduced the Margin Top so that it can be visible at first glance*/
+}
+
+.Message > img:first-child {
+  position: absolute;
+  top: 150px;
+  left: 832px;
+}
+
+.Message .ContactEllipse2 {
+  position: absolute;
+  top: 332px;
+  left: 1075px;
+}
+
+.Message h2 {
+  color: #124a80;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Roboto";
+  width: 452px;
+  line-height: 100%;
+}
+
+.Message h2 span {
+  font-weight: 400;
+}
+
+.Message button {
+  width: 231px;
+  height: 56px;
+}
+
+.ContactForm {
+  width: 100%;
+  max-width: 1442px;
+  height: 900px;
+  display: flex;
+  align-items: center;
+  /* padding: 94px 0; */
+  /* justify-content: space-between; */
+}
+
+.FormContainer {
+  margin-left: 141px;
+}
+
+.FormContainer input {
+  width: 501px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 22px;
+  border: 1px solid #124a80;
+  padding-left: 30px;
+}
+
+.FormContainer input:first-child {
+  margin-top: 0;
+}
+
+textarea {
+  width: 501px;
+  height: 126px;
+  margin-top: 22px;
+  border-radius: 20px;
+  border: 1px solid #124a80;
+  padding-left: 30px;
+  padding-top: 15px;
+}
+
+.FormContainer button {
+  width: 151px;
+}
+
+.ContactDetails {
+  margin-right: 150px;
+  margin-left: 158px;
+}
+
+.ContactDetails > div:first-child {
+  width: 492px;
+  height: 442px;
+  background-color: rgba(241, 90, 36, 0.12);
+  border-radius: 20px;
+  padding-top: 23px;
+}
+
+.ContactDetails .Top {
+  width: 440px;
+  height: 395px;
+  background-color: rgba(241, 90, 36, 0.29);
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.ContactAddress {
+  margin-top: 44px;
+  width: 372px;
+}
+
+@media screen and (max-width: 480px) {
+  .ContactHeader {
+    height: fit-content;
+  }
+
+  .Message {
+    margin: 0px 0 0 30px;
+  }
+
+  .Message > img:first-child {
+    display: none;
+  }
+
+  .Message .ContactEllipse2 {
+    display: none;
+  }
+
+  .Message h2 {
+    font-size: 35px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .Message button {
+    margin-bottom: 20px;
+  }
+
+  .ContactForm {
+    flex-direction: column;
+    height: fit-content;
+    align-items: flex-start;
+  }
+
+  .FormContainer {
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .FormContainer input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .FormContainer button {
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .ContactAddress {
+    width: 50%;
+    display: none;
+    margin-left: 0;
+  }
+
+  .ContactAddress img {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .ContactDetails {
+    margin: 0;
+  }
+
+  .ContactDetails > div:first-child {
+    display: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ContactHeader {
+    height: fit-content;
+  }
+
+  .Message {
+    margin: 170px 0 0 35px;
+  }
+
+  .Message > img:first-child {
+    display: none;
+  }
+
+  .Message .ContactEllipse2 {
+    display: none;
+  }
+
+  .Message button {
+    margin-bottom: 20px;
+  }
+
+  .ContactForm {
+    flex-direction: column;
+    height: fit-content;
+    align-items: flex-start;
+  }
+
+  .FormContainer {
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .FormContainer input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .FormContainer button {
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .ContactAddress {
+    width: 100%;
+    margin-left: 40px;
+    margin-bottom: 30px;
+  }
+
+  .ContactAddress img {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .ContactDetails {
+    margin: 0;
+  }
+
+  .ContactDetails > div:first-child {
+    display: none;
+  }
+}

@@ -1,0 +1,454 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.CardWelcome {
+  width: 100%;
+  height: 900px;
+  max-width: 1442px;
+}
+
+.CardWelcomeBody {
+  margin-top: 32px;
+  margin-left: 150px;
+}
+
+.CardWelcomeBody img {
+  display: block;
+  margin: 0 auto;
+}
+
+.CardWelcome h2 {
+  color: #124a80;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 100%;
+  width: 614px;
+}
+
+.CardWelcomeBody h2 span {
+  font-weight: 700;
+}
+
+.CardWelcomeBody button {
+  width: 231px;
+  height: 56px;
+}
+
+.WhatWeOffer {
+  width: 100%;
+  max-width: 1442px;
+  height: 900px;
+  background-color: #fdf0ea;
+  padding: 126px 175px 79px;
+}
+
+.WhatWeOffer > div {
+  display: flex;
+  margin-bottom: 70px;
+  align-items: center;
+}
+
+.WhatWeOffer > div h2 {
+  color: #124a80;
+  margin-left: 70px;
+  width: 392px;
+  font-size: 46px; /*Reduced the font so that it will break nicely*/
+  font-weight: 400;
+  line-height: 100%;
+  font-family: Roboto;
+}
+
+.WhatWeOffer > div h2 span {
+  font-weight: 700;
+}
+
+.Phone {
+  position: relative;
+}
+
+.CardEllipse {
+  position: absolute;
+  top: 979px;
+  left: 680px;
+}
+
+.WhatWeOffer p {
+  color: #124a80;
+  text-align: justify;
+  font-family: Roboto;
+  line-height: 100%;
+}
+
+.WhatCardDo {
+  width: 100%;
+  max-width: 1442px;
+  height: 1312px;
+  padding-left: 310px;
+  padding-right: 284px;
+}
+
+.WhatCardDo h2 {
+  color: #eb6a2b;
+  text-align: center;
+  margin-top: 173px;
+  margin-left: 97px;
+  width: 625px;
+  font-size: 50px;
+  margin-bottom: 94px;
+  line-height: 100%;
+  font-family: Roboto;
+  font-weight: bold;
+}
+
+.ContainerCard {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+.Container > div {
+  width: 149px;
+  height: 152px;
+  background-color: #fdf0ea;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.Container p {
+  color: #124a80;
+  margin-top: 18px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  width: 95px;
+  margin: 18px auto;
+}
+
+.CardEllipse2 {
+  position: absolute;
+  z-index: 1;
+  top: 2559px;
+  left: 275px;
+}
+
+.CardEllipse3 {
+  position: absolute;
+  top: 2870px;
+  left: 1011px;
+}
+
+.Images .FirstPicture {
+  position: relative;
+  width: 465px;
+  height: 449px;
+  margin-left: 22px;
+}
+
+.Images .SecondPicture {
+  position: absolute;
+  width: 465px;
+  height: 317px;
+  top: 2675px;
+  left: 671px;
+}
+
+.CustomizedCards {
+  width: 100%;
+  max-width: 1442px;
+  height: 855px;
+  padding: 0 141px;
+  padding-top: 227px;
+  background-color: #fdf0ea;
+  display: flex;
+}
+
+.CardsRequest h2 {
+  color: #eb6a2b;
+  font-size: 48px;
+  font-family: Roboto;
+  line-height: 100%;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.CardsRequest p {
+  color: #124a80;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 100%;
+  width: 569px;
+  margin-bottom: 50px;
+}
+
+.CardsRequest select {
+  width: 501px;
+  height: 52px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #124a80;
+  margin-top: 20px;
+  padding-left: 15px;
+  color: #124a80;
+  appearance: none;
+  background-image: url(../../assets/Vector\ 1.png);
+  background-repeat: no-repeat;
+  background-position: 453px 15px;
+  cursor: pointer;
+}
+
+.CardsRequest select:first-child {
+  margin-top: 0;
+}
+
+.CardPicture {
+  margin-top: 200px;
+}
+@media screen and (max-width: 480px) {
+  .CardWelcome {
+    height: 90%;
+  }
+
+  .CardWelcomeBody {
+    margin-left: 0;
+  }
+
+  .CardWelcomeBody img {
+    width: 80%;
+  }
+
+  .CardWelcome h2 {
+    width: 90%;
+    margin: 20px auto;
+    font-size: 30px;
+  }
+
+  .CardWelcomeBody button {
+    margin: auto;
+    display: block;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .WhatWeOffer {
+    padding: 0 0 0 0;
+    height: fit-content;
+  }
+
+  .WhatWeOffer > div {
+    flex-direction: column;
+  }
+
+  .WhatWeOffer > div h2 {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .Phone {
+    display: none;
+  }
+
+  .CardEllipse {
+    display: none;
+  }
+
+  .WhatWeOffer p {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .WhatWeOffer p :first-child {
+    margin-top: 0;
+  }
+
+  .LastP {
+    padding-bottom: 30px;
+  }
+
+  .ColorRectangle7 {
+    display: none;
+  }
+
+  .ColorRectangle9 {
+    display: none;
+  }
+
+  .WhatCardDo {
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+  }
+
+  .WhatCardDo h2 {
+    width: 90%;
+    font-size: 40px;
+    margin: 20px auto;
+  }
+
+  .CardEllipse {
+    display: none;
+  }
+
+  .CardEllipse2 {
+    display: none;
+  }
+
+  .CardEllipse3 {
+    display: none;
+  }
+
+  .ContainerCard {
+    flex-direction: column;
+  }
+
+  .Images .FirstPicture {
+    display: none;
+  }
+
+  .Images .SecondPicture {
+    display: none;
+  }
+
+  .CustomizedCards {
+    flex-direction: column;
+    padding: 0 0;
+    height: auto;
+  }
+
+  .CardsRequest h2 {
+    width: 90%;
+    font-size: 35px;
+    margin: 20px auto;
+    margin-top: 40px;
+  }
+
+  .CardsRequest p {
+    width: 90%;
+    margin: auto;
+  }
+
+  .CardsRequest select {
+    width: 90%;
+    margin: 20px auto;
+    display: block;
+    background-position: 90% 50%;
+  }
+
+  .CardsRequest button {
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .CardPicture {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .CardWelcome {
+    height: 90%;
+  }
+
+  .CardWelcomeBody {
+    margin-left: 0;
+  }
+
+  .CardWelcomeBody img {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+
+  .CardWelcome h2 {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .CardWelcomeBody button {
+    width: 50%;
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+
+  .WhatWeOffer {
+    padding: 50px 0 0 0;
+    height: fit-content;
+  }
+
+  .WhatWeOffer > div {
+    width: 100%;
+  }
+
+  .WhatWeOffer > div .Phone {
+    width: 50%;
+    margin-left: 30px;
+  }
+
+  .CardEllipse {
+    display: none;
+  }
+
+  .CardEllipse2 {
+    display: none;
+  }
+
+  .CardEllipse3 {
+    display: none;
+  }
+
+  .WhatWeOffer p {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .LastP {
+    padding-bottom: 20px;
+  }
+
+  .WhatCardDo {
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+  }
+
+  .WhatCardDo h2 {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .Images .FirstPicture {
+    display: none;
+  }
+
+  .Images .SecondPicture {
+    display: none;
+  }
+
+  .ContainerCard {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .CustomizedCards {
+    padding: 50px 50px;
+    height: auto;
+  }
+
+  .CardPicture {
+    display: none;
+  }
+
+  .CardsRequest button {
+    width: 70%;
+    display: block;
+    margin-left: 5px;
+  }
+}
