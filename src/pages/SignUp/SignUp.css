@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.SignUpContainer {
+  padding-top: 102px;
+  padding-bottom: 157px;
+  display: flex;
+}
+
+.SignUpForm {
+  margin-left: 100px;
+  margin-right: 234px;
+  width: 501px;
+}
+
+.SignUpForm h2 {
+  color: #eb6a2b;
+  margin-bottom: 50px;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Roboto;
+  line-height: 100%;
+  width: 300px;
+}
+
+.SignUpForm input {
+  width: 501px;
+  height: 50px;
+  border: 1px solid #124a80;
+  border-radius: 20px;
+  margin-top: 21px;
+  padding-left: 40px;
+}
+
+.SignUpForm input:first-child {
+  margin-top: 0;
+}
+
+.SignUpForm p {
+  color: #124a80;
+  margin-top: 45px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.SignUpForm p a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.SignUpContainer > img:first-child {
+  position: relative;
+}
+
+.RectangleBox {
+  position: absolute;
+  top: 700px;
+  left: 807px;
+}
+
+@media screen and (max-width: 480px) {
+  .SignUpContainer {
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  .SignUpForm {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .SignUpForm input {
+    width: 100%;
+  }
+
+  .SignUpForm button {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .RectangleBox {
+    display: none;
+  }
+
+  .SignUpContainer .SignUppicture {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .SignUpContainer {
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  .SignUpForm {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .SignUpForm input {
+    width: 100%;
+  }
+
+  .SignUpForm button {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .RectangleBox {
+    display: none;
+  }
+
+  .SignUpContainer .SignUppicture {
+    display: none;
+  }
+}

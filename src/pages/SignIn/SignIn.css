@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.SignInContainer {
+  padding-top: 102px;
+  padding-bottom: 157px;
+  display: flex;
+}
+
+.SignInForm {
+  margin-left: 100px;
+  margin-right: 234px;
+  width: 501px;
+}
+
+.SignInForm h2 {
+  color: #eb6a2b;
+  margin-bottom: 50px;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Roboto;
+  line-height: 100%;
+  width: 230px;
+}
+
+.SignInForm input {
+  width: 501px;
+  height: 50px;
+  border: 1px solid #124a80;
+  border-radius: 20px;
+  margin-top: 21px;
+  padding-left: 40px;
+}
+
+.SignInForm input:first-child {
+  margin-top: 0;
+}
+
+.SignInForm p {
+  color: #124a80;
+  margin-top: 45px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.SignInForm .Reset {
+  opacity: 20%;
+  margin-top: 25px;
+}
+
+.SignInForm p a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.SignInContainer > img:first-child {
+  margin-right: 152px;
+  position: relative;
+}
+
+.RectangleBox2 {
+  position: absolute;
+  top: 680px;
+  left: 807px;
+}
+
+@media screen and (max-width: 480px) {
+  .SignInContainer {
+    padding: 0;
+    padding-top: 40px;
+    height: fit-content;
+  }
+
+  .SignInForm {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .SignInForm input {
+    width: 100%;
+  }
+
+  .SignInForm button {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .RectangleBox2 {
+    display: none;
+  }
+
+  .SignInContainer .SignInpicture {
+    display: none;
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .SignInContainer {
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  .SignInForm {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .SignInForm input {
+    width: 100%;
+  }
+
+  .SignInForm button {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .RectangleBox2 {
+    display: none;
+  }
+
+  .SignInContainer .SignInpicture {
+    display: none;
+  }
+}

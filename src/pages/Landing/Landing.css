@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,9 +15,9 @@
 .Welcome .ManImage {
   position: absolute;
   bottom: 0;
-  top: 0;
+  top: 100px;
   right: 0;
-  left: 434px;
+  left: 534px;
 }
 
 .WelcomeText {
@@ -69,13 +70,7 @@
   background-color: #eb6a2b;
   height: 650px;
   display: flex;
-  align-items: center;
-  /* justify-content: space-between; */
-  padding: 182px 141px 197px 150px;
-}
-
-.RechargeText {
-  margin-right: 50px;
+  padding: 182px 100px 197px 100px;
 }
 
 .RechargeText h2 {
@@ -84,7 +79,7 @@
   line-height: 100%;
   font-weight: 500;
   font-family: Roboto;
-  /* width: 292px; */
+  margin-bottom: 51px;
 }
 
 .RechargeText .Card {
@@ -95,12 +90,18 @@
 .RechargeOption {
   display: flex;
   justify-content: space-between;
-  /* width: 60%; */
-  /* background-color: red; */
+  position: relative;
+  width: 800px;
+}
+
+.Rectangle {
+  position: absolute;
+  bottom: -60px;
+  left: 60px;
 }
 
 .RechargeOptions {
-  width: 33%;
+  width: 40%;
 }
 
 .RechargeBox {
@@ -112,19 +113,20 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  text-align: center;
 }
 
 .RechargeBox img {
   height: 70px;
-}
-
-.RechargeBox img {
   margin: auto;
   width: 100%;
 }
 
 .RechargeOptions .RechargePara1 {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 20px;
   margin-top: 18px;
   font-size: 18px;
   font-weight: 500;
@@ -139,12 +141,12 @@
   font-weight: 400;
   font-family: Roboto;
   color: white;
+  width: 192px;
 }
 
 .QuickRecharge {
   width: 100%;
   max-width: 1442px;
-  height: 1034px;
 }
 
 .ColorRectangle {
@@ -169,8 +171,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 21px 150px 62px;
-  align-items: center;
+  padding: 21px 80px 62px;
   width: 100%;
 }
 
@@ -183,7 +184,6 @@
   font-weight: 700px;
   font-family: Roboto;
   font-size: 48px;
-  /* padding: 20px 0px; */
   margin: 0;
 }
 
@@ -218,7 +218,6 @@
   font-size: 24px;
   text-align: center;
   border-radius: 20px;
-  /* margin-left: 20px; */
   cursor: pointer;
   background-color: #fff;
 }
@@ -239,6 +238,30 @@
   font-family: Roboto;
   font-weight: 400;
   padding-left: 20px;
+  appearance: none;
+  background-image: url(../../assets/Vector\ 1.png);
+  background-repeat: no-repeat;
+  background-position: 453px 15px;
+  cursor: pointer;
+}
+
+.SelectPlan input {
+  width: 501px;
+  margin: 10px auto;
+  height: 50px;
+  background-color: white;
+  border: 1px solid #124a80;
+  border-radius: 20px;
+  color: #124a80;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 400;
+  padding-left: 20px;
+  appearance: none;
+  background-image: url(../../assets/Ellipse\ 7.png);
+  background-repeat: no-repeat;
+  background-position: 453px 15px;
+  cursor: pointer;
 }
 
 .QuickRechargeText > button {
@@ -264,9 +287,10 @@
   color: #124a80;
 }
 
-.QuickRechargeText p span a {
+.QuickRechargeText p span {
   font-weight: 900;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .QuickRechargePicture {
@@ -274,10 +298,24 @@
   width: 601px;
 }
 
-.QuickRechargePicture img {
-  /* height: 100%; */
-  width: 100%;
+.QuickRechargePicture .PhoneMan {
+  display: block;
+  position: relative;
   margin: auto;
+  z-index: 1;
+}
+
+.ellipse {
+  position: absolute;
+  z-index: 1;
+  bottom: -1600px;
+  left: 700px;
+}
+
+.ellipse1 {
+  position: absolute;
+  right: 180px;
+  bottom: -1700px;
 }
 
 .Why {
@@ -287,7 +325,6 @@
 
 .WhyUs {
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   width: 100%;
   padding: 128px 259px 128px 324px;
@@ -297,9 +334,16 @@
   margin-right: 70px;
 }
 
-.WhyPicture img {
+.WhyPicture .BlackMan {
   width: 316px;
   height: 394px;
+  position: relative;
+}
+
+.WhyPicture .RectangleWhy {
+  position: absolute;
+  top: 3015px;
+  left: 290px;
 }
 
 .WhyBody h2 {
@@ -362,56 +406,294 @@
   width: 54.44%;
 }
 .DashboardPicture {
-  width: 100%;
+  margin: 100px auto;
 }
 
-.DashboardPictures {
-  display: flex;
-  width: 40%;
+.DashboardPicture img {
   margin: auto;
+  display: block;
 }
-
-.DashboardPictures img {
-  width: 80%;
-}
-
-/* .firstPicture {
-  position: relative;
-}
-
-.SecondPicture {
-  position: absolute;
-} */
 
 .DashCon {
   width: 100%;
-}
-
-.DashConButton {
-  width: 20%;
-  margin: auto;
 }
 
 .DashboardContainer h2 {
   color: #124a80;
   text-align: center;
   font-weight: 400;
-  font-size: 64px;
+  font-size: 60px;
   line-height: 100%;
   font-family: Roboto;
+  width: 1000px;
+  margin: auto;
 }
 
 .DashboardContainer button {
-  width: 269px;
-  height: 56px;
-  border-radius: 20px;
-  color: white;
-  text-align: center;
-  font-size: 18px;
-  line-height: 100%;
-  border: 0;
-  font-weight: 400;
-  margin-top: 50px;
-  cursor: pointer;
-  background-color: #eb6a2b;
+  margin: auto;
+  display: block;
+}
+
+/*Responsiveness*/
+
+@media screen and (max-width: 480px) {
+  .Welcome {
+    width: 100%;
+    background: none;
+    height: fit-content;
+  }
+
+  .WelcomeText {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    margin: auto;
+  }
+
+  .WelcomeText h2 {
+    font-size: 35px;
+    width: 80%;
+    margin: 30px auto;
+  }
+
+  .WelcomeText p {
+    font-size: 15px;
+    width: 80%;
+    margin: 30px auto;
+  }
+
+  .WelcomeText button {
+    width: 80%;
+    margin-left: 15%;
+  }
+
+  .Welcome .ManImage {
+    display: none;
+  }
+
+  .Recharge {
+    flex-direction: column;
+    padding: 40px 50px 90px 50px;
+    height: fit-content;
+  }
+
+  .Rectangle {
+    display: none;
+  }
+
+  .RechargeOption {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .RechargeOptions {
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  .RechargeOptions .RechargePara1 {
+    font-size: 25px;
+  }
+
+  .RechargeOptions .RechargePara2 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .QuickRechargeBody {
+    flex-direction: column;
+    padding: 0px 0px 0px;
+  }
+
+  .QuickRechargePicture {
+    display: none;
+  }
+
+  .RechargeButtons {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .QuickRechargeText {
+    width: 100%;
+    /* margin: auto; */
+  }
+
+  .QuickRechargeText h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .NetworkSelect {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+    background-position: 95% 50%;
+  }
+
+  .SelectPlan input {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+    background-position: 95% 50%;
+  }
+
+  .QuickRechargeText > button {
+    margin: auto;
+    display: block;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .QuickRechargeText > p {
+    margin: 30px;
+  }
+
+  .Why {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .WhyUs {
+    flex-direction: column;
+    padding: 50px 0px 0px 0px;
+  }
+
+  .WhyPicture {
+    margin-right: 0px;
+  }
+
+  .WhyPicture .RectangleWhy {
+    display: none;
+  }
+
+  .WhyBody h2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .WhyBody p {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .WhyBody button {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .DashboardContainer {
+    height: fit-content;
+  }
+
+  .DashboardPicture {
+    width: 100%;
+  }
+
+  .DashboardPicture img {
+    width: 100%;
+  }
+
+  .DashboardContainer h2 {
+    width: 90%;
+    font-size: 40px;
+  }
+
+  .DashboardContainer button {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Welcome {
+    width: 100%;
+    background: none;
+    height: fit-content;
+  }
+  .WelcomeText {
+    width: 100%;
+    margin: auto;
+  }
+  .WelcomeText h2 {
+    width: 70%;
+    margin: 30px auto;
+  }
+
+  .WelcomeText p {
+    width: 70%;
+    margin: 30px auto;
+  }
+
+  .Welcome .ManImage {
+    display: none;
+  }
+
+  .WelcomeText button {
+    width: 50%;
+    margin-left: 15%;
+    margin-bottom: 30px;
+  }
+
+  .Recharge {
+    flex-direction: column;
+    padding: 80px 50px 90px 50px;
+  }
+
+  .RechargeText h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .Rectangle {
+    display: none;
+  }
+
+  .Rectangle2 {
+    display: none;
+  }
+
+  .RechargeOption {
+    width: 100%;
+  }
+
+  .RechargeOptions {
+    width: 100%;
+  }
+
+  .QuickRechargePicture {
+    display: none;
+  }
+
+  .Why {
+    width: 100%;
+  }
+
+  .WhyUs {
+    padding: 50px 20px 0px 20px;
+  }
+
+  .WhyPicture .RectangleWhy {
+    display: none;
+  }
+
+  .DashboardContainer {
+    height: fit-content;
+  }
+
+  .DashboardPicture {
+    width: 100%;
+  }
+
+  .DashboardPicture img {
+    width: 100%;
+  }
+
+  .DashboardContainer h2 {
+    width: 90%;
+  }
+
+  .DashboardContainer button {
+    margin-bottom: 20px;
+  }
 }

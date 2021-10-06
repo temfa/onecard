@@ -1,5 +1,9 @@
 import React from "react";
 import "./Footer.css";
+import LogoWhite from "../../assets/LogoWhite.png";
+import instagram from "../../assets/instagram.png";
+import Twitter from "../../assets/Twitter.png";
+import Facebook from "../../assets/Facebook.png";
 
 const Footer = () => {
   return (
@@ -7,15 +11,7 @@ const Footer = () => {
       <div className="FooterHeader">
         <div className="FooterContainer">
           <div className="FooterText">
-            <h2>
-              {" "}
-              OneCard{" "}
-              <span>
-                {" "}
-                <br />
-                Nigeria{" "}
-              </span>
-            </h2>
+            <img src={LogoWhite} alt="logo" />
           </div>
           <div className="FooterNewsletter">
             <h2>Signup For Our Newsletter</h2>
@@ -30,7 +26,11 @@ const Footer = () => {
         <div className="Copyright">
           <p>Copyright © 2021. All rights reserved.</p>
         </div>
-        <div className="Socials"></div>
+        <div className="Socials">
+          <img src={instagram} alt="" />
+          <img src={Facebook} alt="" />
+          <img src={Twitter} alt="" />
+        </div>
       </div>
     </div>
   );
