@@ -53,7 +53,7 @@
 .WhatWeOffer > div h2 {
   color: #124a80;
   margin-left: 70px;
-  width: 392px;
+  width: 29%;
   font-size: 46px; /*Reduced the font so that it will break nicely*/
   font-weight: 400;
   line-height: 100%;
@@ -79,6 +79,11 @@
   text-align: justify;
   font-family: Roboto;
   line-height: 100%;
+  margin-top: 30px;
+}
+
+.WhatWeOffer p:first-child {
+  margin-top: 0;
 }
 
 .WhatCardDo {
@@ -167,6 +172,7 @@
   padding-top: 227px;
   background-color: #fdf0ea;
   display: flex;
+  align-items: center;
 }
 
 .CardsRequest h2 {
@@ -202,6 +208,7 @@
   background-repeat: no-repeat;
   background-position: 453px 15px;
   cursor: pointer;
+  background-color: #fdf0ea;
 }
 
 .CardsRequest select:first-child {
@@ -209,7 +216,7 @@
 }
 
 .CardPicture {
-  margin-top: 200px;
+  margin-top: 100px;
 }
 @media screen and (max-width: 480px) {
   .CardWelcome {
@@ -249,6 +256,7 @@
   .WhatWeOffer > div h2 {
     width: 90%;
     margin: 20px auto;
+    text-align: center;
   }
 
   .Phone {
@@ -260,7 +268,7 @@
   }
 
   .WhatWeOffer p {
-    width: 90%;
+    width: 80%;
     margin: 20px auto;
   }
 
@@ -326,6 +334,7 @@
     width: 90%;
     font-size: 35px;
     margin: 20px auto;
+    text-align: center;
     margin-top: 40px;
   }
 

@@ -82,7 +82,10 @@ const Services = () => {
           <img src={Ellipse2} alt="Ellipse2" className="ContactEllipse2" />
           <h2>
             Enjoy various
-            <span> recharge and payment options with One1Card</span>
+            <span>
+              {" "}
+              <br /> recharge and payment options with One1Card
+            </span>
           </h2>
           <Button
             buttonText="Explore"

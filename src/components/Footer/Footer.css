@@ -62,6 +62,11 @@
   border: 0;
 }
 
+.NewsletterBody input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
 .NewsletterBody button {
   width: 130px;
   height: 56px;
@@ -90,7 +95,7 @@
   color: white;
   font-size: 12px;
   line-height: 100%;
-  font-family: Poppins;
+  font-family: Roboto;
   padding-top: 35px;
 }
 
@@ -110,7 +115,7 @@
   }
 
   .FooterText {
-    width: 100%;
+    width: 50%;
     margin: auto;
     display: block;
   }
@@ -121,8 +126,8 @@
   }
 
   .FooterNewsletter {
-    margin: 30px auto;
-    display: block;
+    width: 90%;
+    margin: auto;
   }
 
   .NewsletterBody {
@@ -138,9 +143,15 @@
     width: 30%;
   }
 
+  .FooterBody p {
+    width: 100%;
+    text-align: center;
+  }
+
   .Socials {
-    width: 50%;
+    width: 90%;
     margin: 20px auto;
+    padding: 0 25%;
   }
 
   .Socials img {
@@ -153,11 +164,6 @@
     flex-direction: column;
     margin: auto;
   }
-
-  .FooterBody p {
-    width: 100%;
-    padding-left: 15%;
-  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -169,21 +175,18 @@
   .FooterHeader {
     padding: 0;
     height: fit-content;
-    width: 80%;
+    width: 100%;
   }
 
   .FooterContainer {
     width: 100%;
+    /* justify-content: space-around; */
   }
 
   .FooterText {
-    width: 100%;
+    width: 20%;
     margin: auto;
     display: block;
-  }
-
-  .FooterText img {
-    margin-left: 50px;
   }
 
   .FooterNewsletter {

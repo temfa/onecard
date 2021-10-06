@@ -76,15 +76,17 @@
 .RechargeText h2 {
   color: white;
   font-size: 36px;
-  line-height: 100%;
   font-weight: 500;
   font-family: Roboto;
+  width: 70%;
   margin-bottom: 51px;
+  line-height: 37px;
 }
 
 .RechargeText .Card {
   font-weight: 700;
   font-size: 48px;
+  line-height: 49px;
 }
 
 .RechargeOption {
@@ -503,7 +505,7 @@
 
   .QuickRechargeBody {
     flex-direction: column;
-    padding: 0px 0px 0px;
+    padding: 80px 0px 0px;
   }
 
   .QuickRechargePicture {
@@ -587,12 +589,8 @@
     height: fit-content;
   }
 
-  .DashboardPicture {
-    width: 100%;
-  }
-
-  .DashboardPicture img {
-    width: 100%;
+  .DashboardPicture .Pictures {
+    width: 90%;
   }
 
   .DashboardContainer h2 {
@@ -681,12 +679,8 @@
     height: fit-content;
   }
 
-  .DashboardPicture {
-    width: 100%;
-  }
-
   .DashboardPicture img {
-    width: 100%;
+    width: 90%;
   }
 
   .DashboardContainer h2 {
