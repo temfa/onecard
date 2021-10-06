@@ -58,7 +58,7 @@
 
 .RectangleBox {
   position: absolute;
-  top: 800px;
+  top: 700px;
   left: 807px;
 }
 
@@ -89,7 +89,6 @@
 
   .SignUpContainer .SignUppicture {
     display: none;
-    background-color: red;
   }
 }
 
@@ -120,6 +119,5 @@
 
   .SignUpContainer .SignUppicture {
     display: none;
-    background-color: red;
   }
 }
