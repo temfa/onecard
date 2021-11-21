@@ -32,7 +32,7 @@ const Landing = () => {
           <button>Quick Recharge</button>
         </div>
         <div>
-          <img src={Man} className="ManImage" alt="man" />
+          {/* <img src={Man} className="ManImage" alt="man" /> */}
         </div>
       </div>
       <div className="Recharge">
