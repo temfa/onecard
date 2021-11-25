@@ -15,9 +15,31 @@ import Group from "../../assets/Group.png";
 import Group2 from "../../assets/Group 189.png";
 import Group3 from "../../assets/Group 190.png";
 import Layer from "../../assets/Layer 3.png";
+import { useKeycloak } from '@react-keycloak/web';
 
 const Cards = () => {
+  const { keycloak } = useKeycloak();
+  console.log(keycloak);
+
   return (
+    // <div>
+    //   <h1>Cards Page</h1>
+       
+    //   <strong>Anyone can access this page</strong>
+
+    //   {keycloak.init ?
+    //     keycloak.authenticated && <pre >{JSON.stringify(keycloak, undefined, 2)}</pre>
+    //     : <h2>keycloak initializing ....!!!!</h2>
+    //   }
+    // </div>
+    // <div>
+    //   <div>User is {!keycloak?.authenticated ? 'NOT ' : ''} authenticated</div>
+    //   {!!keycloak?.authenticated && (
+    //     <button type="button" onClick={() => keycloak.logout()}>
+    //       Logout
+    //     </button>
+    //   )}
+    // </div>
     <div>
       <div className="CardWelcome">
         <Header />
