@@ -16,10 +16,15 @@ import Group2 from "../../assets/Group 189.png";
 import Group3 from "../../assets/Group 190.png";
 import Layer from "../../assets/Layer 3.png";
 import { useKeycloak } from '@react-keycloak/web';
+import ApiService from "../../services/ApiService";
 
 const Cards = () => {
   const { keycloak } = useKeycloak();
   console.log(keycloak);
+
+  const HTTP = ApiService.instance
+    HTTP.get('/provider/amounts')
+        .then(res => console.log(res.data));
 
   return (
     // <div>
@@ -43,6 +48,7 @@ const Cards = () => {
     <div>
       <div className="CardWelcome">
         <Header />
+        {/* {!keycloak.authenticated && <pre >{JSON.stringify(keycloak, undefined, 2)}</pre>} */}
         <div className="CardWelcomeBody">
           <img src={Top} alt="Top" />
           <h2>

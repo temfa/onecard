@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import UserService from "./services/UserService";
+// import UserService from "./services/UserService";
+import { ReactKeycloakProvider } from '@react-keycloak/web'
+import keycloak from './keycloak'
+import { Provider } from 'react-redux'
+import Store from './redux/store'
 
 const renderApp = () => ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ReactKeycloakProvider authClient={keycloak}>
+    <Provider store={Store}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Provider>
+  </ReactKeycloakProvider>,
   document.getElementById('root')
 );
 
