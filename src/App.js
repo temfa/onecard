@@ -6,6 +6,7 @@ import Contact from "./pages/Contact/Contact.js";
 import SignIn from "./pages/SignIn/SignIn.js";
 import SignUp from "./pages/SignUp/SignUp.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Success from "./pages/Success/Success.js";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/services" component={Services} />
           <Route path="/cards" component={Cards} />
           <Route path="/contact" component={Contact} />
+          <Route path="/success" component={Success} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
         </Switch>
