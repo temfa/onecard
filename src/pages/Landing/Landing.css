@@ -113,7 +113,6 @@
 .inputs {
   display: flex;
   flex-direction: column;
-  margin-bottom: 60px;
 }
 
 .inputs input {
@@ -139,6 +138,10 @@
   margin-bottom: 0px;
 }
 
+.button-section {
+  margin-top: 60px;
+}
+
 .button-section p {
   font-size: 14px;
   text-align: center;
@@ -148,6 +151,12 @@
 
 .button-section p span {
   font-weight: bold;
+}
+
+.button-section .error-message {
+  color: #eb312b;
+  margin-top: 0px;
+  margin-bottom: 16px;
 }
 
 .WelcomeText h2 {

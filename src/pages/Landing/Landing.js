@@ -25,38 +25,70 @@ const Landing = () => {
   const [activeService, setActiveService] = useState('Data')
   const [activeProvider, setActiveProvider] = useState('MTN-AIRTIME')
   const [providers] = useState(Providers)
-  const [recipient, updateRecipient] = useState(0)
-  const [cost, updateCost] = useState(0)
+  const [recipient, updateRecipient] = useState('')
+  const [cost, updateCost] = useState('')
   const [loadingBar, setLoadingBar] = useState(false)
+  const [errorMsg, setErrorMsg] = useState(null)
+  const [formIsValid, setFormIsValid] = useState(false)
 
   const activeServiceHandler = (service) => setActiveService(service)
   const activeProviderHandler = (provider) => setActiveProvider(provider)
-  const recipientHandler = (num) => num.length <= 11 ? updateRecipient(Number(num)) : null
+  const recipientHandler = (num) => { if (num.length <= 11) updateRecipient(num) }
   const costHandler = (num) => { updateCost(num) }
 
   const rechargeHandler = (e) => {
     e.preventDefault()
     setLoadingBar(true)
+
+    validateInput()
+
     const rechargeData = {
       "serviceCode": activeProvider,
       "recipient": recipient,
       "serviceCost": cost,
+      "redirectUrl": window.location.origin + '/success'
     }
 
-    axios
-      .post('https://onecard.factorialsystems.io/api/v1/recharge', rechargeData, { headers: {
-        "Content-Type": "application/json"
-      }})
-      .then(res => {
-        updateRecipient(0)
-        updateCost(0)
+    if (formIsValid) {
+      axios
+        .post('https://onecard.factorialsystems.io/api/v1/recharge', rechargeData, { headers: {
+          "Content-Type": "application/json"
+        }})
+        .then(res => {
+          updateRecipient('')
+          updateCost('')
+          setLoadingBar(false)
+          window.location.href = res.data.authorizationUrl
+        })
+        .catch(err => {
+          setLoadingBar(false)
+        })
+    } else {
+      setErrorMsg('Please check your input and try again!')
+      setTimeout(() => {
+        setErrorMsg(null)
         setLoadingBar(false)
-        window.open(res.data.authorizationUrl)
-      })
-      .catch(err => {
-        console.log(err)
-        setLoadingBar(false)
-      })
+      }, 2000)
+    }
+
+  }
+
+  const validateInput = () => {
+    localStorage.recipient = recipient
+
+    if (!recipient || !cost) {
+      setFormIsValid(false)
+    } else {
+      // if (recipient[0] !== '0') updateRecipient('0'+recipient)
+      if ('0'+recipient.length < 11 || cost.length < 2) {
+        setFormIsValid(false)
+      } else {
+        setFormIsValid(true)
+      }
+    }
+
+    updateRecipient('')
+    updateCost('')
   }
 
   return (
@@ -142,17 +174,30 @@ const Landing = () => {
                   </li>)
                 }
               </ul>
-              <div className="inputs">
-                <input 
+              { activeService === 'Data' && <div className="inputs">
+                <input
                   type="text" placeholder="Phone number" 
+                  onChange={e => recipientHandler(e.target.value)}
+                  disabled
+                />
+                <input 
+                  type="number" placeholder="Data Plan" 
+                  onChange={e => costHandler(e.target.value)}
+                  disabled
+                />
+              </div> }
+              { activeService === 'Airtime' && <div className="inputs">
+                <input
+                  type="text" placeholder="Phone number" value={recipient}
                   onChange={e => recipientHandler(e.target.value)}
                 />
                 <input 
-                  type="number" placeholder="Recharge amount" 
+                  type="number" placeholder="Recharge amount"  value={cost}
                   onChange={e => costHandler(e.target.value)}
                 />
-              </div>
+              </div> }
               <div className="button-section">
+                { errorMsg && <p className="error-message">{ errorMsg }</p> }
                 <OrangeButton buttonText="Recharge" loading={loadingBar} />
                 <p>For more recharge options | <span>Sign up</span></p>
               </div>
