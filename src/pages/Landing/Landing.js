@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
 import OrangeButton from "../../components/Button/OrangeButton";
-import PhoneMan from "../../assets/PhoneMan.png";
+// import PhoneMan from "../../assets/PhoneMan.png";
 import BlackMan from "../../assets/BlackMan.png";
 import Auto from "../../assets/Auto.svg";
 import Recharge from "../../assets/Recharge.svg";
@@ -13,8 +13,8 @@ import AppScreen from "../../assets/app-screens.png";
 // import Man from "../../assets/man.png";
 import HomePage from "../../assets/HomePage.png";
 import HomePage2 from "../../assets/HomePage2.png";
-import Eclipse from "../../assets/Ellipse 16.png";
-import Eclipse1 from "../../assets/Ellipse 17.png";
+// import Eclipse from "../../assets/Ellipse 16.png";
+// import Eclipse1 from "../../assets/Ellipse 17.png";
 import Rectangle from "../../assets/Rectangle 25.png";
 // import { useKeycloak } from '@react-keycloak/web';
 import Providers from "../../utils/providers";
@@ -76,7 +76,7 @@ const Landing = () => {
               Schedule (or automatically repeat) airtime recharges, data
               recharges, tv subscriptions or electricity payments
             </p>
-            <button>Quick Recharge</button>
+            <OrangeButton buttonText="Explore" frameOnly={true} />
           </div>
           <div className="quick-recharge">
             <form className="qr-content" onSubmit={rechargeHandler}>
