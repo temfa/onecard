@@ -11,7 +11,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* <h1>One1Card Website Design</h1> */}
         <Switch>
           <Route path="/" exact component={Landing} />
           <Route path="/home" component={Landing} />

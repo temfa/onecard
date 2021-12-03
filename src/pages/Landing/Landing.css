@@ -5,25 +5,149 @@
 }
 
 .Welcome {
-  background-image: url(../../assets/Rectangle\ 2.jpg);
+  background-image: url(../../assets/bg-home.png);
+  width: 100%;
   height: 900px;
   background-position: right top;
   background-repeat: no-repeat;
   position: relative;
 }
 
-.Welcome .ManImage {
-  position: absolute;
-  bottom: 0;
-  top: 100px;
-  right: 0;
-  left: 534px;
+.jumbo-recharge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100% - 125px);
+  margin-left: 150px;
+  margin-right: 80px;
 }
 
-.WelcomeText {
-  margin-left: 150px;
-  margin-top: 200px;
-  margin-right: 752px;
+.quick-recharge {
+  background: #fff;
+  border-radius: 40px;
+  padding: 50px;
+  min-width: 395px;
+  box-shadow: -13px 5px 126px rgba(235, 106, 43, 0.2);
+}
+
+.qr-content > h3 {
+  color: #124A80;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.qr-options {
+  margin-bottom: 60px;
+}
+
+.qr-options > p {
+  color: #124A80;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.options-list,
+.qr-providers {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.options-list li {
+  background: rgba(235, 106, 43, 0.1);
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 8px;
+  text-align: center;
+  /* margin-right: 10px; */
+}
+
+.qr-providers li {
+  width: 60px;
+  height: 40px;
+  /* margin-right: 10px; */
+  background: rgba(235, 106, 43, 0.1);
+  border-radius: 10px;
+}
+
+.options-list li:last-child,
+.qr-providers li:last-child {
+  margin-right: 0px;
+}
+
+.options-list li .material-icons,
+.qr-providers li .material-icons {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.options-list li > div,
+.qr-providers li > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options-list li,
+.qr-providers li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgba(7, 7, 7, 0.2);
+}
+
+.options-list li.active,
+.qr-providers li.active {
+  background: #124A80;
+  color: #fff;
+}
+
+.qr-providers {
+  margin-bottom: 12px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.inputs input {
+  border-radius: 10px;
+  border: 1px solid rgba(18, 74, 128, 0.5);
+  font-size: 12px;
+  color: #124a80;
+  padding: 13px 22px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.inputs input::placeholder {
+  color: rgba(18, 74, 128, 0.5);
+}
+
+.inputs input:active,
+.inputs input:focus {
+  border: 1px solid rgba(18, 74, 128, 0.8);
+}
+
+.inputs input:last-child {
+  margin-bottom: 0px;
+}
+
+.button-section p {
+  font-size: 14px;
+  text-align: center;
+  color: #124A80;
+  margin-top: 12px;
+}
+
+.button-section p span {
+  font-weight: bold;
 }
 
 .WelcomeText h2 {
