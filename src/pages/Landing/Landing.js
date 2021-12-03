@@ -24,7 +24,7 @@ const Landing = () => {
   // const { keycloak } = useKeycloak();
   const [activeService, setActiveService] = useState('Data')
   const [activeProvider, setActiveProvider] = useState('MTN-AIRTIME')
-  const [providers, setProviders] = useState(Providers)
+  const [providers] = useState(Providers)
   const [recipient, updateRecipient] = useState(0)
   const [cost, updateCost] = useState(0)
   const [loadingBar, setLoadingBar] = useState(false)
