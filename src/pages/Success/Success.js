@@ -2,7 +2,7 @@ import React from "react";
 import OrangeButton from "../../components/Button/OrangeButton";
 import Header from "../../components/Header/Header";
 import JumpingMan from "../../assets/success.png";
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import "./Success.css";
 
 const Success = () => {
