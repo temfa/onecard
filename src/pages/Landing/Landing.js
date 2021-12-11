@@ -23,9 +23,11 @@ import axios from "axios";
 const Landing = () => {
   // const { keycloak } = useKeycloak();
   const [activeService, setActiveService] = useState("Data");
+  const [activeServiceCode, setActiveServiceCode] = useState("");
   const [activeProvider, setActiveProvider] = useState("MTN-AIRTIME");
   const [providers] = useState(Providers);
   const [recipient, updateRecipient] = useState("");
+  const [telephone, updateTelephone] = useState("");
   const [cost, updateCost] = useState("");
   const [loadingBar, setLoadingBar] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -36,6 +38,9 @@ const Landing = () => {
   const recipientHandler = (num) => {
     if (num.length <= 11) updateRecipient(num);
   };
+  const telephoneHandler = (num) => {
+    if (num.length <= 10) updateTelephone(num);
+  };
   const costHandler = (num) => {
     updateCost(num);
   };
@@ -45,13 +50,25 @@ const Landing = () => {
     setLoadingBar(true);
 
     validateInput();
+    let rechargeData;
 
-    const rechargeData = {
-      serviceCode: activeProvider,
-      recipient: recipient,
-      serviceCost: cost,
-      redirectUrl: window.location.origin + "/success",
-    };
+    if (activeService === "Airtime") {
+      rechargeData = {
+        serviceCode: activeProvider,
+        recipient: recipient,
+        serviceCost: cost,
+        redirectUrl: window.location.origin + "/success",
+      };
+    } else if (activeService === "Power") {
+      rechargeData = {
+        serviceCode: activeServiceCode,
+        recipient: recipient,
+        telephone: telephone,
+        serviceCost: cost,
+        redirectUrl: window.location.origin + "/success",
+      };
+    }
+    
 
     if (formIsValid) {
       axios
@@ -174,7 +191,8 @@ const Landing = () => {
                 </ul>
               </div>
               <ul className="qr-providers">
-                {providers.map((provider, index) => (
+                {activeService === "Data" || activeService === "Airtime" 
+                  ? providers.map((provider, index) => (
                   <li
                     key={index}
                     className={
@@ -186,8 +204,17 @@ const Landing = () => {
                       src={provider.logo}
                       alt={`provider - ${provider.provider}`}
                     />
-                  </li>
-                ))}
+                  </li>))
+                  : activeService === "Power" && <select 
+                      className="select-input"
+                      value={activeServiceCode}
+                      onChange={(e) => setActiveServiceCode(e.target.value)}
+                    >
+                    <option>Choose provider</option>
+                    <option value="JED">JED</option>
+                    <option value="EKEDP">EKEDP</option>
+                  </select>
+                }
               </ul>
               {activeService === "Data" && (
                 <div className="inputs">
@@ -212,6 +239,28 @@ const Landing = () => {
                     placeholder="Phone number"
                     value={recipient}
                     onChange={(e) => recipientHandler(e.target.value)}
+                  />
+                  <input
+                    type="number"
+                    placeholder="Recharge amount"
+                    value={cost}
+                    onChange={(e) => costHandler(e.target.value)}
+                  />
+                </div>
+              )}
+              {activeService === "Power" && (
+                <div className="inputs">
+                  <input
+                    type="text"
+                    placeholder="Meter number"
+                    value={recipient}
+                    onChange={(e) => recipientHandler(e.target.value)}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Phone number"
+                    value={telephone}
+                    onChange={(e) => telephoneHandler(e.target.value)}
                   />
                   <input
                     type="number"
