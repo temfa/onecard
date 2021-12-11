@@ -233,6 +233,19 @@
   background-color: #fdf0ea;
 }
 
+.CardsRequest button {
+  padding: 18px 36px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-family: Roboto;
+  cursor: pointer;
+  background-color: #eb6a2b;
+  border: none;
+  color: #fff;
+  margin-top: 20px;
+  width: 319px;
+}
+
 .CardsRequest select:first-child {
   margin-top: 0;
 }
@@ -493,8 +506,22 @@
     display: none;
   }
 
+  .CardsRequest {
+    width: 100%;
+    margin: auto;
+  }
+
+  .CardsRequest input {
+    width: 100%;
+  }
+
+  .CardsRequest select {
+    width: 100%;
+    background-position: 95% 50%;
+  }
+
   .CardsRequest button {
-    width: 70%;
+    width: 100%;
     display: block;
     margin-left: 5px;
   }

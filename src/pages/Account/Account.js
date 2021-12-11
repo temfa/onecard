@@ -1,5 +1,4 @@
 import React from "react";
-import OrangeButton from "../../components/Button/OrangeButton";
 import Button from "../../components/Button/Button";
 import Header from "../../components/Header/Header";
 import JumpingMan from "../../assets/Rectangle 7.png";

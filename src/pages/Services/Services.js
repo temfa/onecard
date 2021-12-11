@@ -6,7 +6,6 @@ import Button from "../../components/Button/Button";
 import ServicesBox from "../../components/ServicesBox/ServicesBox";
 import ServicesMan from "../../assets/ServicesMan.png";
 import System from "../../assets/System.png";
-import LightBulb from "../../assets/LightBulb.png";
 import GroupPeople from "../../assets/GroupPeople.png";
 import Laptop from "../../assets/Laptop.png";
 import BlackMan2 from "../../assets/BlackMan2.png";

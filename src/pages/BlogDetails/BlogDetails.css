@@ -78,3 +78,44 @@
 .BlogDetailsBody .FeaturedSingle h2 {
   padding-bottom: 50px;
 }
+
+@media screen and (max-width: 1024px) {
+  .BlogDetailsBody {
+    padding: 90px 10px 0px 40px;
+  }
+
+  .BlogDetailsWelcome {
+    /* flex-direction: column; */
+    width: 100%;
+    margin: auto;
+  }
+
+  .BlogDetailsWelcome > img {
+    display: none;
+  }
+
+  .BlogDetailsWelcome > div {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .BlogDetailsWelcome h2 {
+    width: 90%;
+  }
+
+  .BlogDetailsBody .FeaturedCon {
+    margin: 20px auto;
+    display: block;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .BlogDetailsBody {
+    padding: 10px 10px 0px 10px;
+  }
+
+  .BlogDetailsBody .FeaturedSingle {
+    width: 100%;
+  }
+}

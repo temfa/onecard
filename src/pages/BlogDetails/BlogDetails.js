@@ -3,7 +3,6 @@ import "./BlogDetails.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import FeaturedSingle from "../../assets/featuredsingle.png";
-import One from "../../assets/One.png";
 import Vector2 from "../../assets/Vector2.png";
 import Vector1 from "../../assets/Vector(1).png";
 import Two from "../../assets/two.png";

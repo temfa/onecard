@@ -587,7 +587,6 @@
 @media screen and (max-width: 480px) {
   .Welcome {
     width: 100%;
-    background: none;
     height: fit-content;
   }
 
@@ -752,7 +751,6 @@
 @media screen and (max-width: 1024px) {
   .Welcome {
     width: 100%;
-    background: none;
     height: fit-content;
   }
   .jumbo-recharge {

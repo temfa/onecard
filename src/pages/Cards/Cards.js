@@ -151,12 +151,7 @@ const Cards = () => {
             <select>
               <option>Denomination </option>
             </select>
-            <Button
-              buttonText="Request Recharge Card"
-              marginTop="50px"
-              backgroundColor="#EB6A2B"
-              Color="White"
-            />
+            <button>Request Recharge Card</button>
           </div>
           <div className="CardPicture">
             <img src={Bottom} alt="" />

@@ -6,6 +6,7 @@ import Geeky from "../../assets/geeky.png";
 import FeaturedSingle from "../../assets/featuredsingle.png";
 import One from "../../assets/One.png";
 import Three from "../../assets/three.png";
+import { NavLink } from "react-router-dom";
 
 const Blog = () => {
   return (
@@ -72,7 +73,11 @@ const Blog = () => {
               </p>
               <div>
                 <p>Tue 18, Oct 202 | 10:45am</p>
-                <button>Read More</button>
+                <NavLink to="/blogdetails">
+                  <NavLink to="/blogdetails">
+                    <button>Read More</button>
+                  </NavLink>
+                </NavLink>
               </div>
             </div>
             <div className="FilterSingle">
@@ -92,7 +97,9 @@ const Blog = () => {
               </p>
               <div>
                 <p>Tue 18, Oct 202 | 10:45am</p>
-                <button>Read More</button>
+                <NavLink to="/blogdetails">
+                  <button>Read More</button>
+                </NavLink>
               </div>
             </div>
             <div className="FilterSingle">
@@ -112,7 +119,9 @@ const Blog = () => {
               </p>
               <div>
                 <p>Tue 18, Oct 202 | 10:45am</p>
-                <button>Read More</button>
+                <NavLink to="/blogdetails">
+                  <button>Read More</button>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -134,7 +143,9 @@ const Blog = () => {
               </p>
               <div>
                 <p>Tue 18, Oct 202 | 10:45am</p>
-                <button>Read More</button>
+                <NavLink to="/blogdetails">
+                  <button>Read More</button>
+                </NavLink>
               </div>
             </div>
             <div className="FilterSingle">
@@ -154,7 +165,9 @@ const Blog = () => {
               </p>
               <div>
                 <p>Tue 18, Oct 202 | 10:45am</p>
-                <button>Read More</button>
+                <NavLink to="/blogdetails">
+                  <button>Read More</button>
+                </NavLink>
               </div>
             </div>
             <div className="FilterSingle">
@@ -174,7 +187,9 @@ const Blog = () => {
               </p>
               <div>
                 <p>Tue 18, Oct 202 | 10:45am</p>
-                <button>Read More</button>
+                <NavLink to="/blogdetails">
+                  <button>Read More</button>
+                </NavLink>
               </div>
             </div>
           </div>
