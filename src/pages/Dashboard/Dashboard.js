@@ -9,10 +9,13 @@ const Dashboard = () => {
     console.log(keycloak)
     return (
         <div>
-            {initialized ?
-                keycloak.authenticated && <pre>{JSON.stringify(keycloak, undefined, 2)}</pre>
+            <AppLayout pageTitle="Dashboard">
+                    <p>Dashboard content</p>
+                </AppLayout>
+            {/* {keycloak.init ?
+                keycloak.authenticated && <p>Hello</p>
                 : <h2>keycloak initializing ....!!!!</h2>
-            }
+            } */}
             {/* {`User is ${!keycloak.authenticated ? 'NOT ' : ''}authenticated`} */}
 
             {/* { keycloak.authenticated

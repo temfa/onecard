@@ -8,6 +8,7 @@ import SignUp from "./pages/SignUp/SignUp.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Success from "./pages/Success/Success.js";
 import Dashboard from "./pages/Dashboard/Dashboard.js";
+import SingleRecharge from "./pages/SingleRecharge/SingleRecharge.js";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/single" component={SingleRecharge} />
         </Switch>
       </div>
     </Router>

@@ -1,6 +1,5 @@
 import React from 'react'
 import Sidebar from '../components/Sidebar/Sidebar'
-import Footer from '../components/Footer/Footer'
 import Profile from '../components/Profile/Profile'
 
 const WebLayout = ({ children, pageTitle }) => {
