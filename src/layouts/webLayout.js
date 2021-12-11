@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 
-const WebsiteLayout = ({ children }) => {
+const WebLayout = ({ children }) => {
     return (
         <>
             <Header />
@@ -12,4 +12,4 @@ const WebsiteLayout = ({ children }) => {
     )
 }
 
-export default WebsiteLayout
+export default WebLayout

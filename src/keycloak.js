@@ -8,6 +8,9 @@ const keycloakConfig = {
    onLoad: 'check-sso',
    pkceMethod: 'S256',
    checkLoginIframe: true,
+   sslRequired: "external",
+   resource: "public-client",
+   publicClient: true,
 //    checkLoginIframeInterval: 25,
 //    frameAncestors: 'self'
 }

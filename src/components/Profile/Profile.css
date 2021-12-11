@@ -1,0 +1,40 @@
+.profile {
+    padding: 60px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-title {
+    font-size: 44px;
+    color: #EB6A2B;
+}
+
+.profile-section,
+.profile-details {
+    display: flex;
+    align-items: center;
+}
+
+.profile-section > img {
+    width: 28px;
+}
+
+.profile-details {
+    margin-left: 25px;
+}
+
+.profile-details h4 {
+    font-size: 18px;
+    color: #124A80;
+}
+
+.image-box {
+    margin-left: 12.5px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}

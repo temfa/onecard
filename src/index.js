@@ -6,16 +6,16 @@ import reportWebVitals from './reportWebVitals';
 // import UserService from "./services/UserService";
 import { ReactKeycloakProvider } from '@react-keycloak/web'
 import keycloak from './keycloak'
-import { Provider } from 'react-redux'
-import Store from './redux/store'
+// import { Provider } from 'react-redux'
+// import Store from './redux/store'
 
 const renderApp = () => ReactDOM.render(
   <ReactKeycloakProvider authClient={keycloak}>
-    <Provider store={Store}>
+    {/* <Provider store={Store}> */}
       <React.StrictMode>
         <App />
       </React.StrictMode>
-    </Provider>
+    {/* </Provider> */}
   </ReactKeycloakProvider>,
   document.getElementById('root')
 );
