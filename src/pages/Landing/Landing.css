@@ -160,6 +160,17 @@
   margin-bottom: 16px;
 }
 
+.select-input {
+  width: 100%;
+  padding: 13px 22px;
+  padding-left: 18px;
+  border-radius: 10px;
+  /* color: #124a80; */
+  color: rgba(18, 74, 128, 0.75);
+  border: 1px solid rgba(18, 74, 128, 0.5);
+  outline: none;
+}
+
 .WelcomeText .Eclipse {
   position: absolute;
   left: 707px;
