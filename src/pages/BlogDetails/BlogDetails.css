@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.BlogDetailsBody {
+  padding: 100px 120px 0px 150px;
+}
+
+.BlogDetailsWelcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.BlogDetailsWelcome h2 {
+  width: 425px;
+  font-size: 60px;
+  line-height: 100%;
+  font-family: Roboto;
+  font-weight: 400;
+  color: #124a80;
+}
+
+.BlogDetailsWelcome p {
+  font-size: 10px;
+  margin-top: 30px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #eb6a2b;
+  font-family: Roboto;
+}
+
+.BlogDetailsBody p {
+  margin-top: 90px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Roboto;
+  line-height: 100%;
+  color: #124a80;
+  margin-bottom: 45px;
+}
+
+.BlogDetailsBody .Like {
+  display: flex;
+}
+
+.Like h4 {
+  margin-top: 47px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Roboto;
+  line-height: 100%;
+  color: #124a80;
+  margin-bottom: 45px;
+  margin-left: 40px;
+}
+
+.Like h4:first-child {
+  margin-left: 0;
+}
+
+.BlogDetailsBody > h2 {
+  color: #124a80;
+  font-size: 36px;
+  line-height: 100%;
+  font-family: Roboto;
+  font-weight: 700;
+  margin-left: 10px;
+  padding: 20px 0;
+}
+
+.BlogDetailsBody .FeaturedCon {
+  margin-bottom: 66px;
+}
+
+.BlogDetailsBody .FeaturedSingle h2 {
+  padding-bottom: 50px;
+}

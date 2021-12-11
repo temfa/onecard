@@ -65,7 +65,7 @@
   font-size: 18px;
   line-height: 100%;
   color: #124a80;
-  margin-left: 70px;
+  margin-left: 50px;
   cursor: pointer;
 }
 
@@ -86,10 +86,10 @@
 
 .SignUpButton {
   width: 139px;
-  background-color: #124a80;
+  background-color: #fff;
   border: 0;
   height: 45px;
-  color: white;
+  color: #124a80;
   font-weight: 700;
   line-height: 100%;
   text-align: center;

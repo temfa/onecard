@@ -7,6 +7,9 @@ import SignIn from "./pages/SignIn/SignIn.js";
 import SignUp from "./pages/SignUp/SignUp.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Success from "./pages/Success/Success.js";
+import Blog from "./pages/Blog/Blog.js";
+import Account from "./pages/Account/Account.js";
+import BlogDetails from "./pages/BlogDetails/BlogDetails.js";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path="/success" component={Success} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/blogdetails" component={BlogDetails} />
+          <Route path="/account" component={Account} />
         </Switch>
       </div>
     </Router>

@@ -1,36 +1,42 @@
 .container {
-    padding: 150px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .success-content {
-    width: 45%;
-    /* margin-right: 234px; */
+  width: 45%;
+  /* margin-right: 234px; */
 }
 
 .success-content h3 {
-    font-size: 48px;
-    color: #EB6A2B;
-    font-weight: bold;
-    font-family: Roboto;
-    margin-bottom: 30px;
+  font-size: 48px;
+  color: #eb6a2b;
+  font-weight: bold;
+  font-family: Roboto;
+  margin-bottom: 30px;
 }
 
 .success-content p {
-    font-size: 18px;
-    color: #124A80;
-    font-family: Roboto;
-    margin-bottom: 60px;
+  font-size: 18px;
+  color: #124a80;
+  font-family: Roboto;
+  margin-bottom: 60px;
 }
 
 .success-image {
-    width: 35%;
-    background: #EB6A2B;
-    border-radius: 33px;
-    height: 520px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 35%;
+  background: #eb6a2b;
+  border-radius: 33px;
+  height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SuccessRetangle {
+  position: absolute;
+  top: 730px;
+  left: 788px;
 }
