@@ -1,13 +1,18 @@
 import React from "react";
-import AppLayout from "../../layouts/appLayout"
-import './SingleRecharge.css'
+import RechargeDet from "../../components/RechargeDet/RechargeDet";
+import AppLayout from "../../layouts/appLayout";
+import "./SingleRecharge.css";
+import Recharge from "../../components/Recharge/Recharge";
 
 const SingleRecharge = () => {
-    return (
-        <AppLayout pageTitle="Single Recharge">
-            <p>Single Recharge content</p>
-        </AppLayout>
-    )
-}
+  return (
+    <AppLayout pageTitle="Single Recharge">
+      <div className="single-body">
+        <RechargeDet />
+        <Recharge />
+      </div>
+    </AppLayout>
+  );
+};
 
-export default SingleRecharge
+export default SingleRecharge;

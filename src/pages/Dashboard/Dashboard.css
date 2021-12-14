@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.dashboard-body {
+  padding: 81px 50px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .dashboard-body .account {
+  background-color: green;
+} */
+
+.account > h2,
+.trans > h2,
+.dashboard-quick > h2 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #124a80;
+  margin-bottom: 20px;
+}
+
+.dashboard-container {
+  background: linear-gradient(182.03deg, #eb6a2b 24.15%, #ff0000 128.13%);
+  border-radius: 20px;
+  padding: 40px 50px 20px 20px;
+  width: 460px;
+  color: white;
+  height: 301px;
+  margin-bottom: 53px;
+}
+
+.dashboard-quick-body {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 90px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 468px;
+}
+
+.quick-body1,
+.quick-body2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trans > button {
+  margin-right: 12px;
+}
+
+.trans-body {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 90px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 468px;
+  padding: 40px 30px 30px 30px;
+}
+
+.trans {
+  margin-left: 46px;
+}
+
+.trans-body > div {
+  display: flex;
+}
+
+.trans-body .type {
+  margin-left: 143px;
+  margin-right: 46px;
+}
+
+.trans-body .trans-head {
+  font-weight: 500;
+  color: #eb6a2b;
+  font-size: 11px;
+  margin-bottom: 20px;
+  line-height: 100%;
+}
+
+.view {
+  text-align: center;
+  color: #124a80;
+  margin-top: 19px;
+  font-size: 9px;
+  line-height: 100%;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+  .dashboard-body {
+    flex-direction: column;
+    padding: 81px 0px 10px 20px;
+  }
+  .trans-body {
+    padding: 40px 0px 30px 30px;
+  }
+  .dashboard-container {
+    padding: 40px 0px 20px 20px;
+  }
+
+  .trans {
+    margin-left: 0px;
+  }
+
+  .dashboard-quick {
+    padding-right: 0px;
+  }
+
+  .account > h2,
+  .trans > h2,
+  .dashboard-quick > h2 {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dashboard-body {
+    padding: 0;
+  }
+
+  .dashboard-container,
+  .dashboard-quick {
+    width: 90%;
+    margin: auto;
+  }
+
+  .dashboard-quick-body {
+    width: 100%;
+  }
+
+  .quick-body1,
+  .quick-body2 {
+    padding: 0 20px;
+  }
+
+  .trans-body {
+    padding: 0;
+    width: 90%;
+    margin: 20px;
+  }
+
+  .trans-body > div {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .view {
+    padding-bottom: 20px;
+  }
+
+  .trans-body .type {
+    margin-left: 123px;
+    margin-right: 6px;
+  }
+
+  .trans-body .trans-head {
+    padding-top: 20px;
+  }
+
+  .account > h2,
+  .trans > h2 {
+    margin-left: 20px;
+  }
+
+  .trans button {
+    margin: auto;
+    display: block;
+  }
+}

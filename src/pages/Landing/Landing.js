@@ -18,84 +18,92 @@ import HomePage2 from "../../assets/HomePage2.png";
 import Rectangle from "../../assets/Rectangle 25.png";
 // import { useKeycloak } from '@react-keycloak/web';
 import Providers from "../../utils/providers";
-import axios from 'axios';
+import axios from "axios";
 
 const Landing = () => {
   // const { keycloak } = useKeycloak();
-  const [activeService, setActiveService] = useState('Data')
-  const [activeProvider, setActiveProvider] = useState('MTN-AIRTIME')
-  const [providers] = useState(Providers)
-  const [recipient, updateRecipient] = useState('')
-  const [cost, updateCost] = useState('')
-  const [loadingBar, setLoadingBar] = useState(false)
-  const [errorMsg, setErrorMsg] = useState(null)
-  const [formIsValid, setFormIsValid] = useState(false)
+  const [activeService, setActiveService] = useState("Data");
+  const [activeProvider, setActiveProvider] = useState("MTN-AIRTIME");
+  const [providers] = useState(Providers);
+  const [recipient, updateRecipient] = useState("");
+  const [cost, updateCost] = useState("");
+  const [loadingBar, setLoadingBar] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(null);
+  const [formIsValid, setFormIsValid] = useState(false);
 
-  const activeServiceHandler = (service) => setActiveService(service)
-  const activeProviderHandler = (provider) => setActiveProvider(provider)
-  const recipientHandler = (num) => { if (num.length <= 11) updateRecipient(num) }
-  const costHandler = (num) => { updateCost(num) }
+  const activeServiceHandler = (service) => setActiveService(service);
+  const activeProviderHandler = (provider) => setActiveProvider(provider);
+  const recipientHandler = (num) => {
+    if (num.length <= 11) updateRecipient(num);
+  };
+  const costHandler = (num) => {
+    updateCost(num);
+  };
 
   const rechargeHandler = (e) => {
-    e.preventDefault()
-    setLoadingBar(true)
+    e.preventDefault();
+    setLoadingBar(true);
 
-    validateInput()
+    validateInput();
 
     const rechargeData = {
-      "serviceCode": activeProvider,
-      "recipient": recipient,
-      "serviceCost": cost,
-      "redirectUrl": window.location.origin + '/success'
-    }
+      serviceCode: activeProvider,
+      recipient: recipient,
+      serviceCost: cost,
+      redirectUrl: window.location.origin + "/success",
+    };
 
     if (formIsValid) {
       axios
-        .post('https://onecard.factorialsystems.io/api/v1/recharge', rechargeData, { headers: {
-          "Content-Type": "application/json"
-        }})
-        .then(res => {
-          updateRecipient('')
-          updateCost('')
-          setLoadingBar(false)
-          window.location.href = res.data.authorizationUrl
+        .post(
+          "https://onecard.factorialsystems.io/api/v1/recharge",
+          rechargeData,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
+        .then((res) => {
+          updateRecipient("");
+          updateCost("");
+          setLoadingBar(false);
+          window.location.href = res.data.authorizationUrl;
         })
-        .catch(err => {
-          setLoadingBar(false)
-        })
+        .catch((err) => {
+          setLoadingBar(false);
+        });
     } else {
-      setErrorMsg('Please check your input and try again!')
+      setErrorMsg("Please check your input and try again!");
       setTimeout(() => {
-        setErrorMsg(null)
-        setLoadingBar(false)
-      }, 2000)
+        setErrorMsg(null);
+        setLoadingBar(false);
+      }, 2000);
     }
-
-  }
+  };
 
   const validateInput = () => {
-    localStorage.recipient = recipient
+    localStorage.recipient = recipient;
 
     if (!recipient || !cost) {
-      setFormIsValid(false)
+      setFormIsValid(false);
     } else {
       // if (recipient[0] !== '0') updateRecipient('0'+recipient)
-      if ('0'+recipient.length < 11 || cost.length < 2) {
-        setFormIsValid(false)
+      if ("0" + recipient.length < 11 || cost.length < 2) {
+        setFormIsValid(false);
       } else {
-        setFormIsValid(true)
+        setFormIsValid(true);
       }
     }
 
-    updateRecipient('')
-    updateCost('')
-  }
+    updateRecipient("");
+    updateCost("");
+  };
 
   return (
     <div>
       {/* <div>{`User is ${!keycloak.authenticated ? 'NOT ' : ''
         }authenticated`}</div> */}
-
       {/* {!!keycloak.authenticated && ( */}
       <div className="Welcome">
         <Header />
@@ -118,7 +126,7 @@ const Landing = () => {
                 <ul className="options-list">
                   <li
                     className={activeService === "Data" ? "active" : ""}
-                    onClick={() => activeServiceHandler('Data')}
+                    onClick={() => activeServiceHandler("Data")}
                   >
                     <div>
                       <span className="material-icons">wifi</span>
@@ -127,7 +135,7 @@ const Landing = () => {
                   </li>
                   <li
                     className={activeService === "Airtime" ? "active" : ""}
-                    onClick={() => activeServiceHandler('Airtime')}
+                    onClick={() => activeServiceHandler("Airtime")}
                   >
                     <div>
                       <span className="material-icons">phone_in_talk</span>
@@ -136,7 +144,7 @@ const Landing = () => {
                   </li>
                   <li
                     className={activeService === "Power" ? "active" : ""}
-                    onClick={() => activeServiceHandler('Power')}
+                    onClick={() => activeServiceHandler("Power")}
                   >
                     <div>
                       <span className="material-icons">power</span>
@@ -145,7 +153,7 @@ const Landing = () => {
                   </li>
                   <li
                     className={activeService === "CableTV" ? "active" : ""}
-                    onClick={() => activeServiceHandler('CableTV')}
+                    onClick={() => activeServiceHandler("CableTV")}
                   >
                     <div>
                       <span className="material-icons">live_tv</span>
@@ -154,7 +162,7 @@ const Landing = () => {
                   </li>
                   <li
                     className={activeService === "Others" ? "active" : ""}
-                    onClick={() => activeServiceHandler('Others')}
+                    onClick={() => activeServiceHandler("Others")}
                   >
                     <div>
                       <span className="material-icons">add_circle_outline</span>
@@ -164,42 +172,59 @@ const Landing = () => {
                 </ul>
               </div>
               <ul className="qr-providers">
-                {
-                  providers.map((provider, index) => <li
+                {providers.map((provider, index) => (
+                  <li
                     key={index}
-                    className={activeProvider === provider.serviceCode ? "active" : ""}
+                    className={
+                      activeProvider === provider.serviceCode ? "active" : ""
+                    }
                     onClick={() => activeProviderHandler(provider.serviceCode)}
                   >
-                    <img src={provider.logo} alt={`provider - ${provider.provider}`} />
-                  </li>)
-                }
+                    <img
+                      src={provider.logo}
+                      alt={`provider - ${provider.provider}`}
+                    />
+                  </li>
+                ))}
               </ul>
-              { activeService === 'Data' && <div className="inputs">
-                <input
-                  type="text" placeholder="Phone number" 
-                  onChange={e => recipientHandler(e.target.value)}
-                  disabled
-                />
-                <input 
-                  type="number" placeholder="Data Plan" 
-                  onChange={e => costHandler(e.target.value)}
-                  disabled
-                />
-              </div> }
-              { activeService === 'Airtime' && <div className="inputs">
-                <input
-                  type="text" placeholder="Phone number" value={recipient}
-                  onChange={e => recipientHandler(e.target.value)}
-                />
-                <input 
-                  type="number" placeholder="Recharge amount"  value={cost}
-                  onChange={e => costHandler(e.target.value)}
-                />
-              </div> }
+              {activeService === "Data" && (
+                <div className="inputs">
+                  <input
+                    type="text"
+                    placeholder="Phone number"
+                    onChange={(e) => recipientHandler(e.target.value)}
+                    disabled
+                  />
+                  <input
+                    type="number"
+                    placeholder="Data Plan"
+                    onChange={(e) => costHandler(e.target.value)}
+                    disabled
+                  />
+                </div>
+              )}
+              {activeService === "Airtime" && (
+                <div className="inputs">
+                  <input
+                    type="text"
+                    placeholder="Phone number"
+                    value={recipient}
+                    onChange={(e) => recipientHandler(e.target.value)}
+                  />
+                  <input
+                    type="number"
+                    placeholder="Recharge amount"
+                    value={cost}
+                    onChange={(e) => costHandler(e.target.value)}
+                  />
+                </div>
+              )}
               <div className="button-section">
-                { errorMsg && <p className="error-message">{ errorMsg }</p> }
+                {errorMsg && <p className="error-message">{errorMsg}</p>}
                 <OrangeButton buttonText="Recharge" loading={loadingBar} />
-                <p>For more recharge options | <span>Sign up</span></p>
+                <p>
+                  For more recharge options | <span>Sign up</span>
+                </p>
               </div>
             </form>
           </div>
@@ -283,9 +308,7 @@ const Landing = () => {
           />
         </div>
       </div>
-      <Footer />
-      )
-      {/* } */}
+      <Footer />){/* } */}
     </div>
   );
 };
