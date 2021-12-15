@@ -46,7 +46,7 @@ const Dashboard = () => {
           <div className="account">
             <h2>Account Balance</h2>
             <div className="dashboard-container">
-              <p>One Card Nigeria</p>
+              <h3>One Card Nigeria</h3>
               <h2>#896,584,697.00</h2>
               <p>24 Jan, 2021</p>
             </div>

@@ -123,7 +123,7 @@ const Profile = ({ pageTitle, userDetails }) => {
           <div className="profile-details">
             <h4>Peter James</h4>
             <div className="image-box">
-              <img src={ProfilePicture} alt="picture of current user" />
+              <img src={ProfilePicture} alt="pic of current user" />
             </div>
           </div>
         </div>

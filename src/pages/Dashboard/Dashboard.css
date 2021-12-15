@@ -35,6 +35,32 @@
   margin-bottom: 53px;
 }
 
+.dashboard-container h3 {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 40px;
+  line-height: 100%;
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+.dashboard-container h2 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 90px;
+  line-height: 100%;
+  font-family: Roboto;
+  font-weight: 700;
+}
+
+.dashboard-container p {
+  color: white;
+  font-size: 12px;
+  line-height: 100%;
+  font-family: Roboto;
+  font-weight: 400;
+}
+
 .dashboard-quick-body {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0px 4px 90px 4px rgba(0, 0, 0, 0.1);

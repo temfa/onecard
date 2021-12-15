@@ -10,7 +10,7 @@ const BeneficiaryDetail = (props) => {
   return (
     <div className="beneficiary-body" style={BeneStyle}>
       <div className="beneficiary-profile">
-        <img src={ProfilePic} alt="Profile Picture" />
+        <img src={ProfilePic} alt="Profile pic" />
         <div>
           <h2>Adam Daniel</h2>
           <p>+234 8165478837</p>

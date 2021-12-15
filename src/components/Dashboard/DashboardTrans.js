@@ -9,7 +9,7 @@ const DashboardTrans = (props) => {
   return (
     <div className="dashboard-trans-body" style={BeneStyle}>
       <div className="dashboard-profile">
-        <img src={ProfilePic} alt="Profile Picture" />
+        <img src={ProfilePic} alt="Profile Pic" />
         <p>MTN Topup</p>
       </div>
       <div className="airtime2">
