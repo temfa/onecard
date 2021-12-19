@@ -1,0 +1,111 @@
+.recharge-banner {
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 100%;
+  font-weight: 700;
+  color: #124a80;
+  margin-bottom: 20px;
+}
+
+.recharge-details {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 20px;
+  width: 306px;
+  box-shadow: 0px 4px 90px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recharge-inputs input {
+  min-width: 266px;
+  border: 1px solid #124a80;
+  border-radius: 10px;
+  opacity: 0.5;
+  padding: 13px 20px;
+  background-color: white;
+}
+
+.bene {
+  display: flex;
+  margin: 10px 0;
+}
+
+.bene button {
+  width: 70px;
+  margin-left: 0px;
+  background: rgba(235, 106, 43, 0.1);
+  font-size: 8px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 100%;
+  color: #124a80;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.bene-circles {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.bene-circles > div {
+  background: rgba(235, 106, 43, 0.1);
+  font-size: 10px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 100%;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  padding-left: 7px;
+  padding-top: 10px;
+  margin-left: 10px;
+  color: #124a80;
+}
+
+.amount-remain {
+  font-size: 9px;
+  font-family: Roboto;
+  font-size: 400;
+  line-height: 100%;
+  color: rgba(18, 74, 128, 0.5);
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.amount-remain span {
+  font-weight: 700;
+}
+
+.qr-content .more-info {
+  font-size: 10px;
+  font-weight: 400;
+  font-family: Roboto;
+  line-height: 100%;
+  color: rgba(18, 74, 128, 0.5);
+  margin-top: 10px;
+}
+
+.qr-content .more-info span {
+  font-weight: 700;
+  color: #eb6a2b;
+}
+
+@media screen and (max-width: 1024px) {
+  .recharge-details {
+    width: 60%;
+    margin: auto;
+  }
+  .recharge-banner {
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .recharge-details {
+    width: 80%;
+  }
+}

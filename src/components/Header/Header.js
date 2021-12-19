@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import Group from "../../assets/Group.svg";
 import { NavLink } from "react-router-dom";
+import { useKeycloak } from "@react-keycloak/web";
 
 function hamburger() {
   const NavHeader = document.getElementById("NavHeader");
@@ -10,6 +11,7 @@ function hamburger() {
 }
 
 const Header = (props) => {
+  const { keycloak } = useKeycloak()
   return (
     <div className="Header">
       <div className="HeaderLogo">
@@ -55,11 +57,12 @@ const Header = (props) => {
             Blog
           </NavLink>
         </div>
-        <NavLink to="/signin">
-          <button className="SignInButton">Sign In</button>
-        </NavLink>
+        {/* <NavLink> */}
+        {/* <NavLink to="/signin"> */}
+          {keycloak && !keycloak.authenticated && <button className="SignInButton" onClick={() => keycloak.login()}>Sign In</button>}
+        {/* </NavLink> */}
         <NavLink to="/signup">
-          <button className="SignUpButton">Sign Up</button>
+          {keycloak && !keycloak.authenticated && <button className="SignUpButton" onClick={() => keycloak.logout()}>Sign Up</button>}
         </NavLink>
       </div>
     </div>

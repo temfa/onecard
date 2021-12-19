@@ -23,10 +23,10 @@ import axios from "axios";
 const Landing = () => {
   // const { keycloak } = useKeycloak();
   const [activeService, setActiveService] = useState("Data");
-  const [activeServiceCode, setActiveServiceCode] = useState("");
   const [activeProvider, setActiveProvider] = useState("MTN-AIRTIME");
   const [providers] = useState(Providers);
   const [recipient, updateRecipient] = useState("");
+  const [activeServiceCode, setActiveServiceCode] = useState("");
   const [telephone, updateTelephone] = useState("");
   const [cost, updateCost] = useState("");
   const [loadingBar, setLoadingBar] = useState(false);
@@ -38,9 +38,10 @@ const Landing = () => {
   const recipientHandler = (num) => {
     if (num.length <= 11) updateRecipient(num);
   };
+  
   const telephoneHandler = (num) => {
     if (num.length <= 10) updateTelephone(num);
-  };
+  }
   const costHandler = (num) => {
     updateCost(num);
   };
@@ -50,6 +51,7 @@ const Landing = () => {
     setLoadingBar(true);
 
     validateInput();
+    
     let rechargeData;
 
     if (activeService === "Airtime") {
@@ -68,7 +70,6 @@ const Landing = () => {
         redirectUrl: window.location.origin + "/success",
       };
     }
-    
 
     if (formIsValid) {
       axios
@@ -364,7 +365,6 @@ const Landing = () => {
         </div>
       </div>
       <Footer />
-      {/* } */}
     </div>
   );
 };

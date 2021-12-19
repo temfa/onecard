@@ -1,0 +1,23 @@
+.dashboard-trans-body {
+  background: rgba(235, 106, 43, 0.1);
+  border-radius: 20px;
+  width: 408px;
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 58px 11px 15px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.dashboard-profile {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-trans-body p {
+  margin-left: 10px;
+  font-weight: 400;
+  font-family: Roboto;
+  color: #124a80;
+  font-size: 11px;
+}
