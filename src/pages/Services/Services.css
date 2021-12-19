@@ -20,8 +20,8 @@
 
 .Explore > img:first-child {
   position: absolute;
-  left: 850px;
-  bottom: 150px;
+  left: 600px;
+  bottom: 50px;
 }
 
 .Explore .ContactEllipse2 {
@@ -30,13 +30,19 @@
   left: 1075px;
 }
 
+.Explore .blackWoman {
+  position: absolute;
+  top: -288px;
+  right: -600px;
+}
+
 .Explore h2 {
   font-size: 36px;
   font-family: "Roboto";
   font-weight: 400;
   line-height: 100%;
   color: #124a80;
-  width: 100%;
+  width: 502px;
 }
 
 .Explore h2 span {
@@ -64,7 +70,7 @@
 
 .SignUp .ServiceRectangle {
   position: absolute;
-  top: 5288px;
+  top: 4520px;
   left: 299px;
 }
 
@@ -248,9 +254,13 @@
     height: fit-content;
   }
 
+  .Explore .blackWoman {
+    display: none;
+  }
+
   .Explore {
     position: unset;
-    padding: 10px 20px;
+    padding: 70px 20px;
   }
 
   .Explore > img:first-child {

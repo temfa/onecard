@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.BlogWelcome {
+  background-image: url(../../assets/banner1.png);
+  width: 100%;
+  max-width: 1442px;
+  height: 900px;
+  position: relative;
+}
+
+.BlogWelcomeBody {
+  margin: 150px 0px 200px 150px;
+}
+
+.BlogWelcomeBody p {
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 400;
+  color: #eb6a2b;
+  line-height: 100%;
+  margin-bottom: 50px;
+}
+
+.BlogWelcomeBody h2 {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #124a80;
+  font-family: Roboto;
+  width: 500px;
+}
+
+.BlogWelcomeBody button {
+  padding: 18px 36px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-family: Roboto;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #eb6a2b;
+  color: #eb6a2b;
+  margin-top: 70px;
+}
+
+.BlogWelcomeBody img {
+  position: absolute;
+  top: 70px;
+  right: 0;
+}
+
+.FeaturedBody {
+  margin: 93px 120px;
+}
+
+.FeaturedBody h2 {
+  color: #124a80;
+  font-size: 36px;
+  line-height: 100%;
+  font-family: Roboto;
+  font-weight: 700;
+  margin-left: 10px;
+  padding: 20px 0;
+}
+
+.FeaturedCon {
+  justify-content: space-between;
+  display: flex;
+}
+
+.FeaturedSingle {
+  width: 32%;
+  border-radius: 40px;
+  border: 1px solid rgba(235, 106, 43, 0.2);
+  padding: 15px 0;
+}
+
+.FeaturedSingle img {
+  margin: auto;
+  width: 90%;
+  display: block;
+}
+
+.FeaturedSingle h2 {
+  color: #124a80;
+  font-size: 17px;
+  line-height: 100%;
+  font-family: Roboto;
+  font-weight: 400;
+  width: 321px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.FilterBody {
+  margin: 93px 120px;
+}
+
+.FilterBody > h2 {
+  color: #124a80;
+  font-size: 36px;
+  line-height: 100%;
+  font-family: Roboto;
+  font-weight: 700;
+  margin-left: 10px;
+  padding: 20px 0;
+}
+
+.FilterBody .FilterCategory {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.FilterCategory p {
+  color: #eb6a2b;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  line-height: 100%;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.FilterCon {
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.FilterSingle {
+  width: 32%;
+  border-radius: 40px;
+  border: 1px solid rgba(235, 106, 43, 0.2);
+  padding: 15px 0;
+}
+
+.FilterSingle img {
+  margin: auto;
+  width: 90%;
+  display: block;
+}
+
+.FilterSingle h2 {
+  color: #124a80;
+  font-size: 17px;
+  line-height: 100%;
+  font-family: Roboto;
+  font-weight: 400;
+  width: 321px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.FilterSingle > p {
+  color: #124a80;
+  font-size: 13px;
+  line-height: 100%;
+  font-family: Roboto;
+  font-weight: 400;
+  width: 331px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.FilterSingle > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+
+.FilterSingle > div p {
+  color: #eb6a2b;
+  font-size: 10px;
+  line-height: 100%;
+  font-family: Roboto;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.FilterSingle > div button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 100%;
+  font-family: Roboto;
+  cursor: pointer;
+  background-color: #fdf0ea;
+  border: none;
+  color: #eb6a2b;
+}
+
+@media screen and (max-width: 1024px) {
+  .BlogWelcomeBody img {
+    display: none;
+  }
+
+  .FeaturedCon {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .FeaturedSingle {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .FilterCon {
+    flex-direction: column;
+  }
+
+  .FilterSingle {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .FilterSingle h2 {
+    width: 90%;
+  }
+
+  .FilterSingle p {
+    width: 90%;
+  }
+
+  .FilterSingle > div button {
+    width: 100%;
+  }
+
+  .FilterSingle > div a {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .BlogWelcomeBody {
+    margin: 50px 0px 0px 50px;
+  }
+
+  .BlogWelcomeBody h2 {
+    width: 100%;
+  }
+
+  .FeaturedBody {
+    margin: 0;
+  }
+
+  .FeaturedBody h2 {
+    margin-left: 20px;
+  }
+
+  .FeaturedSingle {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .FilterBody {
+    margin: 0;
+  }
+
+  .FilterBody > h2 {
+    margin-left: 20px;
+  }
+
+  .FilterBody .FilterCategory {
+    display: none;
+  }
+
+  .FilterSingle {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .FilterSingle > div button {
+    width: 100%;
+  }
+
+  .FilterSingle > div a {
+    width: 50%;
+  }
+}

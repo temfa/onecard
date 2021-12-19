@@ -16,6 +16,9 @@ import Auto from "./pages/Auto/Auto.js";
 import Beneficiaries from "./pages/Beneficiaries/Beneficiaries.js";
 import Trans from "./pages/Trans/Trans.js";
 import ProfilePage from "./pages/ProfilePage/ProfilePage.js";
+import Blog from "./pages/Blog/Blog.js";
+import Account from "./pages/Account/Account.js";
+import BlogDetails from "./pages/BlogDetails/BlogDetails.js";
 
 function App() {
   return (
@@ -39,6 +42,9 @@ function App() {
           <Route path="/trans" component={Trans} />
           <Route path="/bulk" component={Bulk} />
           <Route path="/profilepage" component={ProfilePage} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/blogdetails" component={BlogDetails} />
+          <Route path="/account" component={Account} />
         </Switch>
       </div>
     </Router>

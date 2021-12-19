@@ -5,11 +5,17 @@
 }
 
 .ContactHeader {
-  background-image: url(../../assets/Contact.png);
+  background-image: url(../../assets/Rectangle4.png);
   width: 100%;
   max-width: 1442px;
   height: 900px;
   position: relative;
+}
+
+.ContactHeader .cheerful {
+  position: absolute;
+  left: 500px;
+  top: 133px;
 }
 
 .Message {
@@ -190,6 +196,10 @@ textarea {
 @media screen and (max-width: 1024px) {
   .ContactHeader {
     height: fit-content;
+  }
+
+  .ContactHeader .cheerful {
+    display: none;
   }
 
   .Message {

@@ -6,8 +6,8 @@ import { useKeycloak } from "@react-keycloak/web";
 
 function hamburger() {
   const NavHeader = document.getElementById("NavHeader");
-
   NavHeader.classList.toggle("show");
+  document.getElementById("Burger").classList.toggle("burger-show");
 }
 
 const Header = (props) => {
@@ -17,7 +17,7 @@ const Header = (props) => {
       <div className="HeaderLogo">
         {/* <Group/>  */}
         <img src={Group} alt="Logo" />
-        <div className="Burger" onClick={hamburger}>
+        <div className="Burger" onClick={hamburger} id="Burger">
           <div className="line1"></div>
           <div className="line2"></div>
           <div className="line3"></div>
@@ -42,13 +42,19 @@ const Header = (props) => {
             to="/cards"
             activeStyle={{ color: "#eb6a2b", fontWeight: "bold" }}
           >
-            Cards
+            Recharge Cards
           </NavLink>
           <NavLink
             to="/contact"
             activeStyle={{ color: "#eb6a2b", fontWeight: "bold" }}
           >
             Contact
+          </NavLink>
+          <NavLink
+            to="/blog"
+            activeStyle={{ color: "#eb6a2b", fontWeight: "bold" }}
+          >
+            Blog
           </NavLink>
         </div>
         {/* <NavLink> */}
