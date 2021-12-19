@@ -6,7 +6,7 @@ import Button from "../../components/Button/Button";
 import Phone from "../../assets/Phone.png";
 import Left from "../../assets/Left.png";
 import Right from "../../assets/Right.png";
-import Top from "../../assets/Top.png";
+import Happy from "../../assets/happy.png";
 import Bottom from "../../assets/Bottom.png";
 import Ellipse from "../../assets/Ellipse 17.png";
 import Ellipse2 from "../../assets/Ellipse 19.png";
@@ -15,21 +15,20 @@ import Group from "../../assets/Group.png";
 import Group2 from "../../assets/Group 189.png";
 import Group3 from "../../assets/Group 190.png";
 import Layer from "../../assets/Layer 3.png";
-import { useKeycloak } from '@react-keycloak/web';
+import { useKeycloak } from "@react-keycloak/web";
 import ApiService from "../../services/ApiService";
 
 const Cards = () => {
   const { keycloak } = useKeycloak();
   console.log(keycloak);
 
-  const HTTP = ApiService.instance
-    HTTP.get('/provider/amounts')
-        .then(res => console.log(res.data));
+  const HTTP = ApiService.instance;
+  HTTP.get("/provider/amounts").then((res) => console.log(res.data));
 
   return (
     // <div>
     //   <h1>Cards Page</h1>
-       
+
     //   <strong>Anyone can access this page</strong>
 
     //   {keycloak.init ?
@@ -50,7 +49,6 @@ const Cards = () => {
         <Header />
         {/* {!keycloak.authenticated && <pre >{JSON.stringify(keycloak, undefined, 2)}</pre>} */}
         <div className="CardWelcomeBody">
-          <img src={Top} alt="Top" />
           <h2>
             Enjoy customized
             <span>
@@ -65,6 +63,7 @@ const Cards = () => {
             backgroundColor="#EB6A2B"
           />
         </div>
+        <img src={Happy} alt="Happy" className="happy" />
       </div>
       <div className="WhatWeOffer">
         <div>
@@ -101,7 +100,7 @@ const Cards = () => {
       </div>
       <div className="ColorRectangle6"></div>
       <div className="WhatCardDo">
-        <h2>Who can you gift your One1Card to?</h2>
+        <h2>Who can you gift your One1Card Recharge Cards to?</h2>
         <div className="ContainerCard">
           <div className="Container">
             <div>
@@ -136,28 +135,27 @@ const Cards = () => {
         </div>
       </div>
       <div className="CustomizedCards">
-        <div className="CardsRequest">
-          <h2>Get Your Customized Cards</h2>
-          <p>
-            Our multipurpose recharge card (One1Card); available in various
-            denominations N50 - N10,000. Also customizable for brands and
-            service providers
-          </p>
-          <select>
-            <option>Select Order Quantity</option>
-          </select>
-          <select>
-            <option>Card Amount</option>
-          </select>
-          <Button
-            buttonText="Request Card"
-            marginTop="50px"
-            backgroundColor="#EB6A2B"
-            Color="White"
-          />
-        </div>
-        <div className="CardPicture">
-          <img src={Bottom} alt="" />
+        <h2>Get Your Customized Recharge Cards</h2>
+        <p>
+          Our multipurpose recharge card (One1Card); available in various
+          denominations N50 - N10,000. Also customizable for brands and service
+          providers
+        </p>
+        <div className="CardsRequestBody">
+          <div className="CardsRequest">
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Phone Number" />
+            <select>
+              <option>Order Quantity</option>
+            </select>
+            <select>
+              <option>Denomination </option>
+            </select>
+            <button>Request Recharge Card</button>
+          </div>
+          <div className="CardPicture">
+            <img src={Bottom} alt="" />
+          </div>
         </div>
       </div>
       <Footer />

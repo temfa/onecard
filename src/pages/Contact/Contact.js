@@ -6,6 +6,7 @@ import Button from "../../components/Button/Button";
 import Vector from "../../assets/Vector.png";
 import Ellipse from "../../assets/Ellipse 22.png";
 import Ellipse2 from "../../assets/Ellipse 23.png";
+import Cheerful from "../../assets/cheerful.png";
 
 const Contact = () => {
   return (
@@ -25,6 +26,7 @@ const Contact = () => {
             marginTop="50px"
           />
         </div>
+        <img src={Cheerful} alt="cheerful" className="cheerful" />
       </div>
       <div className="ContactForm">
         <div className="FormContainer">
