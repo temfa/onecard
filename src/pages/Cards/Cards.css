@@ -7,11 +7,19 @@
   width: 100%;
   height: 900px;
   max-width: 1442px;
+  background-image: url(../../assets/bg-home.png);
+  position: relative;
+}
+
+.CardWelcome .happy {
+  position: absolute;
+  top: 145px;
+  right: 0;
 }
 
 .CardWelcomeBody {
-  margin-top: 32px;
-  margin-left: 150px;
+  margin-top: 280px;
+  margin-left: 100px;
 }
 
 .CardWelcomeBody img {
@@ -99,7 +107,7 @@
   text-align: center;
   margin-top: 173px;
   margin-left: 97px;
-  width: 625px;
+  width: 675px;
   font-size: 50px;
   margin-bottom: 94px;
   line-height: 100%;
@@ -171,11 +179,13 @@
   padding: 0 141px;
   padding-top: 227px;
   background-color: #fdf0ea;
-  display: flex;
-  align-items: center;
 }
 
-.CardsRequest h2 {
+.CustomizedCards .CardsRequestBody {
+  display: flex;
+}
+
+.CustomizedCards h2 {
   color: #eb6a2b;
   font-size: 48px;
   font-family: Roboto;
@@ -184,7 +194,7 @@
   margin-bottom: 20px;
 }
 
-.CardsRequest p {
+.CustomizedCards p {
   color: #124a80;
   font-size: 16px;
   font-family: Roboto;
@@ -194,8 +204,20 @@
   margin-bottom: 50px;
 }
 
+.CardsRequest input {
+  width: 459px;
+  height: 52px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #124a80;
+  margin-top: 20px;
+  padding-left: 15px;
+  color: #124a80;
+  background-color: #fdf0ea;
+}
+
 .CardsRequest select {
-  width: 501px;
+  width: 459px;
   height: 52px;
   background-color: white;
   border-radius: 20px;
@@ -206,18 +228,28 @@
   appearance: none;
   background-image: url(../../assets/Vector\ 1.png);
   background-repeat: no-repeat;
-  background-position: 453px 15px;
+  background-position: 423px 15px;
   cursor: pointer;
   background-color: #fdf0ea;
+}
+
+.CardsRequest button {
+  padding: 18px 36px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-family: Roboto;
+  cursor: pointer;
+  background-color: #eb6a2b;
+  border: none;
+  color: #fff;
+  margin-top: 20px;
+  width: 319px;
 }
 
 .CardsRequest select:first-child {
   margin-top: 0;
 }
 
-.CardPicture {
-  margin-top: 100px;
-}
 @media screen and (max-width: 480px) {
   .CardWelcome {
     height: 90%;
@@ -328,6 +360,11 @@
     flex-direction: column;
     padding: 0 0;
     height: auto;
+    width: 100%;
+  }
+
+  .CustomizedCards p {
+    width: 100%;
   }
 
   .CardsRequest h2 {
@@ -343,10 +380,20 @@
     margin: auto;
   }
 
+  .CardsRequest {
+    width: 100%;
+    margin: auto;
+  }
+
+  .CardsRequest input {
+    width: 90%;
+    margin: 20px auto;
+  }
+
   .CardsRequest select {
     width: 90%;
     margin: 20px auto;
-    display: block;
+    /* display: block; */
     background-position: 90% 50%;
   }
 
@@ -364,6 +411,10 @@
 @media screen and (max-width: 1024px) {
   .CardWelcome {
     height: 90%;
+  }
+
+  .CardWelcome .happy {
+    display: none;
   }
 
   .CardWelcomeBody {
@@ -455,8 +506,22 @@
     display: none;
   }
 
+  .CardsRequest {
+    width: 100%;
+    margin: auto;
+  }
+
+  .CardsRequest input {
+    width: 100%;
+  }
+
+  .CardsRequest select {
+    width: 100%;
+    background-position: 95% 50%;
+  }
+
   .CardsRequest button {
-    width: 70%;
+    width: 100%;
     display: block;
     margin-left: 5px;
   }

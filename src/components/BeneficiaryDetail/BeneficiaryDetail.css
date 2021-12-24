@@ -1,0 +1,63 @@
+.beneficiary-body {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 20px;
+  width: 582px;
+  background: rgba(235, 106, 43, 0.1);
+  border-radius: 20px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.beneficiary-profile {
+  display: flex;
+  align-items: center;
+}
+
+.beneficiary-profile h2 {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: Roboto;
+  line-height: 100%;
+  color: #124a80;
+  margin-left: 17px;
+}
+
+.beneficiary-profile p {
+  font-size: 9px;
+  font-weight: 400;
+  font-family: Roboto;
+  line-height: 100%;
+  color: #124a80;
+  margin-left: 17px;
+  margin-top: 5px;
+}
+
+.beneficiary-details {
+  display: flex;
+}
+
+.beneficiary-details button {
+  width: 80px;
+  margin-right: 10px;
+  background-color: #eb6a2b;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  font-family: Roboto;
+  border: none;
+  height: 20px;
+}
+
+.beneficiary-details img {
+  width: 18px;
+  height: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .beneficiary-body {
+    width: 80%;
+    margin: 10px auto;
+  }
+}

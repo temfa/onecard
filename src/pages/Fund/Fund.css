@@ -1,0 +1,103 @@
+.fund-body {
+  display: flex;
+  padding: 100px 60px 0px 60px;
+  width: 100%;
+}
+
+.amount-container {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 90px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  min-width: 305px;
+  padding: 30px 20px 20px 20px;
+  margin-right: 29px;
+}
+
+.amount-container p {
+  font-weight: 400;
+  font-size: 9px;
+  margin-bottom: 10px;
+  font-family: Roboto;
+  line-height: 100%;
+  color: #124a80;
+}
+
+.amount-container h2 {
+  font-weight: 900;
+  font-size: 30px;
+  margin-bottom: 33px;
+  font-family: Roboto;
+  line-height: 100%;
+  color: #eb6a2b;
+}
+
+.amount-container label {
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #124a80;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.amount-container input {
+  width: 295px;
+  border-radius: 10px;
+  border: 1px solid #124a80;
+  padding: 13px 0px 13px 20px;
+  display: block;
+}
+
+.amount-container button {
+  margin-left: 180px;
+}
+
+.payment-container {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 90px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 305px;
+  padding: 30px 21px;
+  margin-right: 29px;
+}
+
+.fund-button {
+  display: flex;
+}
+
+.debit-container {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 90px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 306px;
+  height: 683px;
+}
+
+@media screen and (max-width: 1024px) {
+  .fund-body {
+    flex-direction: column;
+  }
+
+  .debit-container {
+    height: 400px;
+  }
+
+  .fund-body .recharge-banner {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fund-body {
+    padding: 100px 20px 0px 20px;
+    width: 100%;
+  }
+
+  .payment-container {
+    width: 100%;
+  }
+
+  .debit-container {
+    width: 100%;
+  }
+}

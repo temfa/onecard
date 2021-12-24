@@ -6,7 +6,6 @@ import Button from "../../components/Button/Button";
 import ServicesBox from "../../components/ServicesBox/ServicesBox";
 import ServicesMan from "../../assets/ServicesMan.png";
 import System from "../../assets/System.png";
-import LightBulb from "../../assets/LightBulb.png";
 import GroupPeople from "../../assets/GroupPeople.png";
 import Laptop from "../../assets/Laptop.png";
 import BlackMan2 from "../../assets/BlackMan2.png";
@@ -14,14 +13,15 @@ import Ellipse from "../../assets/Ellipse 21.png";
 import Ellipse1 from "../../assets/Ellipse 22.png";
 import Ellipse2 from "../../assets/Ellipse 23.png";
 import Rectangle from "../../assets/Rectangle 33.png";
+import BlackWoman from "../../assets/BlackWoman.png";
 
 const Services = () => {
   const serviceDetails = [
     {
       buttonText: "Quick Recharge",
-      bigText: "Airtime and Data",
+      bigText: "Single Recharge",
       smallText:
-        "Recharge as low as N50 and up to N50,000 in a single transaction",
+        "Recharge as low as N50 and up to to N50,000 in a single transaction, you can also pay for scratch cards, electricity bills and TV subscriptions",
       imgName: ServicesMan,
       imgName2: Ellipse,
       backgroundColor: "#FDF0EA",
@@ -40,17 +40,6 @@ const Services = () => {
       left: "230px",
     },
     {
-      buttonText: "Pay a bill",
-      bigText: "Utility Bills",
-      smallText:
-        "You can also pay for scratch cards, electricity bills and TV subscriptions",
-      imgName: LightBulb,
-      imgName2: Ellipse,
-      backgroundColor: "#FDF0EA",
-      top: "2655px",
-      left: "980px",
-    },
-    {
       buttonText: "Create a beneficiary",
       bigText: "Beneficiaries",
       smallText:
@@ -65,7 +54,7 @@ const Services = () => {
       buttonText: "Schedule a recharge",
       bigText: "Scheduled & Auto Recharge",
       smallText:
-        "Schedule or automically repeat your recharges or payments with a single transaction",
+        "Schedule or automically repeat your recharges or payments with a single click",
       imgName: Laptop,
       imgName2: Ellipse,
       backgroundColor: "#FDF0EA",
@@ -95,6 +84,7 @@ const Services = () => {
             width="231px"
             height="56px"
           />
+          <img src={BlackWoman} alt="BlackWoman" className="blackWoman" />
         </div>
       </div>
       {serviceDetails.map((service, index) => (

@@ -1,0 +1,155 @@
+.profile-container {
+  display: flex;
+  padding: 116px 60px 301px 60px;
+}
+
+.profile-detail {
+  width: 464px;
+  /* padding: 26px 20px 49px 20px; */
+  margin-right: 46px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 90px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.profile-name {
+  background: rgba(235, 106, 43, 0.1);
+  border-radius: 20px 20px 0px 0px;
+  margin-bottom: 20px;
+}
+
+.profile-name > div {
+  padding: 26px 0px 25px 21px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-name > div h2 {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 100%;
+  color: #124a80;
+  width: 91px;
+  margin-left: 33px;
+}
+
+.profile-name > div p {
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 100%;
+  color: #124a80;
+  margin-top: 10px;
+  margin-left: 33px;
+}
+
+.profile-info label {
+  font-weight: 400;
+  font-size: 9px;
+  color: #124a80;
+  line-height: 100%;
+  margin: 20px 0px 10px 20px;
+}
+
+.profile-info input {
+  width: 424px;
+  border: 1px solid #124a80;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 10px 0px 15px 20px;
+  padding: 13px 0px 13px 20px;
+}
+
+.bank-details label {
+  color: #124a80;
+  font-weight: 400;
+  font-family: Roboto;
+  line-height: 100%;
+  font-size: 9px;
+}
+
+.bank-details input {
+  width: 424px;
+  opacity: 0.5;
+  border: 1px solid #124a80;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 13px 0px 13px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bank-details {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 90px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 464px;
+  padding: 30px 20px 37px 20px;
+}
+
+.bank-cont {
+  width: 424px;
+  padding: 20px 0px 20px 20px;
+  background: rgba(235, 106, 43, 0.1);
+  border-radius: 20px;
+  display: flex;
+  margin: 10px 0;
+}
+
+.bank-cont h3 {
+  font-size: 9px;
+  font-weight: 400;
+  font-family: Roboto;
+  line-height: 100%;
+  color: #124a80;
+  margin-left: 10px;
+}
+
+.bank-cont p {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Roboto;
+  line-height: 100%;
+  color: #124a80;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile-container {
+    flex-direction: column;
+    padding: 116px 0px 301px 16px;
+  }
+
+  .profile-detail {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile-detail {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .profile-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .profile-detail input {
+    width: 90%;
+  }
+
+  .bank-details {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .bank-details input {
+    width: 90%;
+  }
+
+  .bank-details > div .bank-cont {
+    width: 90%;
+  }
+}

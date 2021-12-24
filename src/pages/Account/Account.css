@@ -1,0 +1,10 @@
+.success-content > button {
+  border: 1px solid #eb6a2b;
+  width: 501px;
+  border-radius: 20px;
+  background-color: white;
+  cursor: pointer;
+  padding: 18px 36px;
+  color: #eb6a2b;
+  font-size: 18px;
+}

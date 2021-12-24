@@ -28,10 +28,11 @@
   padding: 50px;
   min-width: 395px;
   box-shadow: -13px 5px 126px rgba(235, 106, 43, 0.2);
+  z-index: 1;
 }
 
 .qr-content > h3 {
-  color: #124A80;
+  color: #124a80;
   font-size: 24px;
   margin-bottom: 40px;
 }
@@ -41,18 +42,24 @@
 }
 
 .qr-options > p {
-  color: #124A80;
+  color: #124a80;
   font-size: 10px;
   margin-bottom: 10px;
 }
 
-.options-list,
-.qr-providers {
+.options-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+}
+
+.qr-providers {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .options-list li {
@@ -68,9 +75,13 @@
 .qr-providers li {
   width: 60px;
   height: 40px;
-  /* margin-right: 10px; */
+  margin-right: 10px;
   background: rgba(235, 106, 43, 0.1);
   border-radius: 10px;
+}
+
+.qr-providers li img {
+  max-width: 22px;
 }
 
 .options-list li:last-child,
@@ -102,7 +113,7 @@
 
 .options-list li.active,
 .qr-providers li.active {
-  background: #124A80;
+  background: #124a80;
   color: #fff;
 }
 
@@ -145,7 +156,7 @@
 .button-section p {
   font-size: 14px;
   text-align: center;
-  color: #124A80;
+  color: #124a80;
   margin-top: 12px;
 }
 
@@ -157,6 +168,30 @@
   color: #eb312b;
   margin-top: 0px;
   margin-bottom: 16px;
+}
+
+.select-input {
+  width: 100%;
+  padding: 13px 22px;
+  padding-left: 18px;
+  border-radius: 10px;
+  /* color: #124a80; */
+  color: rgba(18, 74, 128, 0.75);
+  border: 1px solid rgba(18, 74, 128, 0.5);
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.WelcomeText .Eclipse {
+  position: absolute;
+  left: 707px;
+  top: 452px;
+}
+
+.WelcomeText .Eclipse1 {
+  position: absolute;
+  left: 804px;
+  top: 407px;
 }
 
 .WelcomeText h2 {
@@ -477,7 +512,7 @@
 
 .WhyPicture .RectangleWhy {
   position: absolute;
-  top: 3015px;
+  top: 2065px;
   left: 290px;
 }
 
@@ -574,7 +609,6 @@
 @media screen and (max-width: 480px) {
   .Welcome {
     width: 100%;
-    background: none;
     height: fit-content;
   }
 
@@ -739,9 +773,27 @@
 @media screen and (max-width: 1024px) {
   .Welcome {
     width: 100%;
-    background: none;
     height: fit-content;
   }
+  .jumbo-recharge {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .WelcomeText .Eclipse1 {
+    display: none;
+  }
+
+  .WelcomeText .Eclipse {
+    display: none;
+  }
+
+  .quick-recharge {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+
   .WelcomeText {
     width: 100%;
     margin: auto;

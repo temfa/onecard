@@ -1,0 +1,15 @@
+.single-body {
+  display: flex;
+  padding: 100px 396px 283px 60px;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  .single-body {
+    padding: 100px 0px 283px 0px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+}

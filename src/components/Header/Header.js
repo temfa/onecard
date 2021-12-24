@@ -2,20 +2,22 @@ import React from "react";
 import "./Header.css";
 import Group from "../../assets/Group.svg";
 import { NavLink } from "react-router-dom";
+import { useKeycloak } from "@react-keycloak/web";
 
 function hamburger() {
   const NavHeader = document.getElementById("NavHeader");
-
   NavHeader.classList.toggle("show");
+  document.getElementById("Burger").classList.toggle("burger-show");
 }
 
 const Header = (props) => {
+  const { keycloak } = useKeycloak()
   return (
     <div className="Header">
       <div className="HeaderLogo">
         {/* <Group/>  */}
         <img src={Group} alt="Logo" />
-        <div className="Burger" onClick={hamburger}>
+        <div className="Burger" onClick={hamburger} id="Burger">
           <div className="line1"></div>
           <div className="line2"></div>
           <div className="line3"></div>
@@ -40,7 +42,7 @@ const Header = (props) => {
             to="/cards"
             activeStyle={{ color: "#eb6a2b", fontWeight: "bold" }}
           >
-            Cards
+            Recharge Cards
           </NavLink>
           <NavLink
             to="/contact"
@@ -48,12 +50,19 @@ const Header = (props) => {
           >
             Contact
           </NavLink>
+          <NavLink
+            to="/blog"
+            activeStyle={{ color: "#eb6a2b", fontWeight: "bold" }}
+          >
+            Blog
+          </NavLink>
         </div>
-        <NavLink to="/signin">
-          <button className="SignInButton">Sign In</button>
-        </NavLink>
+        {/* <NavLink> */}
+        {/* <NavLink to="/signin"> */}
+          {keycloak && !keycloak.authenticated && <button className="SignInButton" onClick={() => keycloak.login()}>Sign In</button>}
+        {/* </NavLink> */}
         <NavLink to="/signup">
-          <button className="SignUpButton">Sign Up</button>
+          {keycloak && !keycloak.authenticated && <button className="SignUpButton" onClick={() => keycloak.logout()}>Sign Up</button>}
         </NavLink>
       </div>
     </div>
