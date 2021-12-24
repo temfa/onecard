@@ -127,15 +127,15 @@ const Landing = () => {
   const inputHandler = (val, stateOption) => {
     if (String(val).length <= 15) setState({ ...state, [stateOption]: val })
     
-    switch(activeService) {
-      case 'Data':
-        // if (activeProvider) console.log('provider is true')
-        // if (state.phoneNumber.length >= 11) console.log('phone is true')
-        if (activeProvider && state.phoneNumber.length >= 11) setState({ ...state, valid: true })
-        break;
-      default:
-        setState({ ...state, valid: false })
-    }
+    // switch(activeService) {
+    //   case 'Data':
+    //     // if (activeProvider) console.log('provider is true')
+    //     // if (state.phoneNumber.length >= 11) console.log('phone is true')
+    //     if (activeProvider && state.phoneNumber.length >= 11) setState({ ...state, valid: true })
+    //     break;
+    //   default:
+    //     setState({ ...state, valid: false })
+    // }
   }
 
   return (
