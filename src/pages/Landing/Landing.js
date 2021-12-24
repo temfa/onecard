@@ -4,74 +4,107 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
 import OrangeButton from "../../components/Button/OrangeButton";
-// import PhoneMan from "../../assets/PhoneMan.png";
 import BlackMan from "../../assets/BlackMan.png";
 import Auto from "../../assets/Auto.svg";
 import Recharge from "../../assets/Recharge.svg";
 import Schedule from "../../assets/Schedule.svg";
 import AppScreen from "../../assets/app-screens.png";
-// import Man from "../../assets/man.png";
 import HomePage from "../../assets/HomePage.png";
 import HomePage2 from "../../assets/HomePage2.png";
 import Eclipse from "../../assets/Ellipse 16.png";
 import Eclipse1 from "../../assets/Ellipse 17.png";
 import Rectangle from "../../assets/Rectangle 25.png";
 // import { useKeycloak } from '@react-keycloak/web';
-import Providers from "../../utils/providers";
 import axios from "axios";
+import services from "../../utils/defaults";
 
 const Landing = () => {
   // const { keycloak } = useKeycloak();
-  const [activeService, setActiveService] = useState("Data");
-  const [activeProvider, setActiveProvider] = useState("MTN-AIRTIME");
-  const [providers] = useState(Providers);
-  const [recipient, updateRecipient] = useState("");
-  const [activeServiceCode, setActiveServiceCode] = useState("");
-  const [telephone, updateTelephone] = useState("");
-  const [cost, updateCost] = useState("");
+  const [state, setState] = useState({
+    service: 'Airtime',
+    provider: 'MTN-AIRTIME',
+    amount: '',
+    phoneNumber: '',
+    serviceNumber: '',
+    productID: '',
+    valid: false
+  });
+  const [activeService, setActiveService] = useState("");
+  const [activeProvider, setActiveProvider] = useState("");
+  const [providers, setProviders] = useState([]);
+  const [inputs, setInputs] = useState([]);
+  const [selectInput, setSelectInput] = useState(false);
+  const [dataPlans, setDataPlans] = useState([]);
   const [loadingBar, setLoadingBar] = useState(false);
-  const [errorMsg, setErrorMsg] = useState(null);
-  const [formIsValid, setFormIsValid] = useState(false);
 
-  const activeServiceHandler = (service) => setActiveService(service);
-  const activeProviderHandler = (provider) => setActiveProvider(provider);
-  const recipientHandler = (num) => {
-    if (num.length <= 11) updateRecipient(num);
+  const activeServiceHandler = (service) => {
+    setActiveService(service.title)
+    setProviders(service.providers)
+    setInputs(service.inputs)
+    setSelectInput(service.select)
   };
-  
-  const telephoneHandler = (num) => {
-    if (num.length <= 10) updateTelephone(num);
+  const activeProviderHandler = (provider) => {
+    setActiveProvider(provider.serviceCode);
+    if (activeService === 'Data') getPlans(provider.serviceCode)
   }
-  const costHandler = (num) => {
-    updateCost(num);
-  };
+
+  const getPlans = (network) => {
+    axios
+        .get(
+          `https://onecard.factorialsystems.io/api/v1/recharge/plans/${network}`,
+          { headers: { "Content-Type": "application/json", }, }
+        )
+        .then((res) => setDataPlans(res.data))
+        .catch((err) => {
+          console.log(err);
+        });
+  }
 
   const rechargeHandler = (e) => {
     e.preventDefault();
-    setLoadingBar(true);
-
-    validateInput();
-    
     let rechargeData;
+    setLoadingBar(true);
+    console.log(activeProvider)
 
-    if (activeService === "Airtime") {
-      rechargeData = {
-        serviceCode: activeProvider,
-        recipient: recipient,
-        serviceCost: cost,
-        redirectUrl: window.location.origin + "/success",
-      };
-    } else if (activeService === "Power") {
-      rechargeData = {
-        serviceCode: activeServiceCode,
-        recipient: recipient,
-        telephone: telephone,
-        serviceCost: cost,
-        redirectUrl: window.location.origin + "/success",
-      };
+    const formData = new FormData(e.target);
+    const formProps = Object.fromEntries(formData);
+    console.log(formProps)
+
+    switch(activeService) {
+      case 'Data':
+        rechargeData = {
+          serviceCode: activeProvider,
+          recipient: state.phoneNumber,
+          serviceCost: state.amount,
+          redirectUrl: window.location.origin + "/success",
+        };
+        break;
+      case 'Airtime':
+        rechargeData = {
+          serviceCode: activeProvider,
+          recipient: state.phoneNumber,
+          serviceCost: state.amount,
+          redirectUrl: window.location.origin + "/success",
+        };
+        break;
+      case 'Power':
+        rechargeData = {
+          serviceCode: activeProvider,
+          recipient: state.serviceNumber,
+          telephone: state.phoneNumber,
+          serviceCost: state.amount,
+          redirectUrl: window.location.origin + "/success",
+        };
+        break;
+      default:
+        rechargeData = {
+          serviceCode: activeProvider,
+          recipient: state.phoneNumber,
+          serviceCost: state.amount,
+          redirectUrl: window.location.origin + "/success",
+        };
     }
 
-    if (formIsValid) {
       axios
         .post(
           "https://onecard.factorialsystems.io/api/v1/recharge",
@@ -83,40 +116,27 @@ const Landing = () => {
           }
         )
         .then((res) => {
-          updateRecipient("");
-          updateCost("");
-          setLoadingBar(false);
+          console.log(res.data);
           window.location.href = res.data.authorizationUrl;
         })
         .catch((err) => {
           setLoadingBar(false);
         });
-    } else {
-      setErrorMsg("Please check your input and try again!");
-      setTimeout(() => {
-        setErrorMsg(null);
-        setLoadingBar(false);
-      }, 2000);
-    }
   };
 
-  const validateInput = () => {
-    localStorage.recipient = recipient;
-
-    if (!recipient || !cost) {
-      setFormIsValid(false);
-    } else {
-      // if (recipient[0] !== '0') updateRecipient('0'+recipient)
-      if ("0" + recipient.length < 11 || cost.length < 2) {
-        setFormIsValid(false);
-      } else {
-        setFormIsValid(true);
-      }
+  const inputHandler = (val, stateOption) => {
+    if (String(val).length <= 15) setState({ ...state, [stateOption]: val })
+    
+    switch(activeService) {
+      case 'Data':
+        // if (activeProvider) console.log('provider is true')
+        // if (state.phoneNumber.length >= 11) console.log('phone is true')
+        if (activeProvider && state.phoneNumber.length >= 11) setState({ ...state, valid: true })
+        break;
+      default:
+        setState({ ...state, valid: false })
     }
-
-    updateRecipient("");
-    updateCost("");
-  };
+  }
 
   return (
     <div>
@@ -144,136 +164,70 @@ const Landing = () => {
               <div className="qr-options">
                 <p>What would you like to do?</p>
                 <ul className="options-list">
-                  <li
-                    className={activeService === "Data" ? "active" : ""}
-                    onClick={() => activeServiceHandler("Data")}
-                  >
-                    <div>
-                      <span className="material-icons">wifi</span>
-                      <span>Data</span>
-                    </div>
-                  </li>
-                  <li
-                    className={activeService === "Airtime" ? "active" : ""}
-                    onClick={() => activeServiceHandler("Airtime")}
-                  >
-                    <div>
-                      <span className="material-icons">phone_in_talk</span>
-                      <span>Airtime</span>
-                    </div>
-                  </li>
-                  <li
-                    className={activeService === "Power" ? "active" : ""}
-                    onClick={() => activeServiceHandler("Power")}
-                  >
-                    <div>
-                      <span className="material-icons">power</span>
-                      <span>Electricity</span>
-                    </div>
-                  </li>
-                  <li
-                    className={activeService === "CableTV" ? "active" : ""}
-                    onClick={() => activeServiceHandler("CableTV")}
-                  >
-                    <div>
-                      <span className="material-icons">live_tv</span>
-                      <span>Cable TV</span>
-                    </div>
-                  </li>
-                  <li
-                    className={activeService === "Others" ? "active" : ""}
-                    onClick={() => activeServiceHandler("Others")}
-                  >
-                    <div>
-                      <span className="material-icons">add_circle_outline</span>
-                      <span>Others</span>
-                    </div>
-                  </li>
+                  {
+                    services.map(service => <li
+                      className={activeService === service.title ? "active" : ""}
+                      onClick={() => activeServiceHandler(service)}
+                      key={service.title}
+                    >
+                      <div>
+                        <span className="material-icons">{service.icon}</span>
+                        <span>{service.name}</span>
+                      </div>
+                    </li>)
+                  }
                 </ul>
               </div>
               <ul className="qr-providers">
-                {activeService === "Data" || activeService === "Airtime" 
-                  ? providers.map((provider, index) => (
-                  <li
-                    key={index}
-                    className={
-                      activeProvider === provider.serviceCode ? "active" : ""
-                    }
-                    onClick={() => activeProviderHandler(provider.serviceCode)}
-                  >
-                    <img
-                      src={provider.logo}
-                      alt={`provider - ${provider.provider}`}
-                    />
-                  </li>))
-                  : activeService === "Power" && <select 
-                      className="select-input"
-                      value={activeServiceCode}
-                      onChange={(e) => setActiveServiceCode(e.target.value)}
+                {
+                  providers.map((provider, index) => (
+                    <li
+                      key={index}
+                      className={
+                        activeProvider === provider.serviceCode ? "active" : ""
+                      }
+                      onClick={() => activeProviderHandler(provider)}
                     >
-                    <option>Choose provider</option>
-                    <option value="JED">JED</option>
-                    <option value="EKEDP">EKEDP</option>
-                  </select>
+                      <img
+                        src={provider.logo}
+                        alt={`provider - ${provider.provider}`}
+                      />
+                    </li>))
                 }
               </ul>
-              {activeService === "Data" && (
-                <div className="inputs">
-                  <input
-                    type="text"
-                    placeholder="Phone number"
-                    onChange={(e) => recipientHandler(e.target.value)}
-                    disabled
-                  />
-                  <input
-                    type="number"
-                    placeholder="Data Plan"
-                    onChange={(e) => costHandler(e.target.value)}
-                    disabled
-                  />
-                </div>
-              )}
-              {activeService === "Airtime" && (
-                <div className="inputs">
-                  <input
-                    type="text"
-                    placeholder="Phone number"
-                    value={recipient}
-                    onChange={(e) => recipientHandler(e.target.value)}
-                  />
-                  <input
-                    type="number"
-                    placeholder="Recharge amount"
-                    value={cost}
-                    onChange={(e) => costHandler(e.target.value)}
-                  />
-                </div>
-              )}
-              {activeService === "Power" && (
-                <div className="inputs">
-                  <input
-                    type="text"
-                    placeholder="Meter number"
-                    value={recipient}
-                    onChange={(e) => recipientHandler(e.target.value)}
-                  />
-                  <input
-                    type="text"
-                    placeholder="Phone number"
-                    value={telephone}
-                    onChange={(e) => telephoneHandler(e.target.value)}
-                  />
-                  <input
-                    type="number"
-                    placeholder="Recharge amount"
-                    value={cost}
-                    onChange={(e) => costHandler(e.target.value)}
-                  />
-                </div>
-              )}
+              <div className="inputs">
+                {
+                  selectInput && dataPlans.length > 0 && <select 
+                    className="select-input"
+                    value={state.productID}
+                    onChange={(e) => inputHandler(e.target.value, 'productID')}
+                  >
+                    { dataPlans.map(plan => <option
+                        key={plan.product_id}
+                        value={plan.product_id}>
+                          {'N' + new Intl.NumberFormat('en-US').format(plan.price) + ' - ' + plan.validity}
+                        </option>
+                      )
+                    }
+                  </select>
+                }
+                {
+                  inputs.map(input => <input
+                    type={input.type}
+                    placeholder={input.placeholder}
+                    key={input.placeholder}
+                    name={input.value}
+                    value={state[input.value]}
+                    onChange={(e) => inputHandler(e.target.value, input.value)}
+                  />)
+                }
+              </div>
               <div className="button-section">
-                {errorMsg && <p className="error-message">{errorMsg}</p>}
-                <OrangeButton buttonText="Recharge" loading={loadingBar} />
+                {/* {errorMsg && <p className="error-message">{errorMsg}</p>} */}
+                <OrangeButton buttonText="Recharge" loading={loadingBar} 
+                  // disabled={!activeProvider && !state.phoneNumber} />
+                  // disabled={!state.valid} 
+                  />
                 <p>
                   For more recharge options | <span>Sign up</span>
                 </p>

@@ -5,14 +5,15 @@ const keycloakConfig = {
    // url: 'https://auth.factorialsystems.io/auth',
    realm: 'onecard', 
    clientId: 'public-client',
+   // onLoad: 'login-required',
    // onLoad: 'check-sso',
-   // pkceMethod: 'S256',
-   // checkLoginIframe: true,
+   pkceMethod: 'S256',
+   checkLoginIframe: true,
    // sslRequired: "external",
    // resource: "public-client",
    // publicClient: true,
    checkLoginIframeInterval: 25,
-   frameAncestors: 'self'
+   // frameAncestors: 'self'
 }
 
 // const keycloak = new Keycloak(keycloakConfig, initOptions);

@@ -47,13 +47,19 @@
   margin-bottom: 10px;
 }
 
-.options-list,
-.qr-providers {
+.options-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+}
+
+.qr-providers {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .options-list li {
@@ -69,9 +75,13 @@
 .qr-providers li {
   width: 60px;
   height: 40px;
-  /* margin-right: 10px; */
+  margin-right: 10px;
   background: rgba(235, 106, 43, 0.1);
   border-radius: 10px;
+}
+
+.qr-providers li img {
+  max-width: 22px;
 }
 
 .options-list li:last-child,
@@ -169,6 +179,7 @@
   color: rgba(18, 74, 128, 0.75);
   border: 1px solid rgba(18, 74, 128, 0.5);
   outline: none;
+  margin-bottom: 10px;
 }
 
 .WelcomeText .Eclipse {
