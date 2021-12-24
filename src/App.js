@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Landing from "./pages/Landing/Landing.js";
 import Services from "./pages/Services/Services.js";
 import Cards from "./pages/Cards/Cards.js";
@@ -19,8 +19,16 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage.js";
 import Blog from "./pages/Blog/Blog.js";
 import Account from "./pages/Account/Account.js";
 import BlogDetails from "./pages/BlogDetails/BlogDetails.js";
+import keycloak from "./keycloak.js";
 
 function App() {
+  
+  useEffect(() => {
+    // console.log(keycloak)
+    keycloak.init()
+    // window.location.href = keycloak.createLoginUrl()
+    // console.log(keycloak.createLoginUrl())
+  })
   return (
     <Router>
       <div className="App">
