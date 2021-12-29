@@ -73,7 +73,6 @@ const Landing = () => {
         rechargeData = {
           serviceCode: activeProvider,
           recipient: state.phoneNumber,
-          serviceCost: state.amount,
           productId: state.productID,
           redirectUrl: window.location.origin + "/success",
         };
