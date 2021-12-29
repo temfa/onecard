@@ -65,8 +65,8 @@ const Landing = () => {
     let rechargeData;
     setLoadingBar(true);
 
-    const formData = new FormData(e.target);
-    const formProps = Object.fromEntries(formData);
+    // const formData = new FormData(e.target);
+    // const formProps = Object.fromEntries(formData);
 
     switch(activeService) {
       case 'Data':
