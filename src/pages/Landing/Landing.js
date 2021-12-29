@@ -64,11 +64,9 @@ const Landing = () => {
     e.preventDefault();
     let rechargeData;
     setLoadingBar(true);
-    console.log(activeProvider)
 
-    const formData = new FormData(e.target);
-    const formProps = Object.fromEntries(formData);
-    console.log(formProps)
+    // const formData = new FormData(e.target);
+    // const formProps = Object.fromEntries(formData);
 
     switch(activeService) {
       case 'Data':
@@ -76,6 +74,7 @@ const Landing = () => {
           serviceCode: activeProvider,
           recipient: state.phoneNumber,
           serviceCost: state.amount,
+          productId: state.productID,
           redirectUrl: window.location.origin + "/success",
         };
         break;
@@ -105,23 +104,22 @@ const Landing = () => {
         };
     }
 
-      axios
-        .post(
-          "https://onecard.factorialsystems.io/api/v1/recharge",
-          rechargeData,
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        )
-        .then((res) => {
-          console.log(res.data);
-          window.location.href = res.data.authorizationUrl;
-        })
-        .catch((err) => {
-          setLoadingBar(false);
-        });
+    axios
+      .post(
+        "https://onecard.factorialsystems.io/api/v1/recharge",
+        rechargeData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((res) => {
+        window.location.href = res.data.authorizationUrl;
+      })
+      .catch((err) => {
+        setLoadingBar(false);
+      });
   };
 
   const inputHandler = (val, stateOption) => {
