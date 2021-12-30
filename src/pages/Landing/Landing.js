@@ -199,6 +199,7 @@ const Landing = () => {
                     value={state.productID}
                     onChange={(e) => inputHandler(e.target.value, 'productID')}
                   >
+                    <option style={{opacity:'0.5'}}>Choose one {activeProvider} plan</option>
                     { dataPlans.map(plan => <option
                         key={plan.product_id}
                         value={plan.product_id}>
