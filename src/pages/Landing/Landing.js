@@ -36,9 +36,11 @@ const Landing = () => {
   const [selectInput, setSelectInput] = useState(false);
   const [dataPlans, setDataPlans] = useState([]);
   const [loadingBar, setLoadingBar] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
 
   const activeServiceHandler = (service) => {
     setActiveService(service.title)
+    setActiveProvider('')
     setProviders(service.providers)
     setInputs(service.inputs)
     setSelectInput(service.select)
@@ -70,22 +72,41 @@ const Landing = () => {
 
     switch(activeService) {
       case 'Data':
-        rechargeData = {
-          serviceCode: activeProvider,
-          recipient: state.phoneNumber,
-          productId: state.productID,
-          redirectUrl: window.location.origin + "/success",
-        };
+        if (activeProvider && state.phoneNumber && state.productID) {
+          rechargeData = {
+            serviceCode: activeProvider,
+            recipient: state.phoneNumber,
+            productId: state.productID,
+            redirectUrl: window.location.origin + "/success",
+          };
+          rechargeFunc(rechargeData)
+        } else {
+          setLoadingBar(false);
+          setErrorMsg('Please complete the form to continue')
+          setTimeout(() => {
+            setErrorMsg('')
+          }, 2000)
+        }
         break;
       case 'Airtime':
+        if (activeProvider && state.phoneNumber && state.amount) {
         rechargeData = {
           serviceCode: activeProvider,
           recipient: state.phoneNumber,
           serviceCost: state.amount,
           redirectUrl: window.location.origin + "/success",
         };
+        rechargeFunc(rechargeData)
+      } else {
+        setLoadingBar(false);
+        setErrorMsg('Please complete the form to continue')
+        setTimeout(() => {
+          setErrorMsg('')
+        }, 2000)
+      }
         break;
       case 'Power':
+        if (activeProvider && state.serviceNumber && state.phoneNumber && state.amount) {
         rechargeData = {
           serviceCode: activeProvider,
           recipient: state.serviceNumber,
@@ -93,16 +114,25 @@ const Landing = () => {
           serviceCost: state.amount,
           redirectUrl: window.location.origin + "/success",
         };
+        rechargeFunc(rechargeData)
+      } else {
+        setLoadingBar(false);
+        setErrorMsg('Please complete the form to continue')
+        setTimeout(() => {
+          setErrorMsg('')
+        }, 2000)
+      }
         break;
       default:
-        rechargeData = {
-          serviceCode: activeProvider,
-          recipient: state.phoneNumber,
-          serviceCost: state.amount,
-          redirectUrl: window.location.origin + "/success",
-        };
+        setLoadingBar(false);
+        setErrorMsg('Something went wrong! Please refresh and try again..')
+        setTimeout(() => {
+          setErrorMsg('')
+        }, 2000)
     }
+  };
 
+  const rechargeFunc = (rechargeData) => {
     axios
       .post(
         "https://onecard.factorialsystems.io/api/v1/recharge",
@@ -119,7 +149,7 @@ const Landing = () => {
       .catch((err) => {
         setLoadingBar(false);
       });
-  };
+  }
 
   const inputHandler = (val, stateOption) => {
     if (String(val).length <= 15) setState({ ...state, [stateOption]: val })
@@ -221,7 +251,7 @@ const Landing = () => {
                 }
               </div>
               <div className="button-section">
-                {/* {errorMsg && <p className="error-message">{errorMsg}</p>} */}
+                {errorMsg && <p className="error-message">{errorMsg}</p>}
                 <OrangeButton buttonText="Recharge" loading={loadingBar} 
                   // disabled={!activeProvider && !state.phoneNumber} />
                   // disabled={!state.valid} 
