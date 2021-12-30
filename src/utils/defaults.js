@@ -63,7 +63,7 @@ const services = [
             },
             {
                 provider: "9mobile",
-                serviceCode: "9-AIRTIME",
+                serviceCode: "9MOBILE-AIRTIME",
                 logo: logo9mobile
             },
         ],
