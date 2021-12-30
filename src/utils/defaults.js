@@ -35,7 +35,7 @@ const services = [
         select: true,
         inputs: [
             {
-                type: 'text',
+                type: 'number',
                 placeholder: 'Phone Number',
                 value: 'phoneNumber'
             }
@@ -53,7 +53,7 @@ const services = [
             },
             {
                 provider: "Airtel",
-                serviceCode: "AIRT-AIRTIME",
+                serviceCode: "AIRTEL-AIRTIME",
                 logo: logoAirtel
             },
             {
@@ -70,7 +70,7 @@ const services = [
         select: false,
         inputs: [
             {
-                type: 'text',
+                type: 'number',
                 placeholder: 'Phone Number',
                 value: 'phoneNumber'
             },
