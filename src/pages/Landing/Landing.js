@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Landing.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -37,6 +37,41 @@ const Landing = () => {
   const [dataPlans, setDataPlans] = useState([]);
   const [loadingBar, setLoadingBar] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+
+  useEffect(() => {
+    // const url = window.location.href
+    // if (url.includes('trxref')) {
+    //   console.log(url)
+    //   url.split('')
+    // }
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+    const trxref = params["trxref"];
+    // console.log({ params, trxref });
+
+    if(trxref && localStorage.id) {
+      axios
+      .get(
+        "https://onecard.factorialsystems.io/api/v1/recharge/" + localStorage.id,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((res) => {
+        if (res.data.message) {
+          localStorage.removeItem('id');
+          window.location.href = window.location.origin;
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    } else if (trxref) {
+      window.location.href = window.location.origin;
+    }
+  })
 
   const activeServiceHandler = (service) => {
     setActiveService(service.title)
@@ -146,6 +181,7 @@ const Landing = () => {
       )
       .then((res) => {
         window.location.href = res.data.authorizationUrl;
+        localStorage.id = res.data.id
       })
       .catch((err) => {
         setLoadingBar(false);
