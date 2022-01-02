@@ -62,7 +62,8 @@ const Landing = () => {
       .then((res) => {
         if (res.data.message) {
           localStorage.removeItem('id');
-          window.location.href = window.location.origin;
+          // window.location.href = window.location.origin;
+          window.history.replaceState(null, 'One1Card | OneCard Nigeria', '/')
         }
       })
       .catch((err) => {
