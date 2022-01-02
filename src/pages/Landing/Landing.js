@@ -94,7 +94,8 @@ const Landing = () => {
           serviceCode: activeProvider,
           recipient: state.phoneNumber,
           serviceCost: state.amount,
-          redirectUrl: window.location.origin + "/success",
+          redirectUrl: window.location.origin,
+          // redirectUrl: window.location.origin + "/success",
         };
         rechargeFunc(rechargeData)
       } else {
