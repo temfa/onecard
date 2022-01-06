@@ -38,7 +38,7 @@ function App() {
           <Route path="/services" component={Services} />
           <Route path="/cards" component={Cards} />
           <Route path="/contact" component={Contact} />
-          <Route path="/success" component={Success} />
+          <Route path="/feedback" component={Success} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
           <Route path="/dashboard" component={Dashboard} />
