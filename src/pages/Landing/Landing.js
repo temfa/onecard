@@ -47,7 +47,7 @@ const Landing = () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
     const trxref = params["trxref"];
-    console.log(params, trxref)
+    // console.log(params, trxref)
 
     if(trxref && localStorage.id) {
     // if(trxref && localStorage.id) {

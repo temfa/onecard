@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import OrangeButton from "../../components/Button/OrangeButton";
 import Header from "../../components/Header/Header";
 import JumpingMan from "../../assets/success.png";
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import "./Success.css";
 import Rectangle from "../../assets/Rectangle 25.png";
 import loader from "../../assets/loading.gif";
@@ -11,32 +11,35 @@ import axios from "axios";
 const Success = () => {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState('');
+  const history = useHistory()
 
   useEffect(() => {
-    axios
-      .get(
-        "https://onecard.factorialsystems.io/api/v1/recharge/" + localStorage.id,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
-      .then((res) => {
-        console.log(res.data)
-        if (res.data.message) {
-          setLoading(false)
+    if (localStorage.id) {
+      axios
+        .get(
+          "https://onecard.factorialsystems.io/api/v1/recharge/" + localStorage.id,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
+        .then((res) => {
           console.log(res.data)
-          setMessage(res.data.message)
-          // localStorage.removeItem('id');
-          // window.location.href = window.location.origin;
-          // window.history.replaceState(null, 'One1Card | OneCard Nigeria', '/')
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  })
+          if (res.data.message) {
+            setLoading(false)
+            setMessage(res.data.message)
+            localStorage.removeItem('id');
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          history.push('/')
+        });
+      }
+  }, [history])
+
+
   return (
     <div>
       {
