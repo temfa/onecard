@@ -1,5 +1,5 @@
 .container {
-  padding: 150px;
+  padding: 100px 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,4 +39,25 @@
   position: absolute;
   top: 730px;
   left: 788px;
+}
+
+.loading-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(18, 74, 128, 0.1);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-box {
+  background: #124a80;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
 }

@@ -15,11 +15,13 @@ import Eclipse from "../../assets/Ellipse 16.png";
 import Eclipse1 from "../../assets/Ellipse 17.png";
 import Rectangle from "../../assets/Rectangle 25.png";
 // import { useKeycloak } from '@react-keycloak/web';
+import { useHistory } from 'react-router-dom';
 import axios from "axios";
 import services from "../../utils/defaults";
 
 const Landing = () => {
   // const { keycloak } = useKeycloak();
+  const history = useHistory();
   const [state, setState] = useState({
     service: 'Airtime',
     provider: 'MTN-AIRTIME',
@@ -29,6 +31,7 @@ const Landing = () => {
     productID: '',
     valid: false
   });
+
   const [activeService, setActiveService] = useState("");
   const [activeProvider, setActiveProvider] = useState("");
   const [providers, setProviders] = useState([]);
@@ -38,41 +41,21 @@ const Landing = () => {
   const [loadingBar, setLoadingBar] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
-  useEffect(() => {
-    // const url = window.location.href
-    // if (url.includes('trxref')) {
-    //   console.log(url)
-    //   url.split('')
-    // }
+  useEffect(() => redirectToPaymentFeedback() )
+
+  const redirectToPaymentFeedback = () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
     const trxref = params["trxref"];
-    // console.log({ params, trxref });
+    console.log(params, trxref)
 
     if(trxref && localStorage.id) {
-      axios
-      .get(
-        "https://onecard.factorialsystems.io/api/v1/recharge/" + localStorage.id,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
-      .then((res) => {
-        if (res.data.message) {
-          localStorage.removeItem('id');
-          // window.location.href = window.location.origin;
-          window.history.replaceState(null, 'One1Card | OneCard Nigeria', '/')
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // if(trxref && localStorage.id) {
+      history.push('/feedback')
     } else if (trxref) {
-      window.location.href = window.location.origin;
+      window.history.replaceState(null, 'One1Card | OneCard Nigeria', '/')
     }
-  })
+  }
 
   const activeServiceHandler = (service) => {
     setActiveService(service.title)
@@ -183,6 +166,7 @@ const Landing = () => {
       .then((res) => {
         window.location.href = res.data.authorizationUrl;
         localStorage.id = res.data.id
+        localStorage.recipient = rechargeData.recipient
       })
       .catch((err) => {
         setLoadingBar(false);
