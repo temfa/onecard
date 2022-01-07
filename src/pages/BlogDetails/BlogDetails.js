@@ -67,15 +67,15 @@ const BlogDetails = () => {
           <div className="FeaturedCon">
             <div className="FeaturedSingle">
               <img src={FeaturedSingle} alt="Featured" />
-              <h2>How to make more money with One1Card</h2>
+              <h2>How to make more money with OneCard</h2>
             </div>
             <div className="FeaturedSingle">
               <img src={FeaturedSingle} alt="Featured" />
-              <h2>How to make more money with One1Card</h2>
+              <h2>How to make more money with OneCard</h2>
             </div>
             <div className="FeaturedSingle">
               <img src={FeaturedSingle} alt="Featured" />
-              <h2>How to make more money with One1Card</h2>
+              <h2>How to make more money with OneCard</h2>
             </div>
           </div>
         </div>

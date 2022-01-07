@@ -31,15 +31,15 @@ const Blog = () => {
         <div className="FeaturedCon">
           <div className="FeaturedSingle">
             <img src={FeaturedSingle} alt="Featured" />
-            <h2>How to make more money with One1Card</h2>
+            <h2>How to make more money with OneCard</h2>
           </div>
           <div className="FeaturedSingle">
             <img src={FeaturedSingle} alt="Featured" />
-            <h2>How to make more money with One1Card</h2>
+            <h2>How to make more money with OneCard</h2>
           </div>
           <div className="FeaturedSingle">
             <img src={FeaturedSingle} alt="Featured" />
-            <h2>How to make more money with One1Card</h2>
+            <h2>How to make more money with OneCard</h2>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ const Blog = () => {
           <div className="FilterCon">
             <div className="FilterSingle">
               <img src={FeaturedSingle} alt="FeaturedSingle" />
-              <h2>How to make more money with One1Card</h2>
+              <h2>How to make more money with OneCard</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. A,
                 vitae posuere tristique at scelerisque bibendum vitae. Ut augue
@@ -82,7 +82,7 @@ const Blog = () => {
             </div>
             <div className="FilterSingle">
               <img src={One} alt="One" />
-              <h2>How to make more money with One1Card</h2>
+              <h2>How to make more money with OneCard</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. A,
                 vitae posuere tristique at scelerisque bibendum vitae. Ut augue
@@ -104,7 +104,7 @@ const Blog = () => {
             </div>
             <div className="FilterSingle">
               <img src={Three} alt="Three" />
-              <h2>How to make more money with One1Card</h2>
+              <h2>How to make more money with OneCard</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. A,
                 vitae posuere tristique at scelerisque bibendum vitae. Ut augue
@@ -128,7 +128,7 @@ const Blog = () => {
           <div className="FilterCon">
             <div className="FilterSingle">
               <img src={FeaturedSingle} alt="FeaturedSingle" />
-              <h2>How to make more money with One1Card</h2>
+              <h2>How to make more money with OneCard</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. A,
                 vitae posuere tristique at scelerisque bibendum vitae. Ut augue
@@ -150,7 +150,7 @@ const Blog = () => {
             </div>
             <div className="FilterSingle">
               <img src={One} alt="One" />
-              <h2>How to make more money with One1Card</h2>
+              <h2>How to make more money with OneCard</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. A,
                 vitae posuere tristique at scelerisque bibendum vitae. Ut augue
@@ -172,7 +172,7 @@ const Blog = () => {
             </div>
             <div className="FilterSingle">
               <img src={Three} alt="Three" />
-              <h2>How to make more money with One1Card</h2>
+              <h2>How to make more money with OneCard</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. A,
                 vitae posuere tristique at scelerisque bibendum vitae. Ut augue
