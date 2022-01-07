@@ -28,7 +28,7 @@ const Success = () => {
           console.log(res.data)
           if (res.data.message) {
             setLoading(false)
-            setMessage(res.data.message)
+            setMessage(res.data.message.replace(/Ringo /g, ''))
             localStorage.removeItem('id');
           }
         })
