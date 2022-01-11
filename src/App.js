@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Landing from "./pages/Landing/Landing.js";
 import Services from "./pages/Services/Services.js";
 import Cards from "./pages/Cards/Cards.js";
@@ -19,16 +19,17 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage.js";
 import Blog from "./pages/Blog/Blog.js";
 import Account from "./pages/Account/Account.js";
 import BlogDetails from "./pages/BlogDetails/BlogDetails.js";
-import keycloak from "./keycloak.js";
+// import keycloak from "./keycloak.js";
+import ProtectedRoute from "./utils/protected.js";
 
 function App() {
   
-  useEffect(() => {
-    // console.log(keycloak)
-    keycloak.init()
-    // window.location.href = keycloak.createLoginUrl()
-    // console.log(keycloak.createLoginUrl())
-  })
+  // useEffect(() => {
+  //   // console.log(keycloak)
+  //   keycloak.init()
+  //   // window.location.href = keycloak.createLoginUrl()
+  //   // console.log(keycloak.createLoginUrl())
+  // })
   return (
     <Router>
       <div className="App">
@@ -41,18 +42,53 @@ function App() {
           <Route path="/feedback" component={Success} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/single" component={SingleRecharge} />
-          <Route path="/roles" component={Roles} />
-          <Route path="/fund" component={Fund} />
-          <Route path="/auto" component={Auto} />
-          <Route path="/beneficiaries" component={Beneficiaries} />
-          <Route path="/trans" component={Trans} />
-          <Route path="/bulk" component={Bulk} />
-          <Route path="/profilepage" component={ProfilePage} />
           <Route path="/blog" component={Blog} />
           <Route path="/blogdetails" component={BlogDetails} />
-          <Route path="/account" component={Account} />
+
+          <Route 
+            path="/dashboard"
+            component={Dashboard}
+          />
+          {/* <Route 
+            path="/dashboard"
+            element={<ProtectedRoute><Dashboard /></ProtectedRoute>}
+          /> */}
+          <Route
+            path="/single"
+            element={<ProtectedRoute><SingleRecharge /></ProtectedRoute>} 
+          />
+          <Route
+            path="/roles" 
+            element={<ProtectedRoute><Roles /></ProtectedRoute>} 
+          />
+          <Route
+            path="/fund"
+            element={<ProtectedRoute><Fund /></ProtectedRoute>}
+          />
+          <Route 
+            path="/auto"
+            element={<ProtectedRoute><Auto /></ProtectedRoute>}
+          />
+          <Route 
+            path="/beneficiaries"
+            element={<ProtectedRoute><Beneficiaries /></ProtectedRoute>}
+          />
+          <Route 
+            path="/trans"
+            element={<ProtectedRoute><Trans /></ProtectedRoute>}
+          />
+          <Route 
+            path="/bulk"
+            element={<ProtectedRoute><Bulk /></ProtectedRoute>}
+          />
+          <Route 
+            path="/profilepage"
+            element={<ProtectedRoute><ProfilePage /></ProtectedRoute>}
+          />
+          <Route 
+            path="/account"
+            element={<ProtectedRoute><Account /></ProtectedRoute>}
+          />
         </Switch>
       </div>
     </Router>

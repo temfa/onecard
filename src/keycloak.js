@@ -3,9 +3,9 @@ import Keycloak from 'keycloak-js'
 const keycloakConfig = {
    url: 'http://localhost:8080/auth',
    // url: 'https://auth.factorialsystems.io/auth',
-   realm: 'onecard', 
-   clientId: 'public-client',
-   // onLoad: 'login-required',
+   realm: 'demo', 
+   clientId: 'js-console',
+   onLoad: 'login-required',
    // onLoad: 'check-sso',
    pkceMethod: 'S256',
    checkLoginIframe: true,

@@ -11,7 +11,8 @@ function hamburger() {
 }
 
 const Header = (props) => {
-  const { keycloak } = useKeycloak()
+  const { keycloak } = useKeycloak();
+
   return (
     <div className="Header">
       <div className="HeaderLogo">
@@ -58,12 +59,13 @@ const Header = (props) => {
           </NavLink>
         </div>
         {/* <NavLink> */}
-        {/* <NavLink to="/signin"> */}
-          {keycloak && !keycloak.authenticated && <button className="SignInButton" onClick={() => keycloak.login()}>Sign In</button>}
-        {/* </NavLink> */}
-        <NavLink to="/signup">
-          {keycloak && !keycloak.authenticated && <button className="SignUpButton" onClick={() => keycloak.logout()}>Sign Up</button>}
+        <NavLink to="/dashboard">
+          {keycloak && !keycloak.authenticated && <button className="SignInButton">Sign In</button>}
         </NavLink>
+        {/* <NavLink to="/signup"> */}
+          {keycloak && !keycloak.authenticated && <button className="SignUpButton" onClick={() => keycloak.register()}>Sign Up</button>}
+        {/* </NavLink> */}
+        {keycloak && keycloak.authenticated && <p onClick={() => keycloak.logout()}>Logout</p>}
       </div>
     </div>
   );
