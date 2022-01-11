@@ -72,7 +72,7 @@ const Sidebar = () => {
           <p className="title">Menu</p>
           <ul className="menu-list">
             {menuList.map((item, index) => (
-              <li>
+              <li key={index}>
                 <NavLink
                   to={item.link}
                   activeStyle={{ fontWeight: "bold", cursor: "text" }}
@@ -87,7 +87,7 @@ const Sidebar = () => {
           <p className="title">Account</p>
           <ul className="menu-list">
             {accountList.map((item, index) => (
-              <li>
+              <li key={index}>
                 <NavLink to={item.link}>{item.item}</NavLink>
               </li>
             ))}

@@ -17,7 +17,7 @@ const Contact = () => {
           <img src={Ellipse} alt="Ellipse" />
           <img src={Ellipse2} alt="Ellipse2" className="ContactEllipse2" />
           <h2>
-            Get in touch with One1Card,<span> Leave a message</span>
+            Get in touch with OneCard,<span> Leave a message</span>
           </h2>
           <Button
             buttonText="Contact"
