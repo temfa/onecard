@@ -10,7 +10,7 @@ function hamburger() {
   document.getElementById("Burger").classList.toggle("burger-show");
 }
 
-const Header = (props) => {
+const Header = () => {
   const { keycloak } = useKeycloak();
 
   return (
@@ -58,14 +58,16 @@ const Header = (props) => {
             Blog
           </NavLink>
         </div>
-        {/* <NavLink> */}
-        <NavLink to="/dashboard">
-          {keycloak && !keycloak.authenticated && <button className="SignInButton">Sign In</button>}
-        </NavLink>
-        {/* <NavLink to="/signup"> */}
-          {keycloak && !keycloak.authenticated && <button className="SignUpButton" onClick={() => keycloak.register()}>Sign Up</button>}
-        {/* </NavLink> */}
-        {keycloak && keycloak.authenticated && <p onClick={() => keycloak.logout()}>Logout</p>}
+        <div className="auth-links">
+          {/* <NavLink> */}
+          <NavLink to="/dashboard">
+            {keycloak && !keycloak.authenticated && <button className="SignInButton">Dashboard</button>}
+          </NavLink>
+          {/* <NavLink to="/signup"> */}
+            {/* {keycloak && !keycloak.authenticated && <button className="SignUpButton" onClick={() => keycloak.register()}>Sign Up</button>} */}
+          {/* </NavLink> */}
+          {keycloak && keycloak.authenticated && <p onClick={() => keycloak.logout()}>Logout</p>}
+        </div>
       </div>
     </div>
   );

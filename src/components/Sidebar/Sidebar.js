@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import OneCardLogoWhite from "../../assets/logos/onecard-white.svg";
 import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
+import { useKeycloak } from "@react-keycloak/web";
 
 const Sidebar = () => {
+  const { keycloak } = useKeycloak();
+
   const [menuList] = useState([
     {
       item: "Dashboard",
@@ -53,12 +56,12 @@ const Sidebar = () => {
       roleType: "all",
       link: "/profilepage",
     },
-    {
-      item: "Logout",
-      active: false,
-      roleType: "all",
-      link: "#",
-    },
+    // {
+    //   item: "Logout",
+    //   active: false,
+    //   roleType: "all",
+    //   link: "#",
+    // },
   ]);
   return (
     <div className="sidebar">
@@ -91,6 +94,13 @@ const Sidebar = () => {
                 <NavLink to={item.link}>{item.item}</NavLink>
               </li>
             ))}
+          </ul>
+        </div>
+        <div className="sidebar-menu">
+          <ul className="menu-list">
+              <li className="logout">
+                <p onClick={() => keycloak.logout()}>Logout</p>
+              </li>
           </ul>
         </div>
       </div>

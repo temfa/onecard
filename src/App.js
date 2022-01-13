@@ -20,16 +20,9 @@ import Blog from "./pages/Blog/Blog.js";
 import Account from "./pages/Account/Account.js";
 import BlogDetails from "./pages/BlogDetails/BlogDetails.js";
 // import keycloak from "./keycloak.js";
-import ProtectedRoute from "./utils/protected.js";
+// import ProtectedRoute from "./utils/protected.js";
 
 function App() {
-  
-  // useEffect(() => {
-  //   // console.log(keycloak)
-  //   keycloak.init()
-  //   // window.location.href = keycloak.createLoginUrl()
-  //   // console.log(keycloak.createLoginUrl())
-  // })
   return (
     <Router>
       <div className="App">
@@ -49,45 +42,41 @@ function App() {
             path="/dashboard"
             component={Dashboard}
           />
-          {/* <Route 
-            path="/dashboard"
-            element={<ProtectedRoute><Dashboard /></ProtectedRoute>}
-          /> */}
           <Route
             path="/single"
-            element={<ProtectedRoute><SingleRecharge /></ProtectedRoute>} 
+            component={SingleRecharge} 
           />
           <Route
             path="/roles" 
-            element={<ProtectedRoute><Roles /></ProtectedRoute>} 
+            component={Roles} 
           />
           <Route
             path="/fund"
-            element={<ProtectedRoute><Fund /></ProtectedRoute>}
+            component={Fund}
           />
           <Route 
             path="/auto"
-            element={<ProtectedRoute><Auto /></ProtectedRoute>}
+            component={Auto}
           />
           <Route 
             path="/beneficiaries"
-            element={<ProtectedRoute><Beneficiaries /></ProtectedRoute>}
+            component={Beneficiaries}
           />
           <Route 
             path="/trans"
-            element={<ProtectedRoute><Trans /></ProtectedRoute>}
+            component={Trans}
           />
           <Route 
             path="/bulk"
-            element={<ProtectedRoute><Bulk /></ProtectedRoute>}
+            component={Bulk}
           />
           <Route 
             path="/profilepage"
-            element={<ProtectedRoute><ProfilePage /></ProtectedRoute>}
+            component={ProfilePage}
           />
           <Route 
             path="/account"
-            element={<ProtectedRoute><Account /></ProtectedRoute>}
+            component={Account}
           />
         </Switch>
       </div>
