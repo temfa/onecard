@@ -37,6 +37,14 @@
   color: #ffffff;
 }
 
+.logout p {
+  color: rgba(255, 91, 31, 0.75);
+}
+
+.logout p:hover {
+  color: rgb(255, 91, 31);
+}
+
 @media screen and (max-width: 480px) {
   .sidebar {
     display: none;

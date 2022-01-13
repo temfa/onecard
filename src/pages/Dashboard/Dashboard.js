@@ -1,4 +1,3 @@
-import { useKeycloak } from "@react-keycloak/web";
 import React from "react";
 import AppLayout from "../../layouts/appLayout";
 import "./Dashboard.css";
@@ -36,14 +35,11 @@ const Dashboard = () => {
       type: "MTN Data Topup",
     },
   ];
-  // const {keycloak, initialized} = useKeycloak()
-  const { keycloak } = useKeycloak();
-  console.log(keycloak);
+
   return (
     <div>
-      {
-      keycloak.authenticated && <AppLayout pageTitle="Dashboard">
-          <div className="dashboard-body">
+      <AppLayout>
+        <div className="dashboard-body">
             <div className="account">
               <h2>Account Balance</h2>
               <div className="dashboard-container">
@@ -55,13 +51,13 @@ const Dashboard = () => {
                 <h2>Quick Recharge</h2>
                 <div className="dashboard-quick-body">
                   <div className="quick-body1">
-                    {quickDetails1.map((items) => (
-                      <Quick amount={items.amount} type={items.type} />
+                    {quickDetails1.map((items, index) => (
+                      <Quick key={index} amount={items.amount} type={items.type} />
                     ))}
                   </div>
                   <div className="quick-body2">
-                    {quickDetails2.map((items) => (
-                      <Quick amount={items.amount} type={items.type} />
+                    {quickDetails2.map((items, index) => (
+                      <Quick key={index} amount={items.amount} type={items.type} />
                     ))}
                   </div>
                 </div>
@@ -99,25 +95,9 @@ const Dashboard = () => {
             </div>
           </div>
         </AppLayout>
-        // : keycloak.login()
-        // : <h2>keycloak initializing ....!!!!</h2>
-      }
-      {/* {keycloak.init ?
-                keycloak.authenticated && <p>Hello</p>
-                : <h2>keycloak initializing ....!!!!</h2>
-            } */}
-      {/* {`User is ${!keycloak.authenticated ? 'NOT ' : ''}authenticated`} */}
-
-      {/* { keycloak.authenticated
-                && <AppLayout pageTitle="Dashboard">
-                    <p>Dashboard content</p>
-                </AppLayout>
-                // : keycloak.init()
-                // : <h2>keycloak initializing ....!!!!</h2>
-            } */}
     </div>
-    // {!!keycloak.authenticated && (<p>hey</p>)}
-  );
+  )
+
 };
 
 export default Dashboard;

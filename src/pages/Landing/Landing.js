@@ -53,7 +53,7 @@ const Landing = () => {
     // if(trxref && localStorage.id) {
       history.push('/feedback')
     } else if (trxref) {
-      window.history.replaceState(null, 'One1Card | OneCard Nigeria', '/')
+      window.history.replaceState(null, 'OneCard | OneCard Nigeria', '/')
     }
   }
 
@@ -197,7 +197,7 @@ const Landing = () => {
         <div className="jumbo-recharge">
           <div className="WelcomeText">
             <h2>
-              Life just got easier <span> with One1Card</span>
+              Life just got easier <span> with OneCard</span>
             </h2>
             <p>
               Schedule (or automatically repeat) airtime recharges, data
@@ -289,7 +289,7 @@ const Landing = () => {
       <div className="Recharge">
         <div className="RechargeText">
           <h2>
-            Recharge options with <span className="Card"> One1Card</span>
+            Recharge options with <span className="Card"> OneCard</span>
           </h2>
           <img src={HomePage2} className="Rectangle2" alt="HomePage" />
         </div>
@@ -336,7 +336,7 @@ const Landing = () => {
             <img src={Rectangle} alt="BlackMan" className="RectangleWhy" />
           </div>
           <div className="WhyBody">
-            <h2>Why One1Card?</h2>
+            <h2>Why OneCard?</h2>
             <p>
               We have built a robust technology that enables every individual to
               enjoy easy, convenient and extensive recharge or payment solutions

@@ -14,12 +14,12 @@ const Account = () => {
         <div className="success-content">
           <h3>Account Created</h3>
           <p>
-            You’ve successfully created and account with One1Card. Kindly
+            You’ve successfully created and account with OneCard. Kindly
             complete your profile to gain full access to all services
           </p>
           <button> Back Home </button>
           <Button
-            buttonText="Go  to Dashboard"
+            buttonText="Go to Dashboard"
             width="501px"
             Color="White"
             backgroundColor="#EB6A2B"

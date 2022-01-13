@@ -52,7 +52,7 @@ const Cards = () => {
           <h2>
             Enjoy customized
             <span>
-              <br /> One1Card
+              <br /> OneCard
             </span>{" "}
             with your friends, families & more
           </h2>
@@ -100,7 +100,7 @@ const Cards = () => {
       </div>
       <div className="ColorRectangle6"></div>
       <div className="WhatCardDo">
-        <h2>Who can you gift your One1Card Recharge Cards to?</h2>
+        <h2>Who can you gift your OneCard Recharge Cards to?</h2>
         <div className="ContainerCard">
           <div className="Container">
             <div>
@@ -137,7 +137,7 @@ const Cards = () => {
       <div className="CustomizedCards">
         <h2>Get Your Customized Recharge Cards</h2>
         <p>
-          Our multipurpose recharge card (One1Card); available in various
+          Our multipurpose recharge card (OneCard); available in various
           denominations N50 - N10,000. Also customizable for brands and service
           providers
         </p>

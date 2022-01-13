@@ -1,8 +1,8 @@
 {
-  "realm": "onecard",
+  "realm": "demo",
   "auth-server-url": "http://localhost:8080/auth",
   "ssl-required": "external",
-  "resource": "public-client",
+  "resource": "js-console",
   "public-client": true,
-  "on-load": "check-sso"
+  "on-load": "login-required"
 }

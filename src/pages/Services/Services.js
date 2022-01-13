@@ -73,7 +73,7 @@ const Services = () => {
             Enjoy various
             <span>
               {" "}
-              <br /> recharge and payment options with One1Card
+              <br /> recharge and payment options with OneCard
             </span>
           </h2>
           <Button

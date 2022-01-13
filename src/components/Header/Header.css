@@ -9,11 +9,19 @@
   max-width: 1442px;
   display: flex;
   justify-content: space-between;
-  padding: 40px 80px;
+  height: 125px;
+  padding: 0px 80px;
+  /* padding: 40px 80px; */
+}
+
+.HeaderLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .HeaderLogo img {
-  margin-bottom: -60px;
+  margin-bottom: -2rem;
 }
 
 .NavHeader {
@@ -25,11 +33,17 @@
 .NavLinks {
   display: flex;
   justify-content: space-between;
-  margin-right: 139px;
+  margin-right: 5rem;
 }
 
 .NavLinks a :first-child {
   margin-left: 0px;
+}
+
+.auth-links {
+  width: 280px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .Burger {
@@ -91,12 +105,13 @@
 }
 
 .SignInButton {
-  width: 139px;
+  width: 10rem;
   background-color: #eb6a2b;
   border: 0;
   height: 45px;
   font-family: "Roboto";
-  border-radius: 20px 0px 0px 20px;
+  border-radius: 20px;
+  /* border-radius: 20px 0px 0px 20px; */
   cursor: pointer;
   color: white;
   font-weight: 700;
