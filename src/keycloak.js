@@ -16,18 +16,18 @@ switch(process.env.NODE_ENV) {
 
 const keycloakConfig = {
    url: url,
-   // url: 'https://auth.factorialsystems.io/auth',
    realm: realm, 
    clientId: clientId,
    onLoad: 'login-required',
-   // onLoad: 'check-sso',
    pkceMethod: 'S256',
    checkLoginIframe: true,
+   checkLoginIframeInterval: 25,
+   // frameAncestors: 'self'
    // sslRequired: "external",
    // resource: "public-client",
    // publicClient: true,
-   checkLoginIframeInterval: 25,
-   // frameAncestors: 'self'
+   // onLoad: 'check-sso',
+   // url: 'https://auth.factorialsystems.io/auth',
 }
 
 // const keycloak = new Keycloak(keycloakConfig, initOptions);
