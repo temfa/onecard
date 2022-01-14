@@ -1,8 +1,0 @@
-{
-  "realm": "demo",
-  "auth-server-url": "http://localhost:8080/auth",
-  "ssl-required": "external",
-  "resource": "js-console",
-  "public-client": true,
-  "on-load": "login-required"
-}
