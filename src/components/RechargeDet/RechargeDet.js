@@ -1,87 +1,169 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./RechargeDet.css";
-import Providers from "../../utils/providers";
+// import Providers from "../../utils/providers";
 import axios from "axios";
 import OrangeButton from "../../components/Button/OrangeButton";
+import { useHistory } from 'react-router-dom';
+import services from "../../utils/defaults";
 
-const RechargeDet = (props) => {
-  const [activeService, setActiveService] = useState("Data");
-  const [activeProvider, setActiveProvider] = useState("MTN-AIRTIME");
-  const [providers] = useState(Providers);
-  const [recipient, updateRecipient] = useState("");
-  const [cost, updateCost] = useState("");
+const RechargeDet = () => {
+  const history = useHistory();
+  const [state, setState] = useState({
+    service: 'Airtime',
+    provider: 'MTN-AIRTIME',
+    amount: '',
+    phoneNumber: '',
+    serviceNumber: '',
+    productID: '',
+    valid: false
+  });
+
+  const [activeService, setActiveService] = useState("");
+  const [activeProvider, setActiveProvider] = useState("");
+  const [providers, setProviders] = useState([]);
+  const [inputs, setInputs] = useState([]);
+  const [selectInput, setSelectInput] = useState(false);
+  const [dataPlans, setDataPlans] = useState([]);
   const [loadingBar, setLoadingBar] = useState(false);
-  const [errorMsg, setErrorMsg] = useState(null);
-  const [formIsValid, setFormIsValid] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
 
-  const activeServiceHandler = (service) => setActiveService(service);
-  const activeProviderHandler = (provider) => setActiveProvider(provider);
-  const recipientHandler = (num) => {
-    if (num.length <= 11) updateRecipient(num);
+  useEffect(() => redirectToPaymentFeedback() )
+
+  const redirectToPaymentFeedback = () => {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+    const trxref = params["trxref"];
+    // console.log(params, trxref)
+
+    if(trxref && localStorage.id) {
+    // if(trxref && localStorage.id) {
+      history.push('/feedback')
+    } else if (trxref) {
+      window.history.replaceState(null, 'OneCard | OneCard Nigeria', '/')
+    }
+  }
+
+  const activeServiceHandler = (service) => {
+    setActiveService(service.title)
+    setActiveProvider('')
+    setProviders(service.providers)
+    setInputs(service.inputs)
+    setSelectInput(service.select)
   };
-  const costHandler = (num) => {
-    updateCost(num);
-  };
+  const activeProviderHandler = (provider) => {
+    setActiveProvider(provider.serviceCode);
+    if (activeService === 'Data') getPlans(provider.serviceCode)
+  }
+
+  const getPlans = (network) => {
+    axios
+        .get(
+          `https://onecard.factorialsystems.io/api/v1/recharge/plans/${network}`,
+          { headers: { "Content-Type": "application/json", }, }
+        )
+        .then((res) => setDataPlans(res.data))
+        .catch((err) => {
+          console.log(err);
+        });
+  }
 
   const rechargeHandler = (e) => {
     e.preventDefault();
+    let rechargeData;
     setLoadingBar(true);
 
-    validateInput();
+    // const formData = new FormData(e.target);
+    // const formProps = Object.fromEntries(formData);
 
-    const rechargeData = {
-      serviceCode: activeProvider,
-      recipient: recipient,
-      serviceCost: cost,
-      redirectUrl: window.location.origin + "/success",
-    };
-
-    if (formIsValid) {
-      axios
-        .post(
-          "https://onecard.factorialsystems.io/api/v1/recharge",
-          rechargeData,
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        )
-        .then((res) => {
-          updateRecipient("");
-          updateCost("");
+    switch(activeService) {
+      case 'Data':
+        if (activeProvider && state.phoneNumber && state.productID) {
+          rechargeData = {
+            serviceCode: activeProvider,
+            recipient: state.phoneNumber,
+            productId: state.productID,
+            redirectUrl: window.location.origin,
+          };
+          rechargeFunc(rechargeData)
+        } else {
           setLoadingBar(false);
-          window.location.href = res.data.authorizationUrl;
-        })
-        .catch((err) => {
-          setLoadingBar(false);
-        });
-    } else {
-      setErrorMsg("Please check your input and try again!");
-      setTimeout(() => {
-        setErrorMsg(null);
-        setLoadingBar(false);
-      }, 2000);
-    }
-  };
-
-  const validateInput = () => {
-    localStorage.recipient = recipient;
-
-    if (!recipient || !cost) {
-      setFormIsValid(false);
-    } else {
-      // if (recipient[0] !== '0') updateRecipient('0'+recipient)
-      if ("0" + recipient.length < 11 || cost.length < 2) {
-        setFormIsValid(false);
+          setErrorMsg('Please complete the form to continue')
+          setTimeout(() => {
+            setErrorMsg('')
+          }, 2000)
+        }
+        break;
+      case 'Airtime':
+        if (activeProvider && state.phoneNumber && state.amount) {
+        rechargeData = {
+          serviceCode: activeProvider,
+          recipient: state.phoneNumber,
+          serviceCost: state.amount,
+          redirectUrl: window.location.origin,
+          // redirectUrl: window.location.origin + "/success",
+        };
+        rechargeFunc(rechargeData)
       } else {
-        setFormIsValid(true);
+        setLoadingBar(false);
+        setErrorMsg('Please complete the form to continue')
+        setTimeout(() => {
+          setErrorMsg('')
+        }, 2000)
       }
+        break;
+      case 'Power':
+        if (activeProvider && state.serviceNumber && state.phoneNumber && state.amount) {
+        rechargeData = {
+          serviceCode: activeProvider,
+          recipient: state.serviceNumber,
+          telephone: state.phoneNumber,
+          serviceCost: state.amount,
+          redirectUrl: window.location.origin,
+        };
+        rechargeFunc(rechargeData)
+      } else {
+        setLoadingBar(false);
+        setErrorMsg('Please complete the form to continue')
+        setTimeout(() => {
+          setErrorMsg('')
+        }, 2000)
+      }
+        break;
+      default:
+        setLoadingBar(false);
+        setErrorMsg('Something went wrong! Please refresh and try again..')
+        setTimeout(() => {
+          setErrorMsg('')
+        }, 2000)
     }
-
-    updateRecipient("");
-    updateCost("");
   };
+
+  const rechargeFunc = (rechargeData) => {
+    axios
+      .post(
+        "https://onecard.factorialsystems.io/api/v1/auth-recharge",
+        rechargeData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res.data);
+        // window.location.href = res.data.authorizationUrl;
+        // localStorage.id = res.data.id
+        // localStorage.recipient = rechargeData.recipient
+      })
+      .catch((err) => {
+        setLoadingBar(false);
+      });
+  }
+
+  const inputHandler = (val, stateOption) => {
+    if (String(val).length <= 15) setState({ ...state, [stateOption]: val })
+  }
+
   return (
     <div>
       <h2 className="recharge-banner">Recharge Details</h2>
@@ -90,115 +172,88 @@ const RechargeDet = (props) => {
           <div className="qr-options">
             <p>What would you like to do?</p>
             <ul className="options-list">
-              <li
-                className={activeService === "Data" ? "active" : ""}
-                onClick={() => activeServiceHandler("Data")}
-              >
-                <div>
-                  <span className="material-icons">wifi</span>
-                  <span>Data</span>
-                </div>
-              </li>
-              <li
-                className={activeService === "Airtime" ? "active" : ""}
-                onClick={() => activeServiceHandler("Airtime")}
-              >
-                <div>
-                  <span className="material-icons">phone_in_talk</span>
-                  <span>Airtime</span>
-                </div>
-              </li>
-              <li
-                className={activeService === "Power" ? "active" : ""}
-                onClick={() => activeServiceHandler("Power")}
-              >
-                <div>
-                  <span className="material-icons">power</span>
-                  <span>Electricity</span>
-                </div>
-              </li>
-              <li
-                className={activeService === "CableTV" ? "active" : ""}
-                onClick={() => activeServiceHandler("CableTV")}
-              >
-                <div>
-                  <span className="material-icons">live_tv</span>
-                  <span>Cable TV</span>
-                </div>
-              </li>
-              <li
-                className={activeService === "Others" ? "active" : ""}
-                onClick={() => activeServiceHandler("Others")}
-              >
-                <div>
-                  <span className="material-icons">add_circle_outline</span>
-                  <span>Others</span>
-                </div>
-              </li>
+              {
+                services.map(service => <li
+                  className={activeService === service.title ? "active" : ""}
+                  onClick={() => activeServiceHandler(service)}
+                  key={service.title}
+                >
+                  <div>
+                    <span className="material-icons">{service.icon}</span>
+                    <span>{service.name}</span>
+                  </div>
+                </li>)
+              }
             </ul>
           </div>
           <ul className="qr-providers">
-            {providers.map((provider, index) => (
-              <li
-                key={index}
-                className={
-                  activeProvider === provider.serviceCode ? "active" : ""
-                }
-                onClick={() => activeProviderHandler(provider.serviceCode)}
-              >
-                <img
-                  src={provider.logo}
-                  alt={`provider - ${provider.provider}`}
-                />
-              </li>
-            ))}
+            {
+              providers.map((provider, index) => (
+                <li
+                  key={index}
+                  className={
+                    activeProvider === provider.serviceCode ? "active" : ""
+                  }
+                  onClick={() => activeProviderHandler(provider)}
+                >
+                  <img
+                    src={provider.logo}
+                    alt={`provider - ${provider.provider}`}
+                  />
+                </li>))
+            }
           </ul>
-          {activeService === "Data" && (
-            <div className="recharge-inputs">
-              <input
-                type="text"
-                placeholder="Select Data Plan"
-                onChange={(e) => recipientHandler(e.target.value)}
-                disabled
-              />
-              <div className="bene">
-                <button>Choose Beneficiaries</button>
-                <div className="bene-circles">
-                  <div>AD</div>
-                  <div>AD</div>
-                  <div>AD</div>
-                  <div>AD</div>
-                  <div>AD</div>
-                </div>
+          <div className="inputs">
+            {
+              selectInput && dataPlans.length > 0 && <select 
+                className="select-input"
+                value={state.productID}
+                onChange={(e) => inputHandler(e.target.value, 'productID')}
+              >
+                <option style={{opacity:'0.5'}}>Choose one {activeProvider} plan</option>
+                { dataPlans.map(plan => <option
+                    key={plan.product_id}
+                    value={plan.product_id}>
+                      {'N' + new Intl.NumberFormat('en-US').format(plan.price) + ' - ' + plan.validity}
+                    </option>
+                  )
+                }
+              </select>
+            }
+            {
+              inputs.map(input => <input
+                type={input.type}
+                placeholder={input.placeholder}
+                key={input.placeholder}
+                name={input.value}
+                value={state[input.value]}
+                onChange={(e) => inputHandler(e.target.value, input.value)}
+              />)
+            }
+          </div>
+          {/* <div className="recharge-inputs">
+            <input
+              type="text"
+              placeholder="Select Data Plan"
+              disabled
+            />
+            <div className="bene">
+              <button>Choose Beneficiaries</button>
+              <div className="bene-circles">
+                <div>AD</div>
+                <div>AD</div>
+                <div>AD</div>
+                <div>AD</div>
+                <div>AD</div>
               </div>
-              <input
-                type="text"
-                placeholder="Phone Number"
-                onChange={(e) => costHandler(e.target.value)}
-                disabled
-              />
             </div>
-          )}
-          {activeService === "Airtime" && (
-            <div className="recharge-inputs">
-              <input
-                type="text"
-                placeholder="Select Data Plan"
-                value={recipient}
-                onChange={(e) => recipientHandler(e.target.value)}
-              />
-              <div className="bene">
-                <button>Choose Beneficiaries</button>
-              </div>
-              <input
-                type="text"
-                placeholder="Phone Number"
-                value={cost}
-                onChange={(e) => costHandler(e.target.value)}
-              />
-            </div>
-          )}
-          <p className="more-info">{props.details}</p>
+            <input
+              type="text"
+              placeholder="Phone Number"
+              disabled
+            />
+          </div>
+          <p className="more-info">{props.details}</p> */}
           <div className="button-section">
             {errorMsg && <p className="error-message">{errorMsg}</p>}
             <OrangeButton buttonText="Next" loading={loadingBar} />
