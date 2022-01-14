@@ -44,6 +44,11 @@
   width: 280px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+}
+
+.auth-links p {
+  margin-left: 2rem;
 }
 
 .Burger {

@@ -61,7 +61,7 @@ const Header = () => {
         <div className="auth-links">
           {/* <NavLink> */}
           <NavLink to="/dashboard">
-            {keycloak && !keycloak.authenticated && <button className="SignInButton">Dashboard</button>}
+            {keycloak && <button className="SignInButton">Dashboard</button>}
           </NavLink>
           {/* <NavLink to="/signup"> */}
             {/* {keycloak && !keycloak.authenticated && <button className="SignUpButton" onClick={() => keycloak.register()}>Sign Up</button>} */}

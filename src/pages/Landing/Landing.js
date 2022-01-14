@@ -189,9 +189,6 @@ const Landing = () => {
 
   return (
     <div>
-      {/* <div>{`User is ${!keycloak.authenticated ? 'NOT ' : ''
-        }authenticated`}</div> */}
-      {/* {!!keycloak.authenticated && ( */}
       <div className="Welcome">
         <Header />
         <div className="jumbo-recharge">
