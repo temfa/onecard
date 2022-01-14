@@ -23,7 +23,7 @@ const keycloakConfig = {
    checkLoginIframe: true,
    checkLoginIframeInterval: 25,
    // frameAncestors: 'self'
-   // sslRequired: "external",
+   sslRequired: "external",
    // resource: "public-client",
    // publicClient: true,
    // onLoad: 'check-sso',
